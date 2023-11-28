@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>CATATAN PERKEMBANGAN PASIEN TERINTEGRASI RAWAT JALAN</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>jQuery UI Signature Basics</title>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet">
+    <link href="<?= base_url('css/jquery.signature.css') ?>" rel="stylesheet">
+    <style>
+        .kbw-signature {
+            width: 200px;
+            height: 125px;
+        }
+    </style>
+    <!--[if IE]>
+    <script src="excanvas.js"></script>
+    <![endif]-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
+
+    <script>
+        $(function() {
+            var sig = $('#sig').signature();
+        });
+    </script>
+
+    <script>
+        $(function() {
+            var sig = $('#sig2').signature();
+        });
+    </script>
+
+
+    <script type="text/javascript">
+        // JavaScript Document
+        var i = 12;
+        var ttd = 0;
+
+        function addRow(tableID) {
+
+            i1 = i + 1;
+            i2 = i + 2;
+            i3 = i + 3;
+            i4 = i + 4;
+            i5 = ttd + 1;
+            i6 = i + 5;
+
+            $("#" + tableID).append($("<tr>")
+                .append($("<td>").html('<div class="form-group"><input type="datetime-local" class="form-control" required="required" name="v_' + i + '" size="20px"></div>'))
+                .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" name="v_' + i1 + '" size="20px" placeholder="Profesi"></div>'))
+                .append($("<td>").html('<div class="form-group"><textarea class="form-control" name="v_' + i2 + '" rows="10" cols="5" placeholder="Hasil"></textarea></div>'))
+                .append($("<td>").html('<div class="form-group"><textarea class="form-control" name="v_' + i3 + '" rows="10" cols="5" placeholder="Instruksi Kesehatan"></textarea></div>'))
+                .append($("<td>").html('<div class="form-group"><input type="datetime-local" id="v_' + i4 + '" name="v_' + i4 + '" size="25px"><label>DPJP</label><br><div id="sig' + i5 + '" class="kbw-signature"><canvas id="sig' + i5 + '" width="198" height="123">Your browser doesn\'t support signing</canvas></div><br><input type="text" id="v_' + i6 + '" name="v_' + i6 + '" size="25px"></div>'))
+            )
+
+            i += 6;
+            ttd += 1;
+
+            initiateSign("sig" + i5)
+
+
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container mt-5">
+        <table class="table text">
+            <tr>
+                <td width="5%" align="right">
+                    <img src="aset/logo.jpeg" width="65px">
+                </td>
+                <td width="60%">
+                    <h5>RSUD Dr. M. Yunus Bengkulu </h5>
+                    <h5>Badan Layanan Umum Daerah</h5>
+                    <strong>
+                        <p style="font-size:12px">Jl. Bhayangkara Bengkulu 38229 Telp. (0736) 52004 - 52006 Fax. (0736) 52007</p>
+                    </strong>
+                </td>
+                <td width="35%" rowspan="2">
+                    <h6>RM. 01 Lanjutan RAWAT JALAN</h6>
+                    <br>
+
+                    <div class="container" style="border:2px solid black; border-radius: 20px;">
+                        <div class="row">
+                            <div class="col-5">
+                                <label>No.RM</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control" type="text" name="no_Registration " id="no_Registration " readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <label>Nama Lengkap</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control" type="text" name="thename " id="thename " readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <label>Tanggal Lahir</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control" type="date" name="v_03" id="v_03" readonly>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5">
+                                <label>NIK</label>
+                            </div>
+                            <div class="col-7">
+                                <input class="form-control" type="text" name="thenik" id="thenik" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <div class="row">
+                        <div class="col-3">
+                            <h4><label>POLIKLINIK : </label></h4>
+                        </div>
+                        <div class="col-8">
+                            <input class="form-control" type="text" name="clinic_id" id="clinic_id" readonly>
+                        </div>
+                    </div>
+    </div>
+    </td>
+    </tr>
+    <tr>
+        <td colspan="3">
+            <h3 class="text-center">CATATAN PERKEMBANGAN PASIEN TERINTEGRASI RAWAT JALAN</h3>
+        </td>
+    </tr>
+    </table>
+
+    <table class="w-full table table-striped table-bordered table-hover text-center" style="border: 2px solid black">
+        <tr>
+            <thead>
+                <th width="10%">TANGGAL/JAM</th>
+                <th width="10%">PROFESI</th>
+                <th width="30%">
+                    HASIL PEMERIKSAAN, ANALISIS, <br> RENCANA PENATALAKSANAAN PASIEN <br>
+                    <p>(Dituliskan dengan format SOAP/ADIME, Disertai dengan Targer yang terukur, Evaluasi Hasil Tatalaksana dituliskan dalam Asessment. Harap Bubuhkan Stampel Nama, dan Paraf Setiap Akhir Catatan)</p>
+                </th>
+                <th width="30%">
+                    Instruksi Tenaga Kesehatan Termasuk <br> Pasca Bedah/Prosudur <br>
+                    (Instruksi Ditulis dengan Rinci dan Jelas)
+                </th>
+                <th width="20%">
+                    VERIFIKASI DPJP <br>
+                    (Bubuhkan Stempel Nama, Paraf, Tgl, Jam) <br> (DPJP Harus membaca seluruh rencana perawatan)
+                </th>
+            </thead>
+        </tr>
+        <tbody id="tbody2">
+            <tr>
+                <td>
+                    <div class="form-group">
+                        <input type="datetime-local" class="form-control" required="required" name="v_06" size="20px">
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="v_07" placeholder="Profesi">
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <textarea class="form-control" name="v_08" rows="10x" cols="5" placeholder="Hasil"></textarea>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <textarea class="form-control" name="v_09" rows="10" cols="5" placeholder="Instruksi"></textarea>
+                    </div>
+                </td>
+                <td>
+                    <div class="form-group">
+                        <input type="datetime-local" id="v_10" name="v_10" size="25px">
+                        <label>DPJP</label><br>
+                        <div id="sig"></div><br>
+                        <input type="text" id="v_11" name="v_11" size="25px">
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <td colspan="5" align="center">
+                <button type="button" class="btn btn-primary" onclick="addRow('tbody2')">Tambah Baris</button>
+            </td>
+        </tfoot>
+    </table>
+
+    </div>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
