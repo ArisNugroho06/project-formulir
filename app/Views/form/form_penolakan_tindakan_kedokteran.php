@@ -142,7 +142,7 @@
                   <label class="col-form-label">No RM</label>
                 </div>
                 <div class="col-md-10">
-                  <input class="form-control" type="text" name="v_01" id="v_01">
+                  <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
                 </div>
               </div>
 
@@ -151,7 +151,7 @@
                   <label class="col-form-label">Nama Lengkap</label>
                 </div>
                 <div class="col-md-10">
-                  <input class="form-control" type="text" name="v_02" id="v_02">
+                  <input class="form-control" type="text" name="thename" id="thename" readonly>
                 </div>
               </div>
 
@@ -162,7 +162,7 @@
                       <label class="col-form-label">Tanggal Lahir</label>
                     </div>
                     <div class="col-md-8">
-                      <input class="form-control" type="date" name="v_03" id="v_03">
+                      <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
                     </div>
                   </div>
                 </div>
@@ -172,7 +172,7 @@
                       <label class="col-form-label">Umur</label>
                     </div>
                     <div class="col-md-9">
-                      <input class="form-control" type="text" name="v_04" id="v_04">
+                      <input class="form-control" type="text" name="ageyea " id="ageyea " readonly>
                     </div>
                   </div>
                 </div>
@@ -199,7 +199,7 @@
                   <label class="col-form-label">Alamat</label>
                 </div>
                 <div class="col-md-10">
-                  <textarea class="form-control" name="v_05" id="v_05" cols="6" rows="2"></textarea>
+                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly></textarea>
                 </div>
               </div>
 
@@ -622,27 +622,20 @@
       </tr>
       <tr>
         <td>
-          <?php
-          if ($v_02 == $t_02) {
-          ?>
-            <p>
-              Yang bertanda tangan dibawah ini, Saya, nama "<?= $v_02; ?>" umur "<?= $v_04; ?>" tahun, "<?= $t_01; ?>",
-              alamat "<?= $v_05; ?>" dengan ini menyatakan penolakan untuk dilakukannya tindakan "<?= $v_15; ?>" terhadap saya
-            </p><br>
-          <?php } else { ?>
-
-            <p>
-              Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_34" id="v_34"> umur <input type="text" name="v_35" id="v_35"> tahun,
-              <input type="radio" class="form-check-input" name="t_01" value="laki">
-              <label>Laki-laki</label>
-              <input type="radio" class="form-check-input" name="t_01" value="perempuan">
-              <label>Perempuan</label>,
-              alamat <input type="text" name="v_35" id="v_35"> dengan ini menyatakan penolakan
-              untuk dilakukannya tindakan "<?= $v_15; ?>" terhadap<input type="text" name="v_36" id="v_36"> saya
-              bernama "<?= $v_02; ?>" umur "<?= $v_04; ?>" tahun, "<?= $t_01; ?>", alamat "<?= $v_05; ?>"
-
-            </p>
-          <?php }; ?>
+          <p>
+            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_29" id="v_29" readonly> umur <input type="text" name="v_30" id="v_30" readonly> tahun, <input type="text" name="v_31" id="v_31" readonly>,
+            alamat <input type="text" name="v_32" id="v_32" readonly> dengan ini menyatakan persetujuan untuk dilakukannya tindakan <input type="text" name="v_33" id="v_33" readonly> terhadap saya
+          </p><br>
+          <p>
+            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_34" id="v_34" readonly> umur <input type="text" name="v_35" id="v_35" readonly> tahun,
+            <input type="radio" class="form-check-input" name="t_014" value="laki">
+            <label>Laki-laki</label>
+            <input type="radio" class="form-check-input" name="t_014" value="perempuan">
+            <label>Perempuan</label>,
+            alamat <input type="text" name="v_36" id="v_36" readonly> dengan ini menyatakan persetujuan
+            untuk dilakukannya tindakan <input type="text" name="v_37" id="v_37" readonly> terhadap<input type="text" name="v_38" id="v_38" readonly> saya
+            bernama <input type="text" name="v_39" id="v_39" readonly> umur <input type="text" name="v_40" id="v_40" readonly> tahun, <input type="text" name="v_41" id="v_41" readonly>, alamat <input type="text" name="v_42" id="v_42" readonly>
+          </p>
         </td>
       </tr>
       <tr>
@@ -658,7 +651,7 @@
     <div class="container mt-5">
       <table class="table text-center">
         <tr>
-          <p>Bengkulu, <input type="datetime-local" name="v_29" id="v_29"></p>
+          <p>Bengkulu, <input type="datetime-local" name="v_43" id="v_43"></p>
         </tr>
         <tr>
           <td>Yang Menyatakan</td>
@@ -682,16 +675,16 @@
         </tr>
         <tr>
           <td>
-            <input type="text" name="v_30" id="v_30">
+            <input type="text" name="v_44" id="v_44">
           </td>
           <td>
-            <input type="text" name="v_31" id="v_31">
+            <input type="text" name="v_45" id="v_45">
           </td>
           <td>
-            <input type="text" name="v_32" id="v_32">
+            <input type="text" name="v_46" id="v_46">
           </td>
           <td>
-            <input type="text" name="v_33" id="v_33">
+            <input type="text" name="v_47" id="v_47">
           </td>
         </tr>
       </table>

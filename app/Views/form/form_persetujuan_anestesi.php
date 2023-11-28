@@ -143,7 +143,7 @@
                   <label class="col-form-label">No RM</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="v_01" id="v_01">
+                  <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
                 </div>
               </div>
 
@@ -152,7 +152,7 @@
                   <label class="col-form-label">Nama Lengkap</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="v_02" id="v_02">
+                  <input class="form-control" type="text" name="thename" id="thename" readonly>
                 </div>
               </div>
 
@@ -163,7 +163,7 @@
                       <label class="col-form-label">Tanggal Lahir</label>
                     </div>
                     <div class="col-md-7">
-                      <input class="form-control" type="date" name="v_03" id="v_03">
+                      <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
                     </div>
                   </div>
                 </div>
@@ -173,7 +173,7 @@
                       <label class="col-form-label">Umur</label>
                     </div>
                     <div class="col-md-9">
-                      <input class="form-control" type="text" name="v_04" id="v_04">
+                      <input class="form-control" type="text" name="ageyear " id="ageyear " readonly>
                     </div>
                   </div>
                 </div>
@@ -200,7 +200,7 @@
                   <label class="col-form-label">Alamat</label>
                 </div>
                 <div class="col-md-9">
-                  <textarea class="form-control" name="v_05" id="v_05" cols="6" rows="2"></textarea>
+                  <textarea class="form-control" name="theaddress " id="theaddress " cols="6" rows="2" readonly></textarea>
                 </div>
               </div>
 
@@ -247,8 +247,6 @@
                   </div>
                 </div>
               </div>
-
-
             </form>
           </div>
   </div>
@@ -353,7 +351,7 @@
           <td>Indikasi Tindakan</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" id="v_15" name="v_15">
+              <input class="form-control" type="text" id="t_15" name="t_15">
             </div>
           </td>
           <td>
@@ -491,7 +489,9 @@
           </p>
         </td>
         <td>
-          <p class="text-center" width="15%">Tanda Tangan</p>
+          <p class="text-center" width="15%">
+            Tanda Tangan
+          </p>
           <div id="sig1"></div>
         </td>
       </tr>
@@ -510,27 +510,20 @@
       </tr>
       <tr>
         <td>
-          <?php
-          if ($v_02 == $t_02) {
-          ?>
-            <p>
-              Yang bertanda tangan dibawah ini, Saya, nama "<?= $v_02; ?>" umur "<?= $v_04; ?>" tahun, "<?= $t_01; ?>",
-              alamat "<?= $v_05; ?>" dengan ini menyatakan penolakan untuk dilakukannya tindakan "<?= $v_15; ?>" terhadap saya
-            </p><br>
-          <?php } else { ?>
-
-            <p>
-              Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_34" id="v_34"> umur <input type="text" name="v_35" id="v_35"> tahun,
-              <input type="radio" class="form-check-input" name="t_01" value="laki">
-              <label>Laki-laki</label>
-              <input type="radio" class="form-check-input" name="t_01" value="perempuan">
-              <label>Perempuan</label>,
-              alamat <input type="text" name="v_35" id="v_35"> dengan ini menyatakan penolakan
-              untuk dilakukannya tindakan "<?= $v_15; ?>" terhadap<input type="text" name="v_36" id="v_36"> saya
-              bernama "<?= $v_02; ?>" umur "<?= $v_04; ?>" tahun, "<?= $t_01; ?>", alamat "<?= $v_05; ?>"
-
-            </p>
-          <?php }; ?>
+          <p>
+            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_19" id="v_19" readonly> umur <input type="text" name="v_20" id="v_20" readonly> tahun, <input type="text" name="v_21" id="v_21" readonly>,
+            alamat <input type="text" name="v_22" id="v_22" readonly> dengan ini menyatakan persetujuan untuk dilakukannya tindakan <input type="text" name="v_23" id="v_23" readonly> terhadap saya
+          </p><br>
+          <p>
+            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_24" id="v_24" readonly> umur <input type="text" name="v_25" id="v_25" readonly> tahun,
+            <input type="radio" class="form-check-input" name="t_013" value="laki">
+            <label>Laki-laki</label>
+            <input type="radio" class="form-check-input" name="t_013" value="perempuan">
+            <label>Perempuan</label>,
+            alamat <input type="text" name="v_26" id="v_26" readonly> dengan ini menyatakan persetujuan
+            untuk dilakukannya tindakan <input type="text" name="v_27" id="v_27" readonly> terhadap<input type="text" name="v_28" id="v_28" readonly> saya
+            bernama <input type="text" name="v_29" id="v_29" readonly> umur <input type="text" name="v_30" id="v_30" readonly> tahun, <input type="text" name="v_31" id="v_31" readonly>, alamat <input type="text" name="v_32" id="v_32" readonly>
+          </p>
         </td>
       </tr>
       <tr>
@@ -546,7 +539,7 @@
     <div class="container mt-5">
       <table class="table text-center">
         <tr>
-          <p>Bengkulu, <input type="datetime-local" name="v_19" id="v_19"></p>
+          <p>Bengkulu, <input type="datetime-local" name="v_33" id="v_33"></p>
         </tr>
         <tr>
           <td>Yang Menyatakan</td>
@@ -570,16 +563,16 @@
         </tr>
         <tr>
           <td>
-            <input type="text" name="v_20" id="v_20">
+            <input type="text" name="v_34" id="v_34">
           </td>
           <td>
-            <input type="text" name="v_21" id="v_21">
+            <input type="text" name="v_35" id="v_35">
           </td>
           <td>
-            <input type="text" name="v_22" id="v_22">
+            <input type="text" name="v_36" id="v_36">
           </td>
           <td>
-            <input type="text" name="v_23" id="v_23">
+            <input type="text" name="v_37" id="v_37">
           </td>
         </tr>
       </table>
