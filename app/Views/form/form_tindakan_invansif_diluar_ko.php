@@ -157,7 +157,7 @@
                                     <label class="col-form-label">Ruangan</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="v_05" id="v_05">
+                                    <input class="form-control" type="text" name="v_05" id="v_05" readonly>
                                 </div>
                             </div>
 

@@ -202,7 +202,7 @@
         <table class="table text">
             <tr>
                 <td width="5%" align="right">
-                    <img src="aset/logo.jpeg" width="65px">
+                    <img src="<?= base_url('assets/logo.jpeg') ?>" width="65px">
                 </td>
                 <td width="60%" colspan="4">
                     <h5>RSUD Dr. M. Yunus Bengkulu </h5>
