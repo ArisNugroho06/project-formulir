@@ -26,11 +26,11 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => '',
-        'password'     => '',
-        'database'     => '',
-        'DBDriver'     => 'MySQLi',
+        'hostname'     => 'DELL-04\MSSQLSERVER02',
+        'username'     => 'sa',
+        'password'     => '12345',
+        'database'     => 'db_contoh',
+        'DBDriver'     => 'sqlsrv',
         'DBPrefix'     => '',
         'pConnect'     => false,
         'DBDebug'      => true,
@@ -41,7 +41,7 @@ class Database extends Config
         'compress'     => false,
         'strictOn'     => false,
         'failover'     => [],
-        'port'         => 3306,
+        'port'         => 1433, //3306
         'numberNative' => false,
     ];
 

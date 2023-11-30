@@ -172,7 +172,7 @@
                       <label class="col-form-label">Umur</label>
                     </div>
                     <div class="col-md-9">
-                      <input class="form-control" type="text" name="ageyea " id="ageyea " readonly>
+                      <input class="form-control" type="text" name="ageyear " id="ageyear" readonly>
                     </div>
                   </div>
                 </div>

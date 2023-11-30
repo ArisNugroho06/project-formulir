@@ -61,10 +61,13 @@
 
     <main class="container">
         <?= $this->renderSection('content') ?>
+
+
+
     </main>
 
 
-    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="<?= base_url('bootstrap-5.0.2-dist/js/bootstrap.min.js') ?>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="<?= base_url('jquery-3.7.1.min.js') ?>"></script>
 
 </body>
