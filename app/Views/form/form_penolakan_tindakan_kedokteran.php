@@ -184,11 +184,11 @@
                 </div>
                 <div class="col-md-10">
                   <div class="form-check-inline">
-                    <input type="radio" class="form-check-input" name="t_01" value="laki">
+                    <input type="radio" class="form-check-input" name="gender" value="laki">
                     <label>Laki-laki</label>
                   </div>
                   <div class="form-check-inline">
-                    <input type="radio" class="form-check-input" name="t_01" value="perempuan">
+                    <input type="radio" class="form-check-input" name="gender" value="perempuan">
                     <label>Perempuan</label>
                   </div>
                 </div>
@@ -222,7 +222,6 @@
                   <input class="form-control" type="text" name="v_07" id="v_07">
                 </div>
               </div>
-
 
               <div class="row">
                 <div class="col-md-7">

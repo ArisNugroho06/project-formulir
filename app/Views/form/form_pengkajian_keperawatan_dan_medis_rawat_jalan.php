@@ -171,10 +171,11 @@
             $(function f5() {
                 $("input[name='t_06']").click(function f5() {
                     if ($("#t_06_ada").is(":checked")) {
-                        $("#v_81, #v_82, #v_83").removeAttr("disabled");
+                        $("#Riwayat_alergi").removeAttr("disabled");
+                        $("#Riwayat_alergi").focus();
                     } else {
-                        $("#v_81, #v_82, #v_83").attr("disabled", true);
-                        $("#v_81, #v_82, #v_83").val("");
+                        $("#Riwayat_alergi").attr("disabled", true);
+                        $("#Riwayat_alergi").val("");
                     }
                 });
             });
@@ -237,7 +238,7 @@
                                 <label>Tanggal Lahir</label>
                             </div>
                             <div class="col-7">
-                                <input class="form-control" type="date" name="v_03" id="v_03" readonly>
+                                <input class="form-control" type="date" name="date_of_birthx" id="date_of_birthx" readonly>
                             </div>
                         </div>
                         <div class="row">
@@ -601,7 +602,7 @@
                             <label class="col-form-label">Keluhan Utama</label>
                         </div>
                         <div class="col-md-9">
-                            <textarea class="form-control" name="v_11" id="v_11" cols="5" rows="2"></textarea>
+                            <textarea class="form-control" name="anamnase" id="anamnase" cols="5" rows="2"></textarea>
                         </div>
                     </div>
                     <div class="row align-items-center">
@@ -683,27 +684,8 @@
                                 <label for="t_06_ada">Ada, Sebutkan</label>
                             </div>
                             <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <label class="col-form-label">1</label>
-                                </div>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_81" id="v_81" disabled="disabled">
-                                </div>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <label class="col-form-label">2</label>
-                                </div>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_82" id="v_82" disabled="disabled">
-                                </div>
-                            </div>
-                            <div class="row align-items-center">
-                                <div class="col-md-1">
-                                    <label class="col-form-label">3</label>
-                                </div>
-                                <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_83" id="v_83" disabled="disabled">
+                                <div class="col-md-10">
+                                    <textarea class="form-control" name="Riwayat_alergi" id="Riwayat_alergi" cols="10" rows="4" disabled="disabled"></textarea>
                                 </div>
                             </div>
                         </div>

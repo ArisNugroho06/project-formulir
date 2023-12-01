@@ -115,7 +115,7 @@
                                 <label>Tanggal Lahir</label>
                             </div>
                             <div class="col-7">
-                                <input class="form-control" type="date" name="v_03" id="v_03" readonly>
+                                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
                             </div>
                         </div>
                         <div class="row">

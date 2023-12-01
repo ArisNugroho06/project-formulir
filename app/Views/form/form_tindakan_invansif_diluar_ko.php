@@ -40,7 +40,6 @@
             });
         });
     </script>
-
     <script>
         $(function() {
             var sig = $('#sig1').signature();
@@ -54,7 +53,6 @@
             });
         });
     </script>
-
     <script>
         $(function() {
             var sig = $('#sig2').signature();
@@ -68,7 +66,6 @@
             });
         });
     </script>
-
 </head>
 
 <body>
@@ -100,7 +97,6 @@
                                     <input class="form-control" type="text" name="no_Registration " id="no_Registration " readonly>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="row align-items-center">

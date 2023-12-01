@@ -185,11 +185,11 @@
                 </div>
                 <div class="col-md-9">
                   <div class="form-check-inline">
-                    <input type="radio" class="form-check-input" name="t_01" value="laki">
+                    <input type="radio" class="form-check-input" name="gender" value="laki">
                     <label>Laki-laki</label>
                   </div>
                   <div class="form-check-inline">
-                    <input type="radio" class="form-check-input" name="t_01" value="perempuan">
+                    <input type="radio" class="form-check-input" name="gender" value="perempuan">
                     <label>Perempuan</label>
                   </div>
                 </div>

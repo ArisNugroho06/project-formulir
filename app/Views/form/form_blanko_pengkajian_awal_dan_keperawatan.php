@@ -453,8 +453,8 @@ foreach ($query->getResult() as $row) {
                     $("#t_034_fisik").prop("checked", false);
                     $("#t_034_lainnya").attr("disabled", true);
                     $("#t_034_lainnya").prop("checked", false);
-                    $("#v_58").attr("disabled", true);
-                    $("#v_58").val("");
+                    $("#v_59").attr("disabled", true);
+                    $("#v_59").val("");
                 }
             });
         });
@@ -606,11 +606,11 @@ foreach ($query->getResult() as $row) {
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <label class="form-label">Tempat</label>
-                            <input type="text" class="form-control" name="v_04" id="v_04" readonly>
+                            <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" readonly>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Tanggal Lahir</label>
-                            <input type="date" class="form-control" name="v_05" id="v_05" readonly>
+                            <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" readonly>
                         </div>
                     </div>
                 </td>
@@ -628,19 +628,19 @@ foreach ($query->getResult() as $row) {
                 </td>
                 <td colspan="2" align="center">
                     <label class="form-label">Status Perkawinan</label>
-                    <input type="text" class="form-control" name="v_07" id="v_07" readonly>
+                    <input type="text" class="form-control" name="maritalstatusid" id="maritalstatusid" readonly>
                 </td>
                 <td align="center">
                     <label class="form-label">Pekerjaan</label>
-                    <input type="text" class="form-control" name="v_08" id="v_08" readonly>
+                    <input type="text" class="form-control" name="job_id" id="job_id" readonly>
                 </td>
                 <td align="center">
                     <label class="form-label">Agama</label>
-                    <input type="text" class="form-control" name="v_09" id="v_09" readonly>
+                    <input type="text" class="form-control" name="kode_agama" id="kode_agama" readonly>
                 </td>
                 <td align="center">
                     <label class="form-label">Suku Bangsa</label>
-                    <input type="text" class="form-control" name="v_10" id="v_10" readonly>
+                    <input type="text" class="form-control" name="nation_id" id="nation_id" readonly>
                 </td>
             </tr>
             <tr>
@@ -679,17 +679,17 @@ foreach ($query->getResult() as $row) {
                             <label class="col-form-label">Nama Ayah</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="v_14" id="v_14" readonly>
+                            <input class="form-control" type="text" name="father" id="father" readonly>
                         </div>
                     </div>
                 </td>
                 <td colspan="2" align="center">
                     <label class="form-label">Nama Ibu</label>
-                    <input type="text" class="form-control" name="v_15" id="v_15" readonly>
+                    <input type="text" class="form-control" name="mother" id="mother" readonly>
                 </td>
                 <td colspan="3" align="center">
                     <label class="form-label">Mulai Tanggal Berobat</label>
-                    <input type="date" class="form-control" name="v_16" id="v_16" readonly>
+                    <input type="date" class="form-control" name="visit_date" id="visit_date" readonly>
                 </td>
             </tr>
         </table>
@@ -701,18 +701,10 @@ foreach ($query->getResult() as $row) {
                 <td width="25%">
                     <div class="row align-items-center">
                         <div class="col-md-5">
-                            <label class="col-form-label">Tanggal </label>
+                            <label class="col-form-label">Tanggal dan Jam Datang Pasien</label>
                         </div>
                         <div class="col-md-7">
-                            <input class="form-control" type="date" name="v_17" id="v_17" readonly>
-                        </div>
-                    </div>
-                    <div class="row align-items-center">
-                        <div class="col-md-5">
-                            <label class="col-form-label">Jam Datang Pasien</label>
-                        </div>
-                        <div class="col-md-7">
-                            <input class="form-control" type="time" name="v_18" id="v_18" readonly>
+                            <input class="form-control" type="time" name="examination_date" id="examination_date" readonly>
                         </div>
                     </div>
                 </td>
@@ -751,7 +743,7 @@ foreach ($query->getResult() as $row) {
                             <label class="col-form-label">Rujukan</label>
                         </div>
                         <div class="col-md-6">
-                            <input class="form-control" type="text" id="v_13" name="v_13" readonly>
+                            <input class="form-control" type="text" id="ppkrujukan" name="ppkrujukan" readonly>
                         </div>
                     </div>
                     <!-- <p>Rujukan</p> -->
@@ -801,7 +793,7 @@ foreach ($query->getResult() as $row) {
                             <label class="col-form-label">Diagnosa Rujukan</label>
                         </div>
                         <div class="col-md-6">
-                            <input class="form-control" type="text" name="v_22" id="v_22" readonly>
+                            <input class="form-control" type="text" name="conclusion" id="conclusion" readonly>
                         </div>
                     </div>
                     <!-- </div>
