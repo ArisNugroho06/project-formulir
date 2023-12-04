@@ -2,12 +2,29 @@
 
 namespace App\Controllers;
 
+use CodeIgniter\Controller;
+use App\Models\Assessment_model;
+
 class Formulir extends BaseController
 {
 
+    protected $mdata;
+
+    public function __construct()
+    {
+        $this->mdata = new Assessment_model();
+    }
+
     public function formptk(): string
     {
-        return view('form/form_penolakan_tindakan_kedokteran');
+
+        $tampildata =  $this->mdata->tampildata();
+
+        $info = array(
+            'dataAssessmentformptk' => $tampildata,
+        );
+
+        return view('form/form_penolakan_tindakan_kedokteran', $info);
     }
 
     public function formpsa(): string

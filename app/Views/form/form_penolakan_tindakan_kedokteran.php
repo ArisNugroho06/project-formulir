@@ -1,3 +1,14 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformptk as $row) {
+  echo $row->BODY_ID;
+  echo $row->ORG_UNIT_CODE;
+  echo $row->NO_REGISTRATION;
+  echo $row->VISIT_ID;
+};
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -138,35 +149,35 @@
           <div class="col">
             <form>
               <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <label class="col-form-label">No RM</label>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8">
                   <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
                 </div>
               </div>
 
               <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <label class="col-form-label">Nama Lengkap</label>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8">
                   <input class="form-control" type="text" name="thename" id="thename" readonly>
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-8">
                   <div class="row align-items-center">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <label class="col-form-label">Tanggal Lahir</label>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                       <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" readonly>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                   <div class="row align-items-center">
                     <div class="col-md-3">
                       <label class="col-form-label">Umur</label>
@@ -179,10 +190,10 @@
               </div>
 
               <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <label class="col-form-label">Jenis Kelamin</label>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8">
                   <div class="form-check-inline">
                     <input type="radio" class="form-check-input" name="gender" value="laki">
                     <label>Laki-laki</label>
@@ -195,19 +206,19 @@
               </div>
 
               <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <label class="col-form-label">Alamat</label>
                 </div>
-                <div class="col-md-10">
-                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly></textarea>
+                <div class="col-md-8">
+                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="4" readonly></textarea>
                 </div>
               </div>
 
               <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <label class="col-form-label">Dokter Penanggung Jawab Pasien</label>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8">
                   <input class="form-control" type="text" name="v_06" id="v_06">
                 </div>
               </div>
@@ -215,26 +226,26 @@
               <hr>
 
               <div class="row align-items-center">
-                <div class="col-md-2">
+                <div class="col-md-4">
                   <label class="col-form-label">Ruangan</label>
                 </div>
-                <div class="col-md-10">
+                <div class="col-md-8">
                   <input class="form-control" type="text" name="v_07" id="v_07">
                 </div>
               </div>
 
               <div class="row">
-                <div class="col-md-7">
+                <div class="col-md-8">
                   <div class="row align-items-center">
-                    <div class="col-md-4">
+                    <div class="col-md-6">
                       <label class="col-form-label">Tanggal</label>
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-6">
                       <input class="form-control" type="date" name="v_08" id="v_08">
                     </div>
                   </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                   <div class="row align-items-center">
                     <div class="col-md-3">
                       <label class="col-form-label">Pukul</label>

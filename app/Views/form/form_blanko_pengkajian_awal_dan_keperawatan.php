@@ -1,15 +1,3 @@
-<?php
-$db = db_connect();
-
-$query = $db->query("SELECT * FROM db_contoh");
-
-foreach ($query->getResult() as $row) {
-    echo $row->DATAID;
-    echo $row->NAMA;
-};
-?>
-
-
 <!doctype html>
 <html lang="en">
 

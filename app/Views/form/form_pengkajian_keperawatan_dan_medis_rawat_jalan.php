@@ -935,7 +935,7 @@
                         </tr>
                         <tr>
                             <td>Status Lokalis</td>
-                            <td><input class="form-control" type="text" name="v_54" id="v_54"></td>
+                            <td><input class="form-control" type="text" name="lokalis" id="lokalis"></td>
                         </tr>
 
                     </table>
@@ -943,7 +943,7 @@
                     <h6>STATUS LOKALIS</h6>
                     <table class="table table-bordered" style="border: 2px solid black">
                         <tr>
-                            <td><textarea class="form-control" name="v_55" id="v_55" cols="6" rows="5"></textarea></td>
+                            <td><textarea class="form-control" name="lokalis" id="lokalis" cols="6" rows="5"></textarea></td>
                         </tr>
                     </table>
 
