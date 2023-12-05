@@ -2,17 +2,12 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 
     <title>PENGKAJIAN KEPERAWATAN DAN MEDIS RAWAT JALAN/title>
 
@@ -26,12 +21,38 @@
                 height: 75px;
             }
         </style>
-        <!--[if IE]>
-    <script src="excanvas.js"></script>
-    <![endif]-->
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
         <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
+
+        <script>
+            $(function() {
+                var sig = $('#sig').signature();
+                $('#disable').click(function() {
+                    var disable = $(this).text() === 'Disable';
+                    $(this).text(disable ? 'Enable' : 'Disable');
+                    sig.signature(disable ? 'disable' : 'enable');
+                });
+                $('#clear').click(function() {
+                    sig.signature('clear');
+                });
+            });
+        </script>
+
+        <script>
+            $(function() {
+                var sig = $('#sig1').signature();
+                $('#disable').click(function() {
+                    var disable = $(this).text() === 'Disable';
+                    $(this).text(disable ? 'Enable' : 'Disable');
+                    sig.signature(disable ? 'disable' : 'enable');
+                });
+                $('#clear').click(function() {
+                    sig.signature('clear');
+                });
+            });
+        </script>
 
         <script type="text/javascript">
             var i = 18;
@@ -80,37 +101,6 @@
         <script>
             $("#temperature, #weight, #height").keydown(function(e) {
                 !0 == e.shiftKey && e.preventDefault(), e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105 || 8 == e.keyCode || 9 == e.keyCode || 37 == e.keyCode || 39 == e.keyCode || 46 == e.keyCode || 190 == e.keyCode || e.preventDefault(), -1 !== $(this).val().indexOf(".") && 190 == e.keyCode && e.preventDefault()
-            });
-        </script>
-
-
-
-
-        <script>
-            $(function() {
-                var sig = $('#sig').signature();
-                $('#disable').click(function() {
-                    var disable = $(this).text() === 'Disable';
-                    $(this).text(disable ? 'Enable' : 'Disable');
-                    sig.signature(disable ? 'disable' : 'enable');
-                });
-                $('#clear').click(function() {
-                    sig.signature('clear');
-                });
-            });
-        </script>
-
-        <script>
-            $(function() {
-                var sig = $('#sig1').signature();
-                $('#disable').click(function() {
-                    var disable = $(this).text() === 'Disable';
-                    $(this).text(disable ? 'Enable' : 'Disable');
-                    sig.signature(disable ? 'disable' : 'enable');
-                });
-                $('#clear').click(function() {
-                    sig.signature('clear');
-                });
             });
         </script>
 

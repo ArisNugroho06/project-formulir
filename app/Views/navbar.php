@@ -7,27 +7,6 @@
 
         <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formptk') ?>">Form 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formpsa') ?>">Form 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formpta') ?>">Form 3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formtidk') ?>">Form 4</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formbpak') ?>">Form 5</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formpkmrj') ?>">Form 6</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="<?= site_url('formulir/formcpptrj') ?>">Form 7</a>
-                </li>
             </ul>
         </div>
     </div>

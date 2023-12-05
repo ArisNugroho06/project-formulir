@@ -1,14 +1,3 @@
-<?php
-$db = db_connect();
-
-foreach ($dataAssessmentformptk as $row) {
-  echo $row->BODY_ID;
-  echo $row->ORG_UNIT_CODE;
-  echo $row->NO_REGISTRATION;
-  echo $row->VISIT_ID;
-};
-?>
-
 <!doctype html>
 <html lang="en">
 

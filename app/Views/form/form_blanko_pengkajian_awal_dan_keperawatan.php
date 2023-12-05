@@ -1,3 +1,10 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentformptk as $row) {
+};
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -552,7 +559,7 @@
                             <h6><label class="col-form-label">Nomor RM</label></h6>
                         </div>
                         <div class="col-md-7">
-                            <input class="form-control" type="text" name="no_Registration" id="no_Registration" readonly>
+                            <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -572,13 +579,13 @@
                             <label class="col-form-label">Nama</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="thename" id="thename" readonly>
+                            <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
                         </div>
                     </div>
                 </td>
                 <td width="15%" align="center">
                     <label class="form-label">Jenis Kelamin</label>
-                    <input class="form-control" type="text" name="gender" id="gender" readonly>
+                    <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $row->GENDER; ?>" readonly>
 
                     <!-- <select class="form-control" name="t_01">
                             <option selected>Pilih</option> 
@@ -588,7 +595,7 @@
                 </td>
                 <td width="15%" align="center">
                     <label class="form-label">Umur</label>
-                    <input type="text" class="form-control" name="ageyear" id="ageyear" readonly>
+                    <input type="text" class="form-control" name="ageyear" id="ageyear" value="<?php echo $row->AGEYEAR . 't  ' .  $row->AGEMONTH . 'b  ' . $row->AGEDAY . 'h'; ?>" readonly>
                 </td>
                 <td colspan="3" width="30%" align="center">
                     <div class="row align-items-center">
@@ -610,7 +617,7 @@
                             <label class="col-form-label">Alamat</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="theaddress" id="theaddress" readonly>
+                            <input class="form-control" type="text" name="theaddress" id="theaddress" value="<?php echo $row->THEADDRESS; ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -686,13 +693,13 @@
     <div class="container">
         <table class="table table-bordered" style="border:2px solid black">
             <tr>
-                <td width="25%">
+                <td width="40%">
                     <div class="row align-items-center">
-                        <div class="col-md-5">
+                        <div class="col-md-4">
                             <label class="col-form-label">Tanggal dan Jam Datang Pasien</label>
                         </div>
-                        <div class="col-md-7">
-                            <input class="form-control" type="time" name="examination_date" id="examination_date" readonly>
+                        <div class="col-md-8">
+                            <input class="form-control" type="time" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE; ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -724,13 +731,13 @@
                         </div>
                     </div>
                 </td>
-                <td width="50%">
+                <td width="35%">
                     <!-- <div class="row align-items-center"> -->
                     <div class="row align-items-center">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label class="col-form-label">Rujukan</label>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <input class="form-control" type="text" id="ppkrujukan" name="ppkrujukan" readonly>
                         </div>
                     </div>
@@ -748,7 +755,7 @@
                                             <input class="form-check-input" type="radio" id="t_05_ya" name="t_05">
                                         </div> 
                                     </div>
-                                    <div class="col-4">
+                                    <div class="col-3">
                                         <div class="form-check">
                                     <div class="row align-items-center">
                                         <div class="col-md-3">
@@ -777,10 +784,10 @@
                                     </div>
                                 </div>  -->
                     <div class="row align-items-center">
-                        <div class="col-md-4">
+                        <div class="col-md-3">
                             <label class="col-form-label">Diagnosa Rujukan</label>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-9">
                             <input class="form-control" type="text" name="conclusion" id="conclusion" readonly>
                         </div>
                     </div>
@@ -798,7 +805,7 @@
                             <strong><label class="col-form-label"> POLIKLINIK</label></strong>
                         </div>
                         <div class="col-md-3">
-                            <input class="form-control" type="text" name="clinic_id" id="clinic_id" readonly>
+                            <input class="form-control" type="text" name="clinic_id" id="clinic_id" value="<?php echo $row->CLINIC_ID; ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -875,7 +882,7 @@
 
                     <div class="container">
                         <h6><label class="col-form-label">1. KELUHAN UTAMA : </label></h6>
-                        <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="2" readonly></textarea>
+                        <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="3" value="<?php echo $row->ANAMNASE; ?>" readonly></textarea>
 
                         <h6><label class="col-form-label">2. PEMERIKSAAN FISIK</label></h6>
                         <div class="row align-items-center">

@@ -24,7 +24,8 @@ class Formulir extends BaseController
             'dataAssessmentformptk' => $tampildata,
         );
 
-        return view('form/form_penolakan_tindakan_kedokteran', $info);
+
+        return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $info);
     }
 
     public function formpsa(): string
@@ -44,7 +45,7 @@ class Formulir extends BaseController
 
     public function formbpak(): string
     {
-        return view('form/form_blanko_pengkajian_awal_dan_keperawatan');
+        return view('form/form_penolakan_tindakan_kedokteran');
     }
 
     public function formpkmrj(): string
