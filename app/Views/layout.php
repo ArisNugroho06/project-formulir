@@ -47,32 +47,36 @@
 
     <?= $this->include('navbar') ?>
 
-    <div class="container">
+
+    <div class="container" style="margin: 0 auto;">
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
-                        <h5 class="card-title">Formulir Pengkajian Awal dan Keperawatan</h5>
+                        <h5 class="card-title">Formulir Penolakan Tindakan kedokteran</h5>
+                        <br>
                         <a href="<?= site_url('formulir/formptk') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Persetujuan Tindakan Anestesi Lokal</h5>
-                        <a href="<?= site_url('formulir/formpta') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <br>
+                        <a href="<?= site_url('formulir/formpsa') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Penolakan Tindakan Anestesi Lokal</h5>
+                        <br>
                         <a href="<?= site_url('formulir/formpta') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
@@ -82,18 +86,20 @@
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
-                        <h5 class="card-title">Formulir Penolakan Tindakan kedokteran</h5>
+                        <h5 class="card-title">Formulir Pengkajian Awal dan Keperawatan</h5>
+                        <br>
                         <a href="<?= site_url('formulir/formbpak') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Tindakan Invasif Di Luar Kamar Operasi</h5>
+                        <br>
                         <a href="<?= site_url('formulir/formtidk') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
@@ -101,9 +107,10 @@
 
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan</h5>
+                        <br>
                         <a href="<?= site_url('formulir/formpkmrj') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
@@ -113,15 +120,17 @@
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form1.jpg') ?>" class="card-img-top" width="50px">
+                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</h5>
+                        <br>
                         <a href="<?= site_url('formulir/formcpptrj') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 
     <?= $this->renderSection('content') ?>
 

@@ -1,3 +1,10 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmentpkmrj as $row) {
+};
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -190,6 +197,10 @@
 <body>
 
     <div class="container mt-5">
+        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    </div>
+
+    <div class="container mt-5">
         <table class="table text">
             <tr>
                 <td width="5%" align="right">
@@ -212,7 +223,7 @@
                                 <label>No.RM</label>
                             </div>
                             <div class="col-7">
-                                <input class="form-control" type="text" name="no_Registration " id="no_Registration " readonly>
+                                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                             </div>
                         </div>
                         <div class="row">
@@ -220,7 +231,7 @@
                                 <label>Nama Lengkap</label>
                             </div>
                             <div class="col-7">
-                                <input class="form-control" type="text" name="thename " id="thename " readonly>
+                                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
                             </div>
                         </div>
                         <div class="row">
@@ -228,7 +239,7 @@
                                 <label>Tanggal Lahir</label>
                             </div>
                             <div class="col-7">
-                                <input class="form-control" type="date" name="date_of_birthx" id="date_of_birthx" readonly>
+                                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
                             </div>
                         </div>
                         <div class="row">
@@ -236,7 +247,7 @@
                                 <label>NIK</label>
                             </div>
                             <div class="col-7">
-                                <input class="form-control" type="text" name="thenik" id="thenik" readonly>
+                                <input class="form-control" type="text" name="thenik" id="thenik" value="<?php echo $row->THENIK; ?>" readonly>
                             </div>
                         </div>
                     </div>
@@ -1040,6 +1051,10 @@
             </tr>
 
         </table>
+
+        <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-primary" type="button">Simpan</button>
+        </div>
 
     </div>
 

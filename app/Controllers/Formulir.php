@@ -18,43 +18,94 @@ class Formulir extends BaseController
     public function formptk(): string
     {
 
+        $tampilptk =  $this->mdata->tampildata();
+
+        $infoptk = array(
+            'dataAssessmentptk' => $tampilptk,
+        );
+
+        return view('form/form_penolakan_tindakan_kedokteran', $infoptk);
+    }
+
+    public function formpsa(): string
+    {
+
+        $tampilpsa =  $this->mdata->tampildata();
+
+        $infopsa = array(
+            'dataAssessmentpsa' => $tampilpsa,
+        );
+
+        return view('form/form_persetujuan_anestesi', $infopsa);
+    }
+
+    public function formpta(): string
+    {
+        $tampilpta =  $this->mdata->tampildata();
+
+        $infopta = array(
+            'dataAssessmentpta' => $tampilpta,
+        );
+
+        return view('form/form_penolakan_anestesi', $infopta);
+    }
+
+    public function formtidk(): string
+    {
+
+        $tampiltidk =  $this->mdata->tampildata();
+
+        $infotidk = array(
+            'dataAssessmenttidk' => $tampiltidk,
+        );
+
+
+        return view('form/form_tindakan_invansif_diluar_ko', $infotidk);
+    }
+
+    public function formbpak(): string
+    {
+
         $tampildata =  $this->mdata->tampildata();
 
         $info = array(
             'dataAssessmentformptk' => $tampildata,
         );
 
-
         return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $info);
-    }
-
-    public function formpsa(): string
-    {
-        return view('form/form_persetujuan_anestesi');
-    }
-
-    public function formpta(): string
-    {
-        return view('form/form_penolakan_anestesi');
-    }
-
-    public function formtidk(): string
-    {
-        return view('form/form_tindakan_invansif_diluar_ko');
-    }
-
-    public function formbpak(): string
-    {
-        return view('form/form_penolakan_tindakan_kedokteran');
     }
 
     public function formpkmrj(): string
     {
-        return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan');
+
+        $tampilpkmrj =  $this->mdata->tampildata();
+
+        $infopkmrj = array(
+            'dataAssessmentpkmrj' => $tampilpkmrj,
+        );
+
+
+        return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan', $infopkmrj);
     }
 
     public function formcpptrj(): string
     {
-        return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan');
+
+        $tampilcpptrj =  $this->mdata->tampildata();
+
+        $infocpptrj = array(
+            'dataAssessmentcpptrj' => $tampilcpptrj,
+        );
+
+
+        return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $infocpptrj);
+    }
+
+
+    public function add()
+    {
+        $data['data'] = $this->mdata->tambahdata();
+
+        return redirect()->to('/home/index');
     }
 }

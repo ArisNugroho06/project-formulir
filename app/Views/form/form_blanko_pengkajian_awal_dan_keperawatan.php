@@ -5,6 +5,8 @@ foreach ($dataAssessmentformptk as $row) {
 };
 ?>
 
+
+
 <!doctype html>
 <html lang="en">
 
@@ -540,6 +542,10 @@ foreach ($dataAssessmentformptk as $row) {
 <body>
 
     <div class="container mt-5">
+        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    </div>
+
+    <div class="container mt-5">
         <table class="table text">
             <tr>
                 <td width="5%" align="right">
@@ -601,11 +607,11 @@ foreach ($dataAssessmentformptk as $row) {
                     <div class="row align-items-center">
                         <div class="col-md-6">
                             <label class="form-label">Tempat</label>
-                            <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" readonly>
+                            <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" value="<?php echo $row->PLACE_OF_BIRTH; ?>" readonly>
                         </div>
                         <div class="col-md-6">
                             <label class="form-label">Tanggal Lahir</label>
-                            <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" readonly>
+                            <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -617,25 +623,25 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Alamat</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="theaddress" id="theaddress" value="<?php echo $row->THEADDRESS; ?>" readonly>
+                            <textarea class="form-control" type="text" rows="2" cols="6" name="theaddress" id="theaddress" readonly><?php echo $row->THEADDRESS; ?></textarea>
                         </div>
                     </div>
                 </td>
                 <td colspan="2" align="center">
                     <label class="form-label">Status Perkawinan</label>
-                    <input type="text" class="form-control" name="maritalstatusid" id="maritalstatusid" readonly>
+                    <input type="text" class="form-control" name="maritalstatusid" id="maritalstatusid" value="<?php echo $row->MARITALSTATUSID; ?>" readonly>
                 </td>
                 <td align="center">
                     <label class="form-label">Pekerjaan</label>
-                    <input type="text" class="form-control" name="job_id" id="job_id" readonly>
+                    <input type="text" class="form-control" name="job_id" id="job_id" value="<?php echo $row->JOB_ID; ?>" readonly>
                 </td>
                 <td align="center">
                     <label class="form-label">Agama</label>
-                    <input type="text" class="form-control" name="kode_agama" id="kode_agama" readonly>
+                    <input type="text" class="form-control" name="kode_agama" id="kode_agama" value="<?php echo $row->KODE_AGAMA; ?>" readonly>
                 </td>
                 <td align="center">
                     <label class="form-label">Suku Bangsa</label>
-                    <input type="text" class="form-control" name="nation_id" id="nation_id" readonly>
+                    <input type="text" class="form-control" name="nation_id" id="nation_id" value="<?php echo $row->NATION_ID; ?>" readonly>
                 </td>
             </tr>
             <tr>
@@ -652,7 +658,7 @@ foreach ($dataAssessmentformptk as $row) {
                         <div class="col-md-8">
                             <div class="row align-items-center">
                                 <div class="col-md-12">
-                                    <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" readonly>
+                                    <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $row->ALLOANAMNESIS_CONTACT; ?>" readonly>
                                 </div>
                             </div>
                         </div>
@@ -660,11 +666,11 @@ foreach ($dataAssessmentformptk as $row) {
                 </td>
                 <td colspan="2" align="center">
                     <label class="form-label">Alamat</label>
-                    <input type="text" class="form-control" name="alloanamnesis_address" id="alloanamnesis_address" readonly>
+                    <textarea type="text" class="form-control" name="alloanamnesis_address" id="alloanamnesis_address" readonly><?php echo $row->ALLOANAMNESIS_ADDRESS; ?></textarea>
                 </td>
                 <td colspan="3" align="center">
                     <label class="form-label">Hubungan Keluarga</label>
-                    <input type="text" class="form-control" name="alloanamnesis_hub" id="alloanamnesis_hub" readonly>
+                    <input type="text" class="form-control" name="alloanamnesis_hub" id="alloanamnesis_hub" value="<?php echo $row->ALLOANAMNESIS_HUB; ?>" readonly>
                 </td>
             </tr>
             <tr>
@@ -674,17 +680,17 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Nama Ayah</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="father" id="father" readonly>
+                            <input class="form-control" type="text" name="father" id="father" value="<?php echo $row->FATHER; ?>" readonly>
                         </div>
                     </div>
                 </td>
                 <td colspan="2" align="center">
                     <label class="form-label">Nama Ibu</label>
-                    <input type="text" class="form-control" name="mother" id="mother" readonly>
+                    <input type="text" class="form-control" name="mother" id="mother" value="<?php echo $row->MOTHER; ?>" readonly>
                 </td>
                 <td colspan="3" align="center">
                     <label class="form-label">Mulai Tanggal Berobat</label>
-                    <input type="date" class="form-control" name="visit_date" id="visit_date" readonly>
+                    <input type="datetime-local" class="form-control" name="visit_date" id="visit_date" value="<?php echo $row->VISIT_DATE; ?>" readonly>
                 </td>
             </tr>
         </table>
@@ -699,7 +705,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Tanggal dan Jam Datang Pasien</label>
                         </div>
                         <div class="col-md-8">
-                            <input class="form-control" type="time" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE; ?>" readonly>
+                            <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE; ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -738,7 +744,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Rujukan</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" id="ppkrujukan" name="ppkrujukan" readonly>
+                            <input class="form-control" type="text" id="ppkrujukan" name="ppkrujukan" value="<?php echo $row->PPKRUJUKAN; ?>" readonly>
                         </div>
                     </div>
                     <!-- <p>Rujukan</p> -->
@@ -788,7 +794,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Diagnosa Rujukan</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="conclusion" id="conclusion" readonly>
+                            <input class="form-control" type="text" name="conclusion" id="conclusion" value="<?php echo $row->CONCLUSION; ?>" readonly>
                         </div>
                     </div>
                     <!-- </div>
@@ -882,7 +888,7 @@ foreach ($dataAssessmentformptk as $row) {
 
                     <div class="container">
                         <h6><label class="col-form-label">1. KELUHAN UTAMA : </label></h6>
-                        <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="3" value="<?php echo $row->ANAMNASE; ?>" readonly></textarea>
+                        <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="3" readonly><?php echo $row->ANAMNASE; ?></textarea>
 
                         <h6><label class="col-form-label">2. PEMERIKSAAN FISIK</label></h6>
                         <div class="row align-items-center">
@@ -1995,7 +2001,7 @@ foreach ($dataAssessmentformptk as $row) {
                                     <td></td>
                                     <td class="text-center"><strong>Total Skor</strong></td>
                                     <td>
-                                        <center><input class="text-center" type="text" size="7px" id="t_029" readonly /></center>
+                                        <center><input class="text-center" type="text" size="7px" id="t_029" readonly></center>
                                     </td>
                                     <td></td>
                                 </tr>
@@ -2423,6 +2429,10 @@ foreach ($dataAssessmentformptk as $row) {
                 </td>
             </tr>
         </table>
+
+        <div class="d-grid gap-2 mb-3">
+            <button class="btn btn-primary" type="button">Simpan</button>
+        </div>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

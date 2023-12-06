@@ -1,3 +1,10 @@
+<?php
+$db = db_connect();
+
+foreach ($dataAssessmenttidk as $row) {
+};
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -70,6 +77,9 @@
 
 <body>
 
+    <div class="container mt-5">
+        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    </div>
 
     <div class="container-fluid" style="text-align: center">
         <h4>RSUD Dr. M. YUNUS BENGKULU</h4>
@@ -94,7 +104,7 @@
                                     <label class="col-form-label">No. Rekam Medis</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="no_Registration " id="no_Registration " readonly>
+                                    <input class="form-control" type="text" name="no_Registration " id="no_Registration " value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -104,7 +114,7 @@
                                             <label class="col-form-label">Nama Lengkap</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="text" name="thename " id="thename " readonly>
+                                            <input class="form-control" type="text" name="thename " id="thename " value="<?php echo $row->THENAME; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -114,7 +124,7 @@
                                             <label class="col-form-label">Nama Keluarga</label>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" readonly>
+                                            <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $row->ALLOANAMNESIS_CONTACT; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -127,7 +137,7 @@
                                             <label class="col-form-label">Tgl. Lahir</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="date" name="v_04" id="v_04" readonly>
+                                            <input class="form-control" type="date" name="v_04" id="v_04" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +147,7 @@
                                             <label>Jenis Kelamin</label>
                                         </div>
                                         <div class="col-7">
-                                            <input class="form-control" type="text" name="gender" id="gender" readonly>
+                                            <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $row->GENDER; ?>" readonly>
                                             <!-- <select class="form-control" name="t_01">
                                                 <option selected>Pilih</option> 
                                                 <option value="1">L</option>
@@ -153,7 +163,7 @@
                                     <label class="col-form-label">Ruangan</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="v_05" id="v_05" readonly>
+                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
                                 </div>
                             </div>
 
@@ -176,7 +186,7 @@
         <table class="table table-bordered" style="border:1px solid black">
             <tr>
                 <td width="35%">
-                    <form>
+                    <form action="<?= site_url('formulir/add') ?>" method="post">
                         <div class="row align-items-center">
                             <div class="col-md-4">
                                 <label class="col-form-label">Nama Dokter</label>
@@ -1082,6 +1092,10 @@
                 </td>
             </tr>
         </table>
+
+        <div class="d-grid gap-2 mb-3">
+            <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+        </div>
     </div>
 
 
