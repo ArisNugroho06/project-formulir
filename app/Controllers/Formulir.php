@@ -3,6 +3,8 @@
 namespace App\Controllers;
 
 use CodeIgniter\Controller;
+
+//inisialisasi model yang akan digunakan
 use App\Models\Assessment_model;
 
 class Formulir extends BaseController
@@ -102,10 +104,10 @@ class Formulir extends BaseController
     }
 
 
-    public function add()
+    public function addaksi()
     {
         $data['data'] = $this->mdata->tambahdata();
 
-        return redirect()->to('/home/index');
+        return redirect()->to('home/index');
     }
 }
