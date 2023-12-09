@@ -88,68 +88,69 @@ foreach ($dataAssessmentcpptrj as $row) {
     </div>
 
     <div class="container mt-5">
-        <table class="table text">
-            <tr>
-                <td width="5%" align="right">
-                    <img src="<?= base_url('assets/logo.jpeg') ?>" width="65px">
-                </td>
-                <td width="60%">
-                    <h5>RSUD Dr. M. Yunus Bengkulu </h5>
-                    <h5>Badan Layanan Umum Daerah</h5>
-                    <strong>
-                        <p style="font-size:12px">Jl. Bhayangkara Bengkulu 38229 Telp. (0736) 52004 - 52006 Fax. (0736) 52007</p>
-                    </strong>
-                </td>
-                <td width="35%" rowspan="2">
-                    <h6>RM. 01 Lanjutan RAWAT JALAN</h6>
-                    <br>
+        <form action="<?= site_url('formulir/addaksi') ?>" method="post">
+            <table class="table text">
+                <tr>
+                    <td width="5%" align="right">
+                        <img src="<?= base_url('assets/logo.jpeg') ?>" width="65px">
+                    </td>
+                    <td width="60%">
+                        <h5>RSUD Dr. M. Yunus Bengkulu </h5>
+                        <h5>Badan Layanan Umum Daerah</h5>
+                        <strong>
+                            <p style="font-size:12px">Jl. Bhayangkara Bengkulu 38229 Telp. (0736) 52004 - 52006 Fax. (0736) 52007</p>
+                        </strong>
+                    </td>
+                    <td width="35%" rowspan="2">
+                        <h6>RM. 01 Lanjutan RAWAT JALAN</h6>
+                        <br>
 
-                    <div class="container" style="border:2px solid black; border-radius: 20px;">
+                        <div class="container" style="border:2px solid black; border-radius: 20px;">
+                            <div class="row">
+                                <div class="col-5">
+                                    <label>No.RM</label>
+                                </div>
+                                <div class="col-7">
+                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <label>Nama Lengkap</label>
+                                </div>
+                                <div class="col-7">
+                                    <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <label>Tanggal Lahir</label>
+                                </div>
+                                <div class="col-7">
+                                    <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5">
+                                    <label>NIK</label>
+                                </div>
+                                <div class="col-7">
+                                    <input class="form-control" type="text" name="thenik" id="thenik" value="<?php echo $row->THENIK; ?>" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
                         <div class="row">
-                            <div class="col-5">
-                                <label>No.RM</label>
+                            <div class="col-3">
+                                <h4><label>POLIKLINIK : </label></h4>
                             </div>
-                            <div class="col-7">
-                                <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Nama Lengkap</label>
-                            </div>
-                            <div class="col-7">
-                                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
+                            <div class="col-8">
+                                <input class="form-control" type="text" name="clinic_id" id="clinic_id" value="<?php echo $row->CLINIC_ID; ?>" readonly>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>Tanggal Lahir</label>
-                            </div>
-                            <div class="col-7">
-                                <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-5">
-                                <label>NIK</label>
-                            </div>
-                            <div class="col-7">
-                                <input class="form-control" type="text" name="thenik" id="thenik" value="<?php echo $row->THENIK; ?>" readonly>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td colspan="2">
-                    <div class="row">
-                        <div class="col-3">
-                            <h4><label>POLIKLINIK : </label></h4>
-                        </div>
-                        <div class="col-8">
-                            <input class="form-control" type="text" name="clinic_id" id="clinic_id" value="<?php echo $row->CLINIC_ID; ?>" readonly>
-                        </div>
-                    </div>
     </div>
     </td>
     </tr>
@@ -193,7 +194,7 @@ foreach ($dataAssessmentcpptrj as $row) {
                 </td>
                 <td>
                     <div class="form-group">
-                        <textarea class="form-control" name="v_08" rows="10x" cols="5" placeholder="Hasil"></textarea>
+                        <textarea class="form-control" name="v_08" rows="10" cols="5" placeholder="Hasil"></textarea>
                     </div>
                 </td>
                 <td>
@@ -219,8 +220,9 @@ foreach ($dataAssessmentcpptrj as $row) {
     </table>
 
     <div class="d-grid gap-2 mb-3">
-        <button class="btn btn-primary" type="button">Simpan</button>
+        <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
     </div>
+    </form>
 
     </div>
 

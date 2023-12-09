@@ -83,7 +83,7 @@ foreach ($dataAssessmenttidk as $row) {
                     $("#v_27").removeAttr("disabled");
                     $("#v_28").removeAttr("disabled");
                     $("#v_29").removeAttr("disabled");
-                    $("#t_033_lakilaki").removeAttr("disabled");
+                    $("#t_033_laki").removeAttr("disabled");
                     $("#t_033_perempuan").removeAttr("disabled");
                     $("#v_25").focus();
                 } else {
@@ -102,7 +102,7 @@ foreach ($dataAssessmenttidk as $row) {
                     $("#v_29").attr("disabled", true);
                     $("#v_29").prop("checked", false);
                     $("#v_29").val("");
-                    $("#t_033_lakilaki").prop("checked", false);
+                    $("#t_033_laki").prop("checked", false);
                     $("#t_033_perempuan").prop("checked", false);
                 }
             });
@@ -140,7 +140,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">No. Rekam Medis</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="no_Registration " id="no_Registration " value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -150,7 +150,7 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label class="col-form-label">Nama Lengkap</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="text" name="thename " id="thename " value="<?php echo $row->THENAME; ?>" readonly>
+                                            <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -289,11 +289,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_02" id="t_02_ya">
+                                        <input type="radio" class="form-check-input" name="t_02" id="t_02_ya" value="1">
                                         <label for="t_02_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_02" id="t_02_tidak">
+                                        <input type="radio" class="form-check-input" name="t_02" id="t_02_tidak" value="0">
                                         <label for="t_02_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -305,11 +305,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_03" id="t_03_ya">
+                                        <input type="radio" class="form-check-input" name="t_03" id="t_03_ya" value="1">
                                         <label for="t_03_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_03" id="t_03_tidak">
+                                        <input type="radio" class="form-check-input" name="t_03" id="t_03_tidak" value="0">
                                         <label for="t_03_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -321,11 +321,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_04" id="t_04_ya">
+                                        <input type="radio" class="form-check-input" name="t_04" id="t_04_ya" value="1">
                                         <label for="t_04_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_04" id="t_04_tidak">
+                                        <input type="radio" class="form-check-input" name="t_04" id="t_04_tidak" value="0">
                                         <label for="t_04_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -337,11 +337,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_05" id="t_05_ya">
+                                        <input type="radio" class="form-check-input" name="t_05" id="t_05_ya" value="1">
                                         <label for="t_05_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_05" id="t_05_tidak">
+                                        <input type="radio" class="form-check-input" name="t_05" id="t_05_tidak" value="0">
                                         <label for="t_05_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -353,11 +353,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_06" id="t_06_ya">
+                                        <input type="radio" class="form-check-input" name="t_06" id="t_06_ya" value="1">
                                         <label for="t_06_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_06" id="t_06_tidak">
+                                        <input type="radio" class="form-check-input" name="t_06" id="t_06_tidak" value="0">
                                         <label for="t_06_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -389,11 +389,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_07" id="t_07_ya">
+                                        <input type="radio" class="form-check-input" name="t_07" id="t_07_ya" value="1">
                                         <label for="t_07_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_07" id="t_07_tidak">
+                                        <input type="radio" class="form-check-input" name="t_07" id="t_07_tidak" value="0">
                                         <label for="t_07_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -405,11 +405,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_08" id="t_08_ya">
+                                        <input type="radio" class="form-check-input" name="t_08" id="t_08_ya" value="1">
                                         <label for="t_08_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_08" id="t_08_tidak">
+                                        <input type="radio" class="form-check-input" name="t_08" id="t_08_tidak" value="0">
                                         <label for="t_08_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -482,11 +482,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_09" id="t_09_ya">
+                                        <input type="radio" class="form-check-input" name="t_09" id="t_09_ya" value="1">
                                         <label for="t_09_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_09" id="t_09_tidak">
+                                        <input type="radio" class="form-check-input" name="t_09" id="t_09_tidak" value="0">
                                         <label for="t_09_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -505,11 +505,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_010" id="t_010_ya">
+                                        <input type="radio" class="form-check-input" name="t_010" id="t_010_ya" value="1">
                                         <label for="t_010_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_010" id="t_010_tidak">
+                                        <input type="radio" class="form-check-input" name="t_010" id="t_010_tidak" value="0">
                                         <label for="t_010_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -528,11 +528,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_011" id="t_011_ya">
+                                        <input type="radio" class="form-check-input" name="t_011" id="t_011_ya" value="1">
                                         <label for="t_011_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_011" id="t_011_tidak">
+                                        <input type="radio" class="form-check-input" name="t_011" id="t_011_tidak" value="0">
                                         <label for="t_011_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -544,11 +544,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_012" id="t_012_ya">
+                                        <input type="radio" class="form-check-input" name="t_012" id="t_012_ya" value="1">
                                         <label for="t_012_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_012" id="t_012_tidak">
+                                        <input type="radio" class="form-check-input" name="t_012" id="t_012_tidak" value="0">
                                         <label for="t_012_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -560,11 +560,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_013" id="t_013_ya">
+                                        <input type="radio" class="form-check-input" name="t_013" id="t_013_ya" value="1">
                                         <label for="t_013_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_013" id="t_013_tidak">
+                                        <input type="radio" class="form-check-input" name="t_013" id="t_013_tidak" value="0">
                                         <label for="t_013_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -576,11 +576,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_014" id="t_014_ya">
+                                        <input type="radio" class="form-check-input" name="t_014" id="t_014_ya" value="1">
                                         <label for="t_014_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_014" id="t_014_tidak">
+                                        <input type="radio" class="form-check-input" name="t_014" id="t_014_tidak" value="0">
                                         <label for="t_014_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -592,11 +592,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_015" id="t_015_ya">
+                                        <input type="radio" class="form-check-input" name="t_015" id="t_015_ya" value="1">
                                         <label for="t_015_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_015" id="t_015_tidak">
+                                        <input type="radio" class="form-check-input" name="t_015" id="t_015_tidak" value="0">
                                         <label for="t_015_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -608,11 +608,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_016" id="t_016_ya">
+                                        <input type="radio" class="form-check-input" name="t_016" id="t_016_ya" value="1">
                                         <label for="t_016_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_016" id="t_016_tidak">
+                                        <input type="radio" class="form-check-input" name="t_016" id="t_016_tidak" value="0">
                                         <label for="t_016_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -624,11 +624,11 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_017" id="t_017_ya">
+                                        <input type="radio" class="form-check-input" name="t_017" id="t_017_ya" value="1">
                                         <label for="t_017_ya">Ya</label>
                                     </div>
                                     <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_017" id="t_017_tidak">
+                                        <input type="radio" class="form-check-input" name="t_017" id="t_017_tidak" value="0">
                                         <label for="t_017_tidak">Tidak</label>
                                     </div>
                                 </div>
@@ -646,11 +646,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_ya">
+                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_ya" value="1">
                                     <label for="t_018_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_tidak">
+                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_tidak" value="0">
                                     <label for="t_018_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -662,11 +662,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_ya">
+                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_ya" value="1">
                                     <label for="t_019_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_tidak">
+                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_tidak" value="0">
                                     <label for="t_019_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -678,11 +678,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_ya">
+                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_ya" value="1">
                                     <label for="t_020_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_tidak">
+                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_tidak" value="0">
                                     <label for="t_020_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -701,11 +701,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_ya">
+                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_ya" value="1">
                                     <label for="t_021_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_tidak">
+                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_tidak" value="0">
                                     <label for="t_021_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -717,11 +717,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_ya">
+                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_ya" value="1">
                                     <label for="t_022_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_tidak">
+                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_tidak" value="0">
                                     <label for="t_022_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -733,11 +733,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_ya">
+                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_ya" value="1">
                                     <label for="t_023_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_tidak">
+                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_tidak" value="0">
                                     <label>Tidak</label>
                                 </div>
                             </div>
@@ -749,11 +749,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_ya">
+                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_ya" value="1">
                                     <label for="t_024_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_tidak">
+                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_tidak" value="0">
                                     <label for="t_024_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -765,11 +765,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_ya">
+                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_ya" value="1">
                                     <label for="t_025_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_tidak">
+                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_tidak" value="0">
                                     <label for="t_025_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -797,11 +797,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_ya">
+                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_ya" value="1">
                                     <label for="t_026_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_tidak">
+                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_tidak" value="0">
                                     <label for="t_026_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -815,11 +815,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_ya">
+                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_ya" value="1">
                                     <label for="t_027_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_tidak">
+                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_tidak" value="0">
                                     <label for="t_027_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -831,7 +831,7 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_ya">
+                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_ya" value="1" value="0">
                                     <label for="t_028_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
@@ -847,11 +847,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_ya">
+                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_ya" value="1">
                                     <label for="t_029_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_tidak">
+                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_tidak" value="0">
                                     <label for="t_029_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -863,11 +863,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_ya">
+                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_ya" value="1">
                                     <label for="t_030_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_tidak">
+                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_tidak" value="0">
                                     <label for="t_030_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -895,12 +895,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ya">
-                                    <label for="t_030_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ya" value="1">
+                                    <label for="t_031_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ytidak">
-                                    <label for="t_030_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ytidak" value="0">
+                                    <label for="t_031_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -911,11 +911,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_ya">
+                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_ya" value="1">
                                     <label for="t_032_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_tidak">
+                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_tidak" value="0">
                                     <label for="t_032_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -954,11 +954,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-7">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_laki" value="laki" disabled="disabled">
+                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_laki" value="1" disabled="disabled">
                                     <label for="t_033_laki">Laki-laki</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_perempuan" value="perempuan" disabled="disabled">
+                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_perempuan" value="2" disabled="disabled">
                                     <label for="t_033_perempuan">Perempuan</label>
                                 </div>
                             </div>
@@ -991,11 +991,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_ya">
+                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_ya" value="1">
                                     <label for="t_034_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_tidak">
+                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_tidak" value="0">
                                     <label for="t_034_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1007,11 +1007,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_ya">
+                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_ya" value="1">
                                     <label for="t_035_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_tidak">
+                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_tidak" value="0">
                                     <label for="t_035_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1023,11 +1023,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_036" id="t_036_ya">
+                                    <input type="radio" class="form-check-input" name="t_036" id="t_036_ya" value="1">
                                     <label for="t_036_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_036" id="t_036_tidak">
+                                    <input type="radio" class="form-check-input" name="t_036" id="t_036_tidak" value="0">
                                     <label for="t_036_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1037,15 +1037,15 @@ foreach ($dataAssessmenttidk as $row) {
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;- Kesadaran :</p>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="t_037_cm" name="t_037">
+                                    <input class="form-check-input" type="checkbox" id="t_037_cm" name="t_037" value="1">
                                     <label for="t_037_cm">Compos Mentis</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_del" name="t_037">
+                                    <input class="form-check-input" type="checkbox" id="t_037_del" name="t_037" value="2">
                                     <label for="t_037_del">Delirium</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_coma" name="t_037">
+                                    <input class="form-check-input" type="checkbox" id="t_037_coma" name="t_037" value="3">
                                     <label for="t_037_coma">Coma</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_sam" name="t_037">
+                                    <input class="form-check-input" type="checkbox" id="t_037_sam" name="t_037" value="4">
                                     <label for="t_037_sam">Samnolen</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_sc" name="t_037">
+                                    <input class="form-check-input" type="checkbox" id="t_037_sc" name="t_037" value="5">
                                     <label for="t_037_sc">Soporo coma</label>
                                 </div>
                             </div>
@@ -1059,11 +1059,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_038" id="t_038_ya">
+                                    <input type="radio" class="form-check-input" name="t_038" id="t_038_ya" value="1">
                                     <label for="t_038_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_038" id="t_038_tidak">
+                                    <input type="radio" class="form-check-input" name="t_038" id="t_038_tidak" value="0">
                                     <label for="t_038_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1075,11 +1075,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_039" id="t_039_ya">
+                                    <input type="radio" class="form-check-input" name="t_039" id="t_039_ya" value="1">
                                     <label for="t_039_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_039" id="t_039_tidak">
+                                    <input type="radio" class="form-check-input" name="t_039" id="t_039_tidak" value="0">
                                     <label for="t_039_tidak">Tidak</label>
                                 </div>
                             </div>

@@ -118,6 +118,35 @@ foreach ($dataAssessmentptk as $row) {
     });
   </script>
 
+  <script type="text/javascript">
+    $(function f1() {
+      $("input[name='t_015']").click(function f1() {
+        if ($("#t_015_status").is(":checked")) {
+          $("#v_33").removeAttr("disabled");
+          $("#v_34").removeAttr("disabled");
+          $("#v_35").removeAttr("disabled");
+          $("#v_36").removeAttr("disabled");
+          $("#t_016_laki").removeAttr("disabled");
+          $("#t_016_perempuan").removeAttr("disabled");
+          $("#v_33").focus();
+        } else {
+          $("#v_33").attr("disabled", true);
+          $("#v_33").val("");
+          $("#v_34").attr("disabled", true);
+          $("#v_34").val("");
+          $("#v_35").attr("disabled", true);
+          $("#v_35").val("");
+          $("#v_36").attr("disabled", true);
+          $("#v_36").val("");
+          $("#t_016_laki").attr("disabled", true);
+          $("#t_016_laki").prop("checked", false);
+          $("#t_016_perempuan").attr("disabled", true);
+          $("#t_016_perempuan").prop("checked", false);
+        }
+      });
+    });
+  </script>
+
 </head>
 
 <body>
@@ -125,34 +154,33 @@ foreach ($dataAssessmentptk as $row) {
   <div class="container mt-5">
     <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
   </div>
-
   <div class="container mt-5" style="text-align: right">
     <h2>RM 08</h2>
   </div>
-  <div class="container mt-3">
-    <table class="table table-bordered" style="border: 1px solid black">
-      <tr>
-        <td width="40%">
-          <div class="row mb-5">
+  <form action="<?= site_url('formulir/addaksi') ?>" method="post">
+    <div class="container mt-3">
+      <table class="table table-bordered" style="border: 1px solid black">
+        <tr>
+          <td width="40%">
+            <div class="row mb-5">
+              <div class="col">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 class="text-center">FORMULIR PENOLAKAN TINDAKAN DOKTER</h1>
+              </div>
+          </td>
+          <td width="60%">
             <div class="col">
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <h1 class="text-center">FORMULIR PENOLAKAN TINDAKAN DOKTER</h1>
-            </div>
-        </td>
-        <td width="60%">
-          <div class="col">
-            <form>
               <div class="row align-items-center">
                 <div class="col-md-4">
                   <label class="col-form-label">No RM</label>
                 </div>
                 <div class="col-md-8">
-                  <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                  <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                 </div>
               </div>
 
@@ -256,18 +284,13 @@ foreach ($dataAssessmentptk as $row) {
                   </div>
                 </div>
               </div>
+            </div>
+    </div>
+    </td>
+    </tr>
+    </table>
 
-
-            </form>
-          </div>
-  </div>
-  </td>
-  </tr>
-  </table>
-
-  <h4 class="text-center">PEMBERIAN INFORMASI</h4>
-  <form>
-
+    <h4 class="text-center">PEMBERIAN INFORMASI</h4>
     <div class="row align-items-center">
       <div class="col-md-2">
         <label class="col-form-label">Dokter Pelaksana Tindakan</label>
@@ -322,7 +345,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td class="text-center">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_03" name="t_03">
+              <input class="form-check-input" type="checkbox" id="t_03_wddd" name="t_03" value="1">
             </div>
           </td>
         </tr>
@@ -337,7 +360,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_04" name="t_04">
+              <input class="form-check-input" type="checkbox" id="t_04_diagnosis" name="t_04" value="1">
             </div>
           </td>
         </tr>
@@ -352,7 +375,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_05" name="t_05">
+              <input class="form-check-input" type="checkbox" id="t_05_kedokteran" name="t_05" value="1">
             </div>
           </td>
         </tr>
@@ -362,19 +385,19 @@ foreach ($dataAssessmentptk as $row) {
           <td>Indikasi Tindakan</td>
           <td>
             <div class="form-group">
-              <input class="form-control" type="text" id="t_16" name="t_16">
+              <input class="form-control" type="text" id="v_16" name="v_16">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_06" name="t_06">
+              <input class="form-check-input" type="checkbox" id="t_06_tindakan" name="t_06" value="1">
             </div>
           </td>
         </tr>
         <tr>
 
         <tr>
-          <th scope="row">5</th>
+          <th scope="row" rowspan="3">5</th>
           <td>
             <h6>Tata Cara :</h6>
           </td>
@@ -382,7 +405,6 @@ foreach ($dataAssessmentptk as $row) {
           <td></td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
             <p>Tipe Sedasi</p>
           </td>
@@ -393,14 +415,13 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_07" name="t_07">
+              <input class="form-check-input" type="checkbox" id="t_07_sedasi" name="t_07" value="1">
             </div>
           </td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
-            <p>Uraian singkat prosedur dan <br>Tahapan yang penting</p>
+            <p>Uraian singkat prosedur dan Tahapan yang penting</p>
           </td>
           <td>
             <div class="form-group">
@@ -409,7 +430,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_07" name="t_07">
+              <input class="form-check-input" type="checkbox" id="t_07_uraian" name="t_07" value="2">
             </div>
           </td>
         </tr>
@@ -424,7 +445,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_08" name="t_08">
+              <input class="form-check-input" type="checkbox" id="t_08_tujuan" name="t_08" value="1">
             </div>
           </td>
         </tr>
@@ -439,7 +460,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_09" name="t_09">
+              <input class="form-check-input" type="checkbox" id="t_09_risiko" name="t_09" value="1">
             </div>
           </td>
         </tr>
@@ -454,13 +475,13 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_010" name="t_010">
+              <input class="form-check-input" type="checkbox" id="t_010_komplikasi" name="t_010" value="1">
             </div>
           </td>
         </tr>
 
         <tr>
-          <th scope="row">9</th>
+          <th scope="row" rowspan="4">9</th>
           <td>
             <h6>Prognosis :</h6>
           </td>
@@ -468,7 +489,6 @@ foreach ($dataAssessmentptk as $row) {
           <td></td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
             <p>Prognosis Vital</p>
           </td>
@@ -479,12 +499,11 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_011" name="t_011">
+              <input class="form-check-input" type="checkbox" id="t_011_pvital" name="t_011" value="1">
             </div>
           </td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
             <p>Prognosis Fungsi</p>
           </td>
@@ -495,14 +514,12 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_011" name="t_011">
+              <input class="form-check-input" type="checkbox" id="t_011_pfungsi" name="t_011" value="2">
             </div>
           </td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
-
             <p>Prognosis Kesembuhan</p>
           </td>
           <td>
@@ -512,7 +529,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_011" name="t_011">
+              <input class="form-check-input" type="checkbox" id="t_011_pkesembuhan" name="t_011" value="3">
             </div>
           </td>
         </tr>
@@ -525,26 +542,25 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-group">
+              <br>
               <input class="form-control" type="text" name="v_25" id="v_25">
             </div>
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_012" name="t_012">
+              <br>
+              <input class="form-check-input" type="checkbox" id="t_012_alternatif" name="t_012" value="1">
             </div>
           </td>
         </tr>
 
         <tr>
-          <th scope="row">11</th>
-          <td>
+          <th rowspan="4">11</th>
+          <td colspan="3">
             <h6>Hal lain yang akan dilakukan untuk :</h6>
           </td>
-          <td></td>
-          <td></td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
             <p>Perluasan Tindakan</p>
           </td>
@@ -555,12 +571,11 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_013" name="t_013">
+              <input class="form-check-input" type="checkbox" id="t_013_perluasan" name="t_013" value="1">
             </div>
           </td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
             <p>Konsultasi selama tindakan</p>
           </td>
@@ -571,12 +586,11 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_013" name="t_013">
+              <input class="form-check-input" type="checkbox" id="t_013_konsultasi" name="t_013" value="2">
             </div>
           </td>
         </tr>
         <tr>
-          <th scope="row"></th>
           <td>
             <p>Resusitasi</p>
           </td>
@@ -587,7 +601,7 @@ foreach ($dataAssessmentptk as $row) {
           </td>
           <td>
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_013" name="t_013">
+              <input class="form-check-input" type="checkbox" id="t_013_resusitasi" name="t_013" value="3">
             </div>
           </td>
         </tr>
@@ -633,18 +647,23 @@ foreach ($dataAssessmentptk as $row) {
       <tr>
         <td>
           <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_29" id="v_29" readonly> umur <input type="text" name="v_30" id="v_30" readonly> tahun, <input type="text" name="v_31" id="v_31" readonly>,
-            alamat <input type="text" name="v_32" id="v_32" readonly> dengan ini menyatakan persetujuan untuk dilakukannya tindakan <input type="text" name="v_33" id="v_33" readonly> terhadap saya
-          </p><br>
-          <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_34" id="v_34" readonly> umur <input type="text" name="v_35" id="v_35" readonly> tahun,
-            <input type="radio" class="form-check-input" name="t_014" value="laki">
-            <label>Laki-laki</label>
-            <input type="radio" class="form-check-input" name="t_014" value="perempuan">
-            <label>Perempuan</label>,
-            alamat <input type="text" name="v_36" id="v_36" readonly> dengan ini menyatakan persetujuan
-            untuk dilakukannya tindakan <input type="text" name="v_37" id="v_37" readonly> terhadap<input type="text" name="v_38" id="v_38" readonly> saya
-            bernama <input type="text" name="v_39" id="v_39" readonly> umur <input type="text" name="v_40" id="v_40" readonly> tahun, <input type="text" name="v_41" id="v_41" readonly>, alamat <input type="text" name="v_42" id="v_42" readonly>
+            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_29" id="v_29"> umur <input type="text" name="v_30" id="v_30"> tahun,
+            <input type="radio" class="form-check-input" name="t_014" id="t_014_laki" value="1">
+            <label for="t_014_laki">Laki-laki</label>
+            <input type="radio" class="form-check-input" name="t_014" id="t_014_perempuan" value="2">
+            <label for="t_014_perempuan">Perempuan</label>,
+            alamat <input type="text" name="v_31" id="v_31"> dengan ini menyatakan <strong>PENOLAKAN</strong> untuk dilakukannya tindakan <input type="text" name="v_32" id="v_32"> terhadap
+            <input type="radio" class="form-check-input" name="t_015" id="t_015_saya" value="1">
+            <label for="t_015_saya">saya /</label>
+            <input type="radio" class="form-check-input" name="t_015" id="t_015_status" value="2">
+            <label><input type="text" name="v_33" id="v_33" disabled="disabled"></label>
+            saya <br>
+            bernama <input type="text" name="v_34" id="v_34" disabled="disabled"> umur <input type="text" name="v_35" id="v_35" disabled="disabled"> tahun,
+            <input type="radio" class="form-check-input" name="t_016" id="t_016_laki" value="1" disabled="disabled">
+            <label for="t_016_laki">Laki-laki</label>
+            <input type="radio" class="form-check-input" name="t_016" id="t_016_perempuan" value="2" disabled="disabled">
+            <label for="t_016_perempuan">Perempuan</label>,
+            alamat <input type="text" name="v_36" id="v_36" disabled="disabled">
           </p>
         </td>
       </tr>
@@ -661,7 +680,7 @@ foreach ($dataAssessmentptk as $row) {
     <div class="container mt-5">
       <table class="table text-center">
         <tr>
-          <p>Bengkulu, <input type="datetime-local" name="v_43" id="v_43"></p>
+          <p>Bengkulu, <input type="datetime-local" name="v_37" id="v_37"></p>
         </tr>
         <tr>
           <td>Yang Menyatakan</td>
@@ -685,25 +704,25 @@ foreach ($dataAssessmentptk as $row) {
         </tr>
         <tr>
           <td>
-            <input type="text" name="v_44" id="v_44">
+            <input type="text" name="v_38" id="v_38">
           </td>
           <td>
-            <input type="text" name="v_45" id="v_45">
+            <input type="text" name="v_39" id="v_39">
           </td>
           <td>
-            <input type="text" name="v_46" id="v_46">
+            <input type="text" name="v_40" id="v_40">
           </td>
           <td>
-            <input type="text" name="v_47" id="v_47">
+            <input type="text" name="v_41" id="v_41">
           </td>
         </tr>
       </table>
     </div>
-  </form>
 
-  <div class="d-grid gap-2 mb-3">
-    <button class="btn btn-primary" type="button">Simpan</button>
-  </div>
+    <div class="d-grid gap-2 mb-3">
+      <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+    </div>
+  </form>
 
   </div>
 

@@ -118,6 +118,35 @@ foreach ($dataAssessmentpta as $row) {
     });
   </script>
 
+  <script type="text/javascript">
+    $(function f1() {
+      $("input[name='t_014']").click(function f1() {
+        if ($("#t_014_status").is(":checked")) {
+          $("#v_23").removeAttr("disabled");
+          $("#v_24").removeAttr("disabled");
+          $("#v_25").removeAttr("disabled");
+          $("#v_26").removeAttr("disabled");
+          $("#t_015_laki").removeAttr("disabled");
+          $("#t_015_perempuan").removeAttr("disabled");
+          $("#v_23").focus();
+        } else {
+          $("#v_23").attr("disabled", true);
+          $("#v_23").val("");
+          $("#v_24").attr("disabled", true);
+          $("#v_24").val("");
+          $("#v_25").attr("disabled", true);
+          $("#v_25").val("");
+          $("#v_26").attr("disabled", true);
+          $("#v_26").val("");
+          $("#t_015_laki").attr("disabled", true);
+          $("#t_015_laki").prop("checked", false);
+          $("#t_015_perempuan").attr("disabled", true);
+          $("#t_015_perempuan").prop("checked", false);
+        }
+      });
+    });
+  </script>
+
 </head>
 
 <body>
@@ -131,30 +160,31 @@ foreach ($dataAssessmentpta as $row) {
     <h2>RSUD Dr. M. YUNUS BENGKULU</h2>
   </div>
   <div class="container mt-3">
-    <table class="table table-bordered" style="border: 1px solid black">
-      <tr>
-        <td width="50%">
-          <div class="row mb-5">
+    <form action="<?= site_url('formulir/addaksi') ?>" method="post">
+      <table class="table table-bordered" style="border: 1px solid black">
+        <tr>
+          <td width="50%">
+            <div class="row mb-5">
+              <div class="col">
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <h1 class="text-center">PENOLAKAN TINDAKAN ANESTESI LOKAL</h1>
+              </div>
+          </td>
+          <td width="50%">
             <div class="col">
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <br>
-              <h1 class="text-center">PENOLAKAN TINDAKAN ANESTESI LOKAL</h1>
-            </div>
-        </td>
-        <td width="50%">
-          <div class="col">
-            <form>
+
               <div class="row align-items-center">
                 <div class="col-md-3">
                   <label class="col-form-label">No RM</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="no_Registration" id="no_Registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                  <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
                 </div>
               </div>
 
@@ -260,341 +290,345 @@ foreach ($dataAssessmentpta as $row) {
                   </div>
                 </div>
               </div>
-            </form>
-          </div>
+            </div>
   </div>
   </td>
   </tr>
   </table>
 
   <h4 class="text-center">PEMBERIAN INFORMASI</h4>
-  <form>
 
-    <div class="row align-items-center">
-      <div class="col-md-2">
-        <label class="col-form-label">Dokter Pelaksana Tindakan</label>
-      </div>
-      <div class="col-md-10">
-        <input class="form-control" type="text" name="v_10" id="v_10">
-      </div>
+  <div class="row align-items-center">
+    <div class="col-md-2">
+      <label class="col-form-label">Dokter Pelaksana Tindakan</label>
     </div>
+    <div class="col-md-10">
+      <input class="form-control" type="text" name="v_10" id="v_10">
+    </div>
+  </div>
 
-    <div class="row mb-3">
-      <div class="col-md-7">
-        <div class="row align-items-center">
-          <div class="col-md-4">
-            <label class="col-form-label">Penanggung Jawab *</label>
-          </div>
-          <div class="col-md-8">
-            <select class="form-control" name="t_02">
-              <option selected>Pilih</option>
-              <option value="1">Penerima Informasi</option>
-              <option value="2">Pemberi Persetujuan</option>
-            </select>
-          </div>
+  <div class="row mb-3">
+    <div class="col-md-7">
+      <div class="row align-items-center">
+        <div class="col-md-4">
+          <label class="col-form-label">Penanggung Jawab *</label>
         </div>
-      </div>
-      <div class="col-md-5">
-        <div class="row align-items-center">
-          <div class="col-md-12">
-            <input class="form-control" type="text" name="v_11" id="v_11">
-          </div>
+        <div class="col-md-8">
+          <select class="form-control" name="t_02">
+            <option selected>Pilih</option>
+            <option value="1">Penerima Informasi</option>
+            <option value="2">Pemberi Persetujuan</option>
+          </select>
         </div>
       </div>
     </div>
-
-    <table class="table table-bordered" style="border: 1px solid black">
-      <thead class="text-center">
-        <tr>
-          <th width="5%">No</th>
-          <th width="35%">Jenis Informasi</th>
-          <th width="45%">Isi Informasi</th>
-          <th width="15%">Tanda (v)</th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <tr>
-          <th scope="row">1</th>
-          <td>Diagnosis (WD & DD)</td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" name="v_12" id="v_12">
-            </div>
-          </td>
-          <td class="text-center">
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_03" name="t_03">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">2</th>
-          <td>Dasar Diagnosis</td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" name="v_13" id="v_13">
-            </div>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_04" name="t_04">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">3</th>
-          <td>Tindakan Kedokteran</td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" name="v_14" id="v_14">
-            </div>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_05" name="t_05">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">4</th>
-          <td>Indikasi Tindakan</td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" id="t_15" name="t_15">
-            </div>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_06" name="t_06">
-            </div>
-          </td>
-        </tr>
-        <tr>
-
-        <tr>
-          <th scope="row">5</th>
-          <td>
-            <p>Tata Cara</p>
-          </td>
-          <td>
-            <p>Lokal Anestesi</p>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_07" name="t_07">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">6</th>
-          <td>Tujuan</td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" name="v_16" id="v_16">
-            </div>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_08" name="t_08">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">7</th>
-          <td>Risiko Komplikasi</td>
-          <td>
-            <p>LOKAL ANESTESI: <br>
-              Hampir selalu terjadi, dampak minimal: <br>
-              1. Alergi/Reaksi Hipersensitif (Gatal-gatal) <br>
-              2. Nyeri <br>
-              3. Bengkak (odema, Hematom) <br>
-              4. Tehnik yang gagal <br>
-              Jarang terjadi, dampak yang besar: <br>
-              1. Perdarahan <br>
-              2. Infeksi <br>
-              3. Shock <br>
-              4. Penyembuhan luka terganggu <br>
-              5. Koma <br>
-              6. Kematian <br>
-
-            </p>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_09" name="t_09">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">9</th>
-          <td>
-            <p>Prognosis</p>
-          </td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" name="v_17" id="v_17">
-            </div>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_010" name="t_010">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">10</th>
-          <td>
-            <p>Alternatif dan Risiko</p>
-          </td>
-          <td>
-            <div class="form-group">
-              <input class="form-control" type="text" name="v_18" id="v_18">
-            </div>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_011" name="t_011">
-            </div>
-          </td>
-        </tr>
-
-        <tr>
-          <th scope="row">11</th>
-          <td>
-            <h6>Lain-lain</h6>
-          </td>
-          <td>
-            <p>Dokter anestesi bekerjasama dengan dokter operator dalam mengelola faktor-faktor yang ada untuk meminimalkan risiko yang mungkin timbul dengan mengutamakan keselamatan pasien</p>
-          </td>
-          <td>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="t_012" name="t_012">
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-
-    <table class="table table-bordered" style="border: 1px solid black">
-      <tr>
-        <td>
-          <p>Dengan ini menyatakan bahwa saya telah menerangkan hal-hal diatas secara benar dan jelas,
-            dan memberikan kesempatan untuk bertanya dan berdiskusi
-          </p>
-        </td>
-        <td class="text-center" width="15%">
-          <p>Tanda Tangan</p>
-          <div id="sig"></div>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>Dengan ini menyatakan bahwa saya telah menerima informasi dari dokter sebagaimana diatas
-            kemudian yang saya berikan tanda paraf di kolom kanannya, dan telah memahaminya
-          </p>
-        </td>
-        <td>
-          <p class="text-center" width="15%">
-            Tanda Tangan
-          </p>
-          <div id="sig1"></div>
-        </td>
-      </tr>
-      <tr>
-        <th>* Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau keluarga terdekat</th>
-        <td></td>
-      </tr>
-    </table>
-
-
-    <table class="table table-bordered" style="border: 1px solid black">
-      <tr>
-        <td>
-          <h3 class="text-center">PENOLAKAN TINDAKAN ANESTESI LOKAL</h3>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_19" id="v_19" readonly> umur <input type="text" name="v_20" id="v_20" readonly> tahun, <input type="text" name="v_21" id="v_21" readonly>,
-            alamat <input type="text" name="v_22" id="v_22" readonly> dengan ini menyatakan penolakan untuk dilakukannya tindakan <input type="text" name="v_23" id="v_23" readonly> terhadap saya
-          </p><br>
-          <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_24" id="v_24" readonly> umur <input type="text" name="v_25" id="v_25" readonly> tahun,
-            <input type="radio" class="form-check-input" name="t_013" value="laki">
-            <label>Laki-laki</label>
-            <input type="radio" class="form-check-input" name="t_013" value="perempuan">
-            <label>Perempuan</label>,
-            alamat <input type="text" name="v_26" id="v_26" readonly> dengan ini menyatakan penolakan
-            untuk dilakukannya tindakan <input type="text" name="v_27" id="v_27" readonly> terhadap<input type="text" name="v_28" id="v_28" readonly> saya
-            bernama <input type="text" name="v_29" id="v_29" readonly> umur <input type="text" name="v_30" id="v_30" readonly> tahun, <input type="text" name="v_31" id="v_31" readonly>, alamat <input type="text" name="v_32" id="v_32" readonly>
-          </p>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <p>
-            Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti diatas kepada saya termasuk risiko dan komplikasi yang mungkin timbul.
-            Saya juga menyadari bahwa dokter melakukan suatu upaya dan oleh karena ilmu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa.
-          </p>
-        </td>
-      </tr>
-    </table>
-
-    <div class="container mt-5">
-      <table class="table text-center">
-        <tr>
-          <p>Bengkulu, <input type="datetime-local" name="v_33" id="v_33"></p>
-        </tr>
-        <tr>
-          <td>Yang Menyatakan</td>
-          <td>Dokter</td>
-          <td>Saksi 1</td>
-          <td>Saksi 2</td>
-        </tr>
-        <tr>
-          <td>
-            <div id="sig2"></div>
-          </td>
-          <td>
-            <div id="sig3"></div>
-          </td>
-          <td>
-            <div id="sig4"></div>
-          </td>
-          <td>
-            <div id="sig5"></div>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <input type="text" name="v_34" id="v_34">
-          </td>
-          <td>
-            <input type="text" name="v_35" id="v_35">
-          </td>
-          <td>
-            <input type="text" name="v_36" id="v_36">
-          </td>
-          <td>
-            <input type="text" name="v_37" id="v_37">
-          </td>
-        </tr>
-      </table>
+    <div class="col-md-5">
+      <div class="row align-items-center">
+        <div class="col-md-12">
+          <input class="form-control" type="text" name="v_11" id="v_11">
+        </div>
+      </div>
     </div>
-  </form>
+  </div>
+
+  <table class="table table-bordered" style="border: 1px solid black">
+    <thead class="text-center">
+      <tr>
+        <th width="5%">No</th>
+        <th width="35%">Jenis Informasi</th>
+        <th width="45%">Isi Informasi</th>
+        <th width="15%">Tanda (v)</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>Diagnosis (WD & DD)</td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" name="v_12" id="v_12">
+          </div>
+        </td>
+        <td class="text-center">
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_03" name="t_03" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">2</th>
+        <td>Dasar Diagnosis</td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" name="v_13" id="v_13">
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_04" name="t_04" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">3</th>
+        <td>Tindakan Kedokteran</td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" name="v_14" id="v_14">
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_05" name="t_05" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">4</th>
+        <td>Indikasi Tindakan</td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" id="t_15" name="t_15">
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_06" name="t_06" value="1">
+          </div>
+        </td>
+      </tr>
+      <tr>
+
+      <tr>
+        <th scope="row">5</th>
+        <td>
+          <p>Tata Cara</p>
+        </td>
+        <td>
+          <p>Lokal Anestesi</p>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_07" name="t_07" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">6</th>
+        <td>Tujuan</td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" name="v_16" id="v_16">
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_08" name="t_08" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">7</th>
+        <td>Risiko Komplikasi</td>
+        <td>
+          <p>LOKAL ANESTESI: <br>
+            Hampir selalu terjadi, dampak minimal: <br>
+            1. Alergi/Reaksi Hipersensitif (Gatal-gatal) <br>
+            2. Nyeri <br>
+            3. Bengkak (odema, Hematom) <br>
+            4. Tehnik yang gagal <br>
+            Jarang terjadi, dampak yang besar: <br>
+            1. Perdarahan <br>
+            2. Infeksi <br>
+            3. Shock <br>
+            4. Penyembuhan luka terganggu <br>
+            5. Koma <br>
+            6. Kematian <br>
+
+          </p>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_09" name="t_09" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">9</th>
+        <td>
+          <p>Prognosis</p>
+        </td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" name="v_17" id="v_17">
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_010" name="t_010" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">10</th>
+        <td>
+          <p>Alternatif dan Risiko</p>
+        </td>
+        <td>
+          <div class="form-group">
+            <input class="form-control" type="text" name="v_18" id="v_18">
+          </div>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_011" name="t_011" value="1">
+          </div>
+        </td>
+      </tr>
+
+      <tr>
+        <th scope="row">11</th>
+        <td>
+          <h6>Lain-lain</h6>
+        </td>
+        <td>
+          <p>Dokter anestesi bekerjasama dengan dokter operator dalam mengelola faktor-faktor yang ada untuk meminimalkan risiko yang mungkin timbul dengan mengutamakan keselamatan pasien</p>
+        </td>
+        <td>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="t_012" name="t_012" value="1">
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table-bordered" style="border: 1px solid black">
+    <tr>
+      <td>
+        <p>Dengan ini menyatakan bahwa saya telah menerangkan hal-hal diatas secara benar dan jelas,
+          dan memberikan kesempatan untuk bertanya dan berdiskusi
+        </p>
+      </td>
+      <td class="text-center" width="15%">
+        <p>Tanda Tangan</p>
+        <div id="sig"></div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>Dengan ini menyatakan bahwa saya telah menerima informasi dari dokter sebagaimana diatas
+          kemudian yang saya berikan tanda paraf di kolom kanannya, dan telah memahaminya
+        </p>
+      </td>
+      <td>
+        <p class="text-center" width="15%">
+          Tanda Tangan
+        </p>
+        <div id="sig1"></div>
+      </td>
+    </tr>
+    <tr>
+      <th>* Bila pasien tidak kompeten atau tidak mau menerima informasi, maka penerima informasi adalah wali atau keluarga terdekat</th>
+      <td></td>
+    </tr>
+  </table>
+
+
+  <table class="table table-bordered" style="border: 1px solid black">
+    <tr>
+      <td>
+        <h3 class="text-center">PENOLAKAN TINDAKAN ANESTESI LOKAL</h3>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_19" id="v_19"> umur <input type="text" name="v_20" id="v_20"> tahun,
+          <input type="radio" class="form-check-input" name="t_013" id="t_013_laki" value="1">
+          <label for="t_013_laki">Laki-laki</label>
+          <input type="radio" class="form-check-input" name="t_013" id="t_013_perempuan" value="2">
+          <label for="t_013_perempuan">Perempuan</label>,
+          alamat <input type="text" name="v_21" id="v_21"> dengan ini menyatakan <strong>PENOLAKAN</strong> untuk dilakukannya tindakan <input type="text" name="v_22" id="v_22"> terhadap
+          <input type="radio" class="form-check-input" name="t_014" id="t_014_saya" value="1">
+          <label for="t_014_saya">saya /</label>
+          <input type="radio" class="form-check-input" name="t_014" id="t_014_status" value="2">
+          <label><input type="text" name="v_23" id="v_23" disabled="disabled"></label>
+          saya <br>
+          bernama <input type="text" name="v_24" id="v_24" disabled="disabled"> umur <input type="text" name="v_25" id="v_25" disabled="disabled"> tahun,
+          <input type="radio" class="form-check-input" name="t_015" id="t_015_laki" value="1" disabled="disabled">
+          <label for="t_015_laki">Laki-laki</label>
+          <input type="radio" class="form-check-input" name="t_015" id="t_015_perempuan" value="2" disabled="disabled">
+          <label for="t_015_perempuan">Perempuan</label>,
+          alamat <input type="text" name="v_26" id="v_26" disabled="disabled">
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <p>
+          Saya memahami perlunya dan manfaat tindakan tersebut sebagaimana telah dijelaskan seperti diatas kepada saya termasuk risiko dan komplikasi yang mungkin timbul.
+          Saya juga menyadari bahwa dokter melakukan suatu upaya dan oleh karena ilmu kedokteran bukanlah ilmu pasti, maka keberhasilan tindakan kedokteran bukanlah keniscayaan, melainkan sangat bergantung kepada izin Tuhan Yang Maha Esa.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <div class="container mt-5">
+    <table class="table text-center">
+      <tr>
+        <p>Bengkulu, <input type="datetime-local" name="v_27" id="v_27"></p>
+      </tr>
+      <tr>
+        <td>Yang Menyatakan</td>
+        <td>Dokter</td>
+        <td>Saksi 1</td>
+        <td>Saksi 2</td>
+      </tr>
+      <tr>
+        <td>
+          <div id="sig2"></div>
+        </td>
+        <td>
+          <div id="sig3"></div>
+        </td>
+        <td>
+          <div id="sig4"></div>
+        </td>
+        <td>
+          <div id="sig5"></div>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <input type="text" name="v_28" id="v_28">
+        </td>
+        <td>
+          <input type="text" name="v_29" id="v_29">
+        </td>
+        <td>
+          <input type="text" name="v_30" id="v_30">
+        </td>
+        <td>
+          <input type="text" name="v_31" id="v_31">
+        </td>
+      </tr>
+    </table>
+  </div>
+
 
   <div class="d-grid gap-2 mb-3">
-    <button class="btn btn-primary" type="button">Simpan</button>
+    <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
   </div>
+  </form>
 
   </div>
 
