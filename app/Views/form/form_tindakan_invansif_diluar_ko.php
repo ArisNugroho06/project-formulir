@@ -474,8 +474,6 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                             </div>
 
-
-
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <label class="col-form-label">4. Cek EKG (untuk pasien > 40 Tahun)</label>

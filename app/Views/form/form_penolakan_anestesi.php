@@ -155,7 +155,6 @@ foreach ($dataAssessmentpta as $row) {
     <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
   </div>
 
-
   <div class="container mt-5" style="text-align: center">
     <h2>RSUD Dr. M. YUNUS BENGKULU</h2>
   </div>
@@ -266,8 +265,6 @@ foreach ($dataAssessmentpta as $row) {
                   <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
                 </div>
               </div>
-
-
               <div class="row">
                 <div class="col-md-7">
                   <div class="row align-items-center">
