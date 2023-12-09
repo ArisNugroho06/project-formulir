@@ -238,7 +238,7 @@ foreach ($dataAssessmentptk as $row) {
                   <label class="col-form-label">Alamat</label>
                 </div>
                 <div class="col-md-8">
-                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="4" readonly><?php echo $row->THEADDRESS; ?></textarea>
+                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $row->THEADDRESS; ?></textarea>
                 </div>
               </div>
 
@@ -266,20 +266,10 @@ foreach ($dataAssessmentptk as $row) {
                 <div class="col-md-8">
                   <div class="row align-items-center">
                     <div class="col-md-6">
-                      <label class="col-form-label">Tanggal</label>
+                      <label class="col-form-label">Tanggal dan Jam</label>
                     </div>
                     <div class="col-md-6">
-                      <input class="form-control" type="date" name="v_08" id="v_08">
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="row align-items-center">
-                    <div class="col-md-3">
-                      <label class="col-form-label">Pukul</label>
-                    </div>
-                    <div class="col-md-9">
-                      <input class="form-control" type="time" name="v_09" id="v_09">
+                      <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $row->EXAMINATION_DATE; ?>" readonly>
                     </div>
                   </div>
                 </div>

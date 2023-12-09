@@ -552,23 +552,13 @@ foreach ($dataAssessmentpkmrj as $row) {
                 <tr>
                     <td>
                         <div class="row align-items-center">
-                            <div class="col-md-6">
+                            <div class="col-md-8">
                                 <div class="row align-items-center">
                                     <div class="col-md-6">
-                                        <label class="col-form-label">Tanggal berobat di ruang poliklinik : </label>
+                                        <label class="col-form-label">Tanggal dan Jam berobat di ruang poliklinik : </label>
                                     </div>
-                                    <div class="col-md-5">
-                                        <input class="form-control" type="date" name="v_09" id="v_09">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2">
-                                        <label class="col-form-label">Jam</label>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <input class="form-control" type="time" name="v_10" id="v_10">
+                                    <div class="col-md-6">
+                                        <input class="form-control" type="datetime-local" name="v_09" id="v_09">
                                     </div>
                                 </div>
                             </div>
@@ -686,7 +676,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                     <label for="t_06_ada">Ada, Sebutkan</label>
                                 </div>
                                 <div class="row align-items-center">
-                                    <div class="col-md-10">
+                                    <div class="col-md-12">
                                         <textarea class="form-control" name="riwayat_alergi" id="riwayat_alergi" cols="10" rows="4" disabled="disabled"></textarea>
                                     </div>
                                 </div>
