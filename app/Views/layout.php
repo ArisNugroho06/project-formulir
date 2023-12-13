@@ -10,11 +10,12 @@
     <title>Formulir</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/navbar-static/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
     <link href="<?= base_url('bootstrap-5.0.2-dist/css/bootstrap.min.css') ?>" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" rel="stylesheet">
+
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -40,6 +41,55 @@
                 font-size: 3.5rem;
             }
         }
+
+        /* Dropdown Button */
+        .dropbtn {
+            background-color: #ffc107;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            border-radius: 15px;
+
+        }
+
+        /* The container <div> - needed to position the dropdown content */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 500px;
+            z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #fff;
+        }
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn {
+            background-color: #0000ff;
+        }
     </style>
 </head>
 
@@ -47,37 +97,121 @@
 
     <?= $this->include('navbar') ?>
 
+    <h3 class="text-center mt-5">DATA PASIEN</h3>
 
-    <div class="container" style="margin: 0 auto;">
+    <div class="container-fluid fixed">
+        <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">
+
+            <!-- <form class="d-flex mt-3 mb-3" action=" site_url('formulir/search') " method="post">
+                <div class="row align-items-center">
+                    <div class="col-md-3">
+                        <div class="row align-items-center">
+                            <div class="col-md-9">
+                                <input class="form-control me-2" type="search" name="idpasien" placeholder="Cari Data Pasien" aria-label="Search">
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-outline-primary" type="submit">Cari</button>
+                            </div>
+
+                        </div>
+                    </div>
+            </form> -->
+
+
+            <thead class="text-center">
+                <tr>
+                    <th>Isi Formulir</th>
+                    <th>RM</th>
+                    <th>Nama</th>
+                    <th>Alamat</th>
+                    <th>Gender</th>
+                    <th>Umur</th>
+                    <th>T.T.L</th>
+                    <th width="7%">T Berobat</th>
+                    <th>Rujukan</th>
+                    <th>Keluhan</th>
+                    <th>Diagnosa</th>
+                </tr>
+            </thead>
+
+            <?php foreach ($daftarpasien as $row) { ?>
+
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="dropdown">
+                                <button class="dropbtn">Formulir</button>
+                                <div class="dropdown-content">
+                                    <a href="<?= site_url('formulir/formptk/' . $row->BODY_ID) ?>">Formulir Penolakan Tindakan Kedokteran</a>
+                                    <a href="<?= site_url('formulir/formpsa/' . $row->BODY_ID) ?>">Formulir Persetujuan Tindakan Anestesi Lokal</a>
+                                    <a href="<?= site_url('formulir/formpta/' . $row->BODY_ID) ?>">Formulir Penolakan Tindakan Anestesi Lokal</a>
+                                    <a href="<?= site_url('formulir/formtidk/' . $row->BODY_ID) ?>">Formulir Tindakan Invasif Diuar Kamar Operasi</a>
+                                    <a href="<?= site_url('formulir/formbpak/' . $row->BODY_ID) ?>">Formulir Pengkajian Awal Dan Keperawatan</a>
+                                    <a href="<?= site_url('formulir/formpkmrj/' . $row->BODY_ID) ?>">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan</a>
+                                    <a href="<?= site_url('formulir/formcpptrj/' . $row->BODY_ID) ?>">Formulir Catatan Perkembangan Pasien Terintegrasi Rawat Jalan </a>
+                                </div>
+                            </div>
+                        </td>
+                        <td><?= $row->NO_REGISTRATION; ?></td>
+                        <td><?= $row->THENAME; ?></td>
+                        <td><?= $row->THEADDRESS; ?></td>
+                        <td><?= $row->GENDER; ?></td>
+                        <td><?= $row->AGEYEAR . 't  ' .  $row->AGEMONTH . 'b  ' . $row->AGEDAY . 'h'; ?></td>
+                        <td><?= $row->PLACE_OF_BIRTH . ', ' . $row->DATE_OF_BIRTH; ?></td>
+                        <td><?= $row->VISIT_DATE; ?></td>
+                        <td><?= $row->PPKRUJUKAN; ?></td>
+                        <td><?= $row->ANAMNASE; ?></td>
+                        <td><?= $row->CONCLUSION; ?></td>
+                    </tr>
+                </tbody>
+            <?php }; ?>
+        </table>
+    </div>
+
+    <div class="container-fluid fixed">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <svg class="bi" width="30" height="24">
+                        <use xlink:href="#bootstrap" />
+                    </svg>
+                </a>
+                <span class="mb-3 mb-md-0 text-muted">&copy; 2023 RSUD Dr. M. Yunus Bengkulu</span>
+            </div>
+        </footer>
+    </div>
+
+
+    <!-- <div class="container" style="margin: 0 auto;">
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Penolakan Tindakan kedokteran</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formptk') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formptk') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Persetujuan Tindakan Anestesi Lokal</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formpsa') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formpsa') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Penolakan Tindakan Anestesi Lokal</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formpta') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formpta') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
@@ -86,32 +220,32 @@
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Pengkajian Awal dan Keperawatan</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formbpak') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formbpak') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Tindakan Invasif Di Luar Kamar Operasi</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formtidk') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formtidk') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formpkmrj') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formpkmrj') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
@@ -120,16 +254,16 @@
         <div class="row align-items-center">
             <div class="col-md-4">
                 <div class="card mt-5" style="width: 18rem;" align="center">
-                    <img src="<?= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
+                    <img src="<= base_url('assets/form3.png') ?>" class="card-img-top" width="50px">
                     <div class="card-body">
                         <h5 class="card-title">Formulir Catatan Perkembangan Pasien Terintegrasi Rawat Jalan</h5>
                         <br>
-                        <a href="<?= site_url('formulir/formcpptrj') ?>" class="btn btn-primary">Isi Formulir</a>
+                        <a href="<= site_url('formulir/formcpptrj') ?>" class="btn btn-primary">Isi Formulir</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
 
     <?= $this->renderSection('content') ?>

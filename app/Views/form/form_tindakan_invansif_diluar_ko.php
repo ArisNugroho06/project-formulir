@@ -1,9 +1,7 @@
-<?php
-$db = db_connect();
+<!-- $db = db_connect();
 
 foreach ($dataAssessmenttidk as $row) {
-};
-?>
+}; -->
 
 <!doctype html>
 <html lang="en">
@@ -76,34 +74,60 @@ foreach ($dataAssessmenttidk as $row) {
 
     <script type="text/javascript">
         $(function f1() {
-            $("input[name='t_032']").click(function f1() {
-                if ($("#t_032_ya").is(":checked")) {
-                    $("#v_25").removeAttr("disabled");
-                    $("#v_26").removeAttr("disabled");
-                    $("#v_27").removeAttr("disabled");
-                    $("#v_28").removeAttr("disabled");
-                    $("#v_29").removeAttr("disabled");
-                    $("#t_033_laki").removeAttr("disabled");
-                    $("#t_033_perempuan").removeAttr("disabled");
-                    $("#v_25").focus();
+            $("input[name='t_07']").click(function f1() {
+                if ($("#t_07_ya").is(":checked")) {
+                    $("#v_09").removeAttr("disabled");
+                    $("#v_10").removeAttr("disabled");
+                    $("#v_11").removeAttr("disabled");
+                    $("#v_12").removeAttr("disabled");
+                    $("#v_13").removeAttr("disabled");
+                    $("#v_14").removeAttr("disabled");
+                    $("#v_09").focus();
                 } else {
-                    $("#v_25").attr("disabled", true);
-                    $("#v_25").prop("checked", false);
-                    $("#v_25").val("");
-                    $("#v_26").attr("disabled", true);
-                    $("#v_26").prop("checked", false);
-                    $("#v_26").val("");
-                    $("#v_27").attr("disabled", true);
-                    $("#v_27").prop("checked", false);
-                    $("#v_27").val("");
-                    $("#v_28").attr("disabled", true);
-                    $("#v_28").prop("checked", false);
-                    $("#v_28").val("");
-                    $("#v_29").attr("disabled", true);
-                    $("#v_29").prop("checked", false);
-                    $("#v_29").val("");
-                    $("#t_033_laki").prop("checked", false);
-                    $("#t_033_perempuan").prop("checked", false);
+                    $("#v_09").attr("disabled", true);
+                    $("#v_09").val("");
+                    $("#v_10").attr("disabled", true);
+                    $("#v_10").val("");
+                    $("#v_11").attr("disabled", true);
+                    $("#v_11").val("");
+                    $("#v_12").attr("disabled", true);
+                    $("#v_12").val("");
+                    $("#v_13").attr("disabled", true);
+                    $("#v_13").val("");
+                    $("#v_14").attr("disabled", true);
+                    $("#v_14").val("");
+                }
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function f1() {
+            $("input[name='t_031']").click(function f1() {
+                if ($("#t_031_ya").is(":checked")) {
+                    $("#v_20").removeAttr("disabled");
+                    $("#v_21").removeAttr("disabled");
+                    $("#v_22").removeAttr("disabled");
+                    $("#v_23").removeAttr("disabled");
+                    $("#v_24").removeAttr("disabled");
+                    $("#t_032_laki").removeAttr("disabled");
+                    $("#t_032_perempuan").removeAttr("disabled");
+                    $("#v_20").focus();
+                } else {
+                    $("#v_20").attr("disabled", true);
+                    $("#v_20").val("");
+                    $("#v_21").attr("disabled", true);
+                    $("#v_21").val("");
+                    $("#v_22").attr("disabled", true);
+                    $("#v_22").val("");
+                    $("#v_23").attr("disabled", true);
+                    $("#v_23").val("");
+                    $("#v_24").attr("disabled", true);
+                    $("#v_24").val("");
+                    $("#t_032_laki").attr("disabled", true);
+                    $("#t_032_laki").prop("checked", false);
+                    $("#t_032_perempuanx").attr("disabled", true);
+                    $("#t_032_perempuan").prop("checked", false);
                 }
             });
         });
@@ -140,7 +164,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">No. Rekam Medis</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $row->NO_REGISTRATION; ?>" readonly>
+                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $psn[0]->NO_REGISTRATION; ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -150,7 +174,7 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label class="col-form-label">Nama Lengkap</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $row->THENAME; ?>" readonly>
+                                            <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $psn[0]->THENAME; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +184,7 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label class="col-form-label">Nama Keluarga</label>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $row->ALLOANAMNESIS_CONTACT; ?>" readonly>
+                                            <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $psn[0]->ALLOANAMNESIS_CONTACT; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -173,7 +197,7 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label class="col-form-label">Tgl. Lahir</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $row->DATE_OF_BIRTH; ?>" readonly>
+                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $psn[0]->DATE_OF_BIRTH; ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -183,7 +207,7 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label>Jenis Kelamin</label>
                                         </div>
                                         <div class="col-7">
-                                            <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $row->GENDER; ?>" readonly>
+                                            <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $psn[0]->GENDER; ?>" readonly>
                                             <!-- <select class="form-control" name="t_01">
                                                 <option selected>Pilih</option> 
                                                 <option value="1">L</option>
@@ -199,7 +223,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Ruangan</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $row->CLASS_ROOM_ID; ?>" readonly>
+                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $psn[0]->CLASS_ROOM_ID; ?>" readonly>
                                 </div>
                             </div>
 
@@ -209,7 +233,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label>Stiker Pasien</label>
                                 </div>
                                 <div class="col-6">
-                                    <input type="file" name="upload" id="upload">
+                                    <input type="file" name="img" id="img">
                                 </div>
                             </div>
                         </div>
@@ -226,7 +250,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Nama Dokter</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_06" id="v_06">
+                                    <input class="form-control" type="text" name="v_01" id="v_01">
                                 </div>
                             </div>
 
@@ -235,7 +259,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Nama Tindakan</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_07" id="v_07">
+                                    <input class="form-control" type="text" name="v_02" id="v_02">
                                 </div>
                             </div>
 
@@ -244,7 +268,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Diagnosa Medis</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_08" id="v_08">
+                                    <input class="form-control" type="text" name="v_03" id="v_03">
                                 </div>
                             </div>
 
@@ -253,7 +277,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Tanggal Tindakan</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="date" name="v_09" id="v_09">
+                                    <input class="form-control" type="date" name="v_04" id="v_04">
                                 </div>
                             </div>
 
@@ -262,7 +286,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Ruang Tindakan</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_10" id="v_10">
+                                    <input class="form-control" type="text" name="v_05" id="v_05">
                                 </div>
                             </div>
 
@@ -275,7 +299,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label"><strong>SIGN IN</strong> pukul</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="time" name="v_11" id="v_11">
+                                    <input class="form-control" type="time" name="v_06" id="v_06">
                                 </div>
                             </div>
 
@@ -286,6 +310,22 @@ foreach ($dataAssessmenttidk as $row) {
                             <div class="row align-items-center">
                                 <div class="col-md-8">
                                     <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Identifikasi dan gelang pasien</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check-inline">
+                                        <input type="radio" class="form-check-input" name="t_01" id="t_01_ya" value="1">
+                                        <label for="t_01_ya">Ya</label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <input type="radio" class="form-check-input" name="t_01" id="t_01_tidak" value="0">
+                                        <label for="t_01_tidak">Tidak</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Asal Rujukan</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -301,7 +341,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Asal Rujukan</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tindakan yang akan dilakukan</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -317,7 +357,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tindakan yang akan dilakukan</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Formulir persetujuan tindakan</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -333,7 +373,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Formulir persetujuan tindakan</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Formulir persetujuan Anesthesia</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -347,9 +387,29 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                             </div>
 
+                            <p>2. Pasien sudah puasa 4 / 6 / 8 jam</p>
+
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Minum/makan terakhir pukul</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input class="form-control" type="time" name="v_07" id="v_07">
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center">
+                                <div class="col-md-5">
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</label>
+                                </div>
+                                <div class="col-md-7">
+                                    <input class="form-control" type="text" name="v_08" id="v_08">
+                                </div>
+                            </div>
+
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Formulir persetujuan Anesthesia</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;*Obat yang diminum sebelumnnya</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -363,29 +423,9 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                             </div>
 
-                            <p>2. Pasien sudah puasa 4 / 6 / 8 jam</p>
-
-                            <div class="row align-items-center">
-                                <div class="col-md-5">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Minum/makan terakhir pukul</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input class="form-control" type="time" name="v_12" id="v_12">
-                                </div>
-                            </div>
-
-                            <div class="row align-items-center">
-                                <div class="col-md-5">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</label>
-                                </div>
-                                <div class="col-md-7">
-                                    <input class="form-control" type="text" name="v_13" id="v_13">
-                                </div>
-                            </div>
-
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;*Obat yang diminum sebelumnnya</label>
+                                    <label class="col-form-label">3. Pasien yang sudah di cek hasil lab :</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -400,8 +440,67 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
 
                             <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5">
+                                            <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Hb</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="v_09" id="v_09" disabled="disabled">
+                                        </div>
+                                    </div>
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5">
+                                            <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Trombosit</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="v_10" id="v_10" disabled="disabled">
+                                        </div>
+                                    </div>
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5">
+                                            <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;APTT</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="v_11" id="v_11" disabled="disabled">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5">
+                                            <label class="col-form-label">HT</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="v_12" id="v_12" disabled="disabled">
+                                        </div>
+                                    </div>
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5">
+                                            <label class="col-form-label">PT</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="v_13" id="v_13" disabled="disabled">
+                                        </div>
+                                    </div>
+
+                                    <div class="row align-items-center">
+                                        <div class="col-md-5">
+                                            <label class="col-form-label">Lain2</label>
+                                        </div>
+                                        <div class="col-md-7">
+                                            <input class="form-control" type="text" name="v_14" id="v_14" disabled="disabled">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">3. Pasien yang sudah di cek hasil lab :</label>
+                                    <label class="col-form-label">4. Cek EKG (untuk pasien > 40 Tahun)</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -416,67 +515,15 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
 
                             <div class="row align-items-center">
-                                <div class="col-md-6">
+                                <div class="col-md-8">
                                     <div class="row align-items-center">
                                         <div class="col-md-5">
-                                            <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Hb</label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_14" id="v_14">
-                                        </div>
-                                    </div>
-
-                                    <div class="row align-items-center">
-                                        <div class="col-md-5">
-                                            <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Trombosit</label>
+                                            <label class="col-form-label">5. Cek Pencitraan</label>
                                         </div>
                                         <div class="col-md-7">
                                             <input class="form-control" type="text" name="v_15" id="v_15">
                                         </div>
                                     </div>
-
-                                    <div class="row align-items-center">
-                                        <div class="col-md-5">
-                                            <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;APTT</label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_16" id="v_16">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-5">
-                                            <label class="col-form-label">HT</label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_17" id="v_17">
-                                        </div>
-                                    </div>
-
-                                    <div class="row align-items-center">
-                                        <div class="col-md-5">
-                                            <label class="col-form-label">PT</label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_18" id="v_18">
-                                        </div>
-                                    </div>
-
-                                    <div class="row align-items-center">
-                                        <div class="col-md-5">
-                                            <label class="col-form-label">Lain2</label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_19" id="v_19">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row align-items-center">
-                                <div class="col-md-8">
-                                    <label class="col-form-label">4. Cek EKG (untuk pasien > 40 Tahun)</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -494,10 +541,10 @@ foreach ($dataAssessmenttidk as $row) {
                                 <div class="col-md-8">
                                     <div class="row align-items-center">
                                         <div class="col-md-5">
-                                            <label class="col-form-label">5. Cek Pencitraan</label>
+                                            <label class="col-form-label">6. Cek Pemeriksaan Penunjang Lain </label>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_20" id="v_20">
+                                            <input class="form-control" type="text" name="v_16" id="v_16">
                                         </div>
                                     </div>
                                 </div>
@@ -515,14 +562,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <div class="row align-items-center">
-                                        <div class="col-md-5">
-                                            <label class="col-form-label">6. Cek Pemeriksaan Penunjang Lain </label>
-                                        </div>
-                                        <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_21" id="v_21">
-                                        </div>
-                                    </div>
+                                    <label class="col-form-label">7. Cek Alat Bed Side Monitor</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -538,7 +578,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">7. Cek Alat Bed Side Monitor</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Cek Alat Instrument yang Telah Steril</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -554,7 +594,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Cek Alat Instrument yang Telah Steril</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Cek Mesin Suction</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -570,7 +610,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Cek Mesin Suction</label>
+                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Cek Meja Operasi</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -586,7 +626,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Cek Meja Operasi</label>
+                                    <label class="col-form-label">8. Apakah alat telah steril ?</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -602,7 +642,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                             <div class="row align-items-center">
                                 <div class="col-md-8">
-                                    <label class="col-form-label">8. Apakah alat telah steril ?</label>
+                                    <label class="col-form-label">9. Apakah persiapan obat anesthesia/sedasi?</label>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-check-inline">
@@ -612,22 +652,6 @@ foreach ($dataAssessmenttidk as $row) {
                                     <div class="form-check-inline">
                                         <input type="radio" class="form-check-input" name="t_016" id="t_016_tidak" value="0">
                                         <label for="t_016_tidak">Tidak</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row align-items-center">
-                                <div class="col-md-8">
-                                    <label class="col-form-label">9. Apakah persiapan obat anesthesia/sedasi?</label>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_017" id="t_017_ya" value="1">
-                                        <label for="t_017_ya">Ya</label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <input type="radio" class="form-check-input" name="t_017" id="t_017_tidak" value="0">
-                                        <label for="t_017_tidak">Tidak</label>
                                     </div>
                                 </div>
                             </div>
@@ -644,6 +668,22 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" name="t_017" id="t_017_ya" value="1">
+                                    <label for="t_017_ya">Ya</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" name="t_017" id="t_017_tidak" value="0">
+                                    <label for="t_017_tidak">Tidak</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi Premedikasi?</label>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check-inline">
                                     <input type="radio" class="form-check-input" name="t_018" id="t_018_ya" value="1">
                                     <label for="t_018_ya">Ya</label>
                                 </div>
@@ -656,7 +696,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Alergi Premedikasi?</label>
+                                <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Asthma?</label>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
@@ -672,7 +712,14 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Asthma?</label>
+                                <div class="row align-items-center">
+                                    <div class="col-md-5">
+                                        <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Lain-lain</label>
+                                    </div>
+                                    <div class="col-md-7">
+                                        <input class="form-control" type="text" name="v_17" id="v_17">
+                                    </div>
+                                </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
@@ -688,14 +735,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <div class="row align-items-center">
-                                    <div class="col-md-5">
-                                        <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Lain-lain</label>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_22" id="v_22">
-                                    </div>
-                                </div>
+                                <label class="col-form-label">11. Apakah pasien memiliki resiko jatuh?</label>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
@@ -711,7 +751,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <label class="col-form-label">11. Apakah pasien memiliki resiko jatuh?</label>
+                                <label class="col-form-label">12. Apakah pasien telah menggunakan pakaian tindakan?</label>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
@@ -727,7 +767,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <label class="col-form-label">12. Apakah pasien telah menggunakan pakaian tindakan?</label>
+                                <label class="col-form-label">13. Apakah pasien telah diinfus/IV line?</label>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
@@ -736,23 +776,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 </div>
                                 <div class="form-check-inline">
                                     <input type="radio" class="form-check-input" name="t_023" id="t_023_tidak" value="0">
-                                    <label>Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <label class="col-form-label">13. Apakah pasien telah diinfus/IV line?</label>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_ya" value="1">
-                                    <label for="t_024_ya">Ya</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_tidak" value="0">
-                                    <label for="t_024_tidak">Tidak</label>
+                                    <label for="t_023_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -763,12 +787,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_ya" value="1">
-                                    <label for="t_025_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_ya" value="1">
+                                    <label for="t_024_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_tidak" value="0">
-                                    <label for="t_025_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_tidak" value="0">
+                                    <label for="t_024_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -783,7 +807,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label"><strong>TIME OUT</strong> pukul</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="time" name="v_23" id="v_23">
+                                <input class="form-control" type="time" name="v_18" id="v_18">
                             </div>
                         </div>
 
@@ -792,6 +816,24 @@ foreach ($dataAssessmenttidk as $row) {
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <label class="col-form-label">1. Tim medis telah memperkenalkan nama dan peran masing-masing</label>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_ya" value="1">
+                                    <label for="t_025_ya">Ya</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_tidak" value="0">
+                                    <label for="t_025_tidak">Tidak</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>2. Dokter/perawat melakukan konfirmasi verbal : </p>
+
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Nama Pasien</label>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
@@ -805,36 +847,18 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                         </div>
 
-                        <p>2. Dokter/perawat melakukan konfirmasi verbal : </p>
-
-                        <div class="row align-items-center">
-                            <div class="col-md-8">
-                                <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Nama Pasien</label>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_ya" value="1">
-                                    <label for="t_027_ya">Ya</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_tidak" value="0">
-                                    <label for="t_027_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tanggal Lahir</label>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_ya" value="1" value="0">
-                                    <label for="t_028_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_ya" value="1" value="0">
+                                    <label for="t_027_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_tidak">
-                                    <label for="t_028_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_tidak">
+                                    <label for="t_027_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -845,12 +869,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_ya" value="1">
-                                    <label for="t_029_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_ya" value="1">
+                                    <label for="t_028_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_tidak" value="0">
-                                    <label for="t_029_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_tidak" value="0">
+                                    <label for="t_028_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -861,12 +885,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_ya" value="1">
-                                    <label for="t_030_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_ya" value="1">
+                                    <label for="t_029_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_tidak" value="0">
-                                    <label for="t_030_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_tidak" value="0">
+                                    <label for="t_029_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -881,7 +905,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label"><strong>SIGN OUT</strong> pukul</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="time" name="v_24" id="v_24">
+                                <input class="form-control" type="time" name="v_19" id="v_19">
                             </div>
                         </div>
 
@@ -893,12 +917,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ya" value="1">
-                                    <label for="t_031_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_ya" value="1">
+                                    <label for="t_030_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ytidak" value="0">
-                                    <label for="t_031_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_tidak" value="0">
+                                    <label for="t_030_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -909,12 +933,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_ya" value="1">
-                                    <label for="t_032_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ya" value="1">
+                                    <label for="t_031_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_tidak" value="0">
-                                    <label for="t_032_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_tidak" value="0">
+                                    <label for="t_031_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -924,7 +948,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Nama Pasien : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="text" name="v_25" id="v_25" disabled="disabled">
+                                <input class="form-control" type="text" name="v_20" id="v_20" disabled="disabled">
                             </div>
                         </div>
 
@@ -933,7 +957,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tanggal Lahir : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="date" name="v_26" id="v_26" disabled="disabled">
+                                <input class="form-control" type="date" name="v_21" id="v_21" disabled="disabled">
                             </div>
                         </div>
 
@@ -942,7 +966,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;No. Rekam Medis : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="text" name="v_27" id="v_27" disabled="disabled">
+                                <input class="form-control" type="text" name="v_22" id="v_22" disabled="disabled">
                             </div>
                         </div>
 
@@ -952,12 +976,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-7">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_laki" value="1" disabled="disabled">
-                                    <label for="t_033_laki">Laki-laki</label>
+                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_laki" value="1" disabled="disabled">
+                                    <label for="t_032_laki">Laki-laki</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_perempuan" value="2" disabled="disabled">
-                                    <label for="t_033_perempuan">Perempuan</label>
+                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_perempuan" value="2" disabled="disabled">
+                                    <label for="t_032_perempuan">Perempuan</label>
                                 </div>
                             </div>
                         </div>
@@ -967,7 +991,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tanggal Tindakan : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="date" name="v_28" id="v_28" disabled="disabled">
+                                <input class="form-control" type="date" name="v_23" id="v_23" disabled="disabled">
                             </div>
                         </div>
 
@@ -976,7 +1000,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Lokasi Pengambilan : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="text" name="v_29" id="v_29" disabled="disabled">
+                                <input class="form-control" type="text" name="v_24" id="v_24" disabled="disabled">
                             </div>
                         </div>
 
@@ -986,6 +1010,22 @@ foreach ($dataAssessmenttidk as $row) {
                         <div class="row align-items-center">
                             <div class="col-md-7">
                                 <label class="col-form-label">3. Kondisi Alat dalam keadaan baik</label>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_ya" value="1">
+                                    <label for="t_033_ya">Ya</label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_tidak" value="0">
+                                    <label for="t_033_tidak">Tidak</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="col-md-7">
+                                <label class="col-form-label">4. Foto USG bila diperlukan</label>
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
@@ -1001,7 +1041,7 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <div class="row align-items-center">
                             <div class="col-md-7">
-                                <label class="col-form-label">4. Foto USG bila diperlukan</label>
+                                <label class="col-form-label">5. Observasi Pemulihan</label>
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
@@ -1016,35 +1056,19 @@ foreach ($dataAssessmenttidk as $row) {
                         </div>
 
                         <div class="row align-items-center">
-                            <div class="col-md-7">
-                                <label class="col-form-label">5. Observasi Pemulihan</label>
-                            </div>
-                            <div class="col-md-5">
-                                <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_036" id="t_036_ya" value="1">
-                                    <label for="t_036_ya">Ya</label>
-                                </div>
-                                <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_036" id="t_036_tidak" value="0">
-                                    <label for="t_036_tidak">Tidak</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row align-items-center">
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;- Kesadaran :</p>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="t_037_cm" name="t_037" value="1">
-                                    <label for="t_037_cm">Compos Mentis</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_del" name="t_037" value="2">
+                                    <input class="form-check-input" type="checkbox" id="t_036_cm" name="t_036" value="1">
+                                    <label for="t_036_cm">Compos Mentis</label><br>
+                                    <input class="form-check-input" type="checkbox" id="t_037_del" name="t_037" value="1">
                                     <label for="t_037_del">Delirium</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_coma" name="t_037" value="3">
-                                    <label for="t_037_coma">Coma</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_sam" name="t_037" value="4">
-                                    <label for="t_037_sam">Samnolen</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_sc" name="t_037" value="5">
-                                    <label for="t_037_sc">Soporo coma</label>
+                                    <input class="form-check-input" type="checkbox" id="t_038_coma" name="t_038" value="1">
+                                    <label for="t_038_coma">Coma</label><br>
+                                    <input class="form-check-input" type="checkbox" id="t_039_sam" name="t_039" value="1">
+                                    <label for="t_039_sam">Samnolen</label><br>
+                                    <input class="form-check-input" type="checkbox" id="t_040_sc" name="t_040" value="1">
+                                    <label for="t_040_sc">Soporo coma</label>
                                 </div>
                             </div>
                         </div>
@@ -1057,12 +1081,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_038" id="t_038_ya" value="1">
-                                    <label for="t_038_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_041" id="t_041_ya" value="1">
+                                    <label for="t_041_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_038" id="t_038_tidak" value="0">
-                                    <label for="t_038_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_041" id="t_041_tidak" value="0">
+                                    <label for="t_041_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -1073,12 +1097,12 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_039" id="t_039_ya" value="1">
-                                    <label for="t_039_ya">Ya</label>
+                                    <input type="radio" class="form-check-input" name="t_042" id="t_042_ya" value="1">
+                                    <label for="t_042_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_039" id="t_039_tidak" value="0">
-                                    <label for="t_039_tidak">Tidak</label>
+                                    <input type="radio" class="form-check-input" name="t_042" id="t_042_tidak" value="0">
+                                    <label for="t_042_tidak">Tidak</label>
                                 </div>
                             </div>
                         </div>
@@ -1098,19 +1122,19 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label for="" style="text-align: center;">Operator</label>
                                         <br>
                                         <div id="sig"></div>
-                                        <br><input type="text" id="v_30" name="v_30" size="5px">
+                                        <br><input type="text" id="v_25" name="v_25" size="5px">
                                     </td>
                                     <td style="text-align: center; width: 30%;">
                                         <label for="" style="text-align: center;">Perawat</label>
                                         <br>
                                         <div id="sig1"></div>
-                                        <br><input type="text" id="v_31" name="v_31" size="5px">
+                                        <br><input type="text" id="v_26" name="v_26" size="5px">
                                     </td>
                                     <td style="text-align: center; width: 30%;">
                                         <label for="" style="text-align: center;">Dokter Anastesi</label>
                                         <br>
                                         <div id="sig2"></div>
-                                        <br><input type="text" id="v_32" name="v_32" size="5px">
+                                        <br><input type="text" id="v_27" name="v_27" size="5px">
                                     </td>
                                 </tr>
                             </table>

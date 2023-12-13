@@ -2,6 +2,12 @@
 
 namespace App\Controllers;
 
+//inisialisasi model yang akan digunakan
+
+use App\Models\Assessment_model;
+//INISIALISASI AGAR BISA TERIMA DATA POST/GET, valisadi dll
+use CodeIgniter\Controller;
+
 class Home extends BaseController
 {
     // public function index(): string
@@ -9,43 +15,22 @@ class Home extends BaseController
     //     return view('welcome_message');
     // }
 
-    public function index(): string
+    protected $mdata;
+
+    public function __construct()
     {
-        return view('layout');
+        $this->mdata = new Assessment_model();
     }
 
-    public function formptk(): string
-    {
-        return view('form/form_penolakan_tindakan_kedokteran');
-    }
+    // public function index(): string
+    // {
+    //     return view('layout');
+    // }
 
-    public function formpsa(): string
+    public function index()
     {
-        return view('form/form_persetujuan_anestesi');
-    }
+        $contoh['daftarpasien'] = $this->mdata->tampilsemuadata();
 
-    public function formpta(): string
-    {
-        return view('form/form_penolakan_anestesi');
-    }
-
-    public function formtidk(): string
-    {
-        return view('form/form_tindakan_invansif_diluar_ko');
-    }
-
-    public function formbpak(): string
-    {
-        return view('form/form_blanko_pengkajian_awal_dan_keperawatan');
-    }
-
-    public function formpkmrj(): string
-    {
-        return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan');
-    }
-
-    public function formcpptrj(): string
-    {
-        return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan');
+        return view('layout', $contoh);
     }
 }

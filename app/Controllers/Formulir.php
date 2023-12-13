@@ -17,87 +17,60 @@ class Formulir extends BaseController
         $this->mdata = new Assessment_model();
     }
 
-    public function formptk(): string
+
+    public function formptk($body_id): string
     {
 
-        $tampilptk =  $this->mdata->tampildata();
-
-        $infoptk = array(
-            'dataAssessmentptk' => $tampilptk,
-        );
+        $infoptk['psn'] = $this->mdata->formpasien($body_id);
 
         return view('form/form_penolakan_tindakan_kedokteran', $infoptk);
     }
 
-    public function formpsa(): string
+    public function formpsa($body_id): string
     {
 
-        $tampilpsa =  $this->mdata->tampildata();
-
-        $infopsa = array(
-            'dataAssessmentpsa' => $tampilpsa,
-        );
+        $infopsa['psn'] = $this->mdata->formpasien($body_id);
 
         return view('form/form_persetujuan_anestesi', $infopsa);
     }
 
-    public function formpta(): string
+    public function formpta($body_id): string
     {
-        $tampilpta =  $this->mdata->tampildata();
-
-        $infopta = array(
-            'dataAssessmentpta' => $tampilpta,
-        );
+        $infopta['psn'] = $this->mdata->formpasien($body_id);
 
         return view('form/form_penolakan_anestesi', $infopta);
     }
 
-    public function formtidk(): string
+    public function formtidk($body_id): string
     {
 
-        $tampiltidk =  $this->mdata->tampildata();
-
-        $infotidk = array(
-            'dataAssessmenttidk' => $tampiltidk,
-        );
+        $infotidk['psn'] = $this->mdata->formpasien($body_id);
 
 
         return view('form/form_tindakan_invansif_diluar_ko', $infotidk);
     }
 
-    public function formbpak(): string
+    public function formbpak($body_id): string
     {
 
-        $tampildata =  $this->mdata->tampildata();
+        $infobpak['psn'] = $this->mdata->formpasien($body_id);
 
-        $info = array(
-            'dataAssessmentformptk' => $tampildata,
-        );
-
-        return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $info);
+        return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $infobpak);
     }
 
-    public function formpkmrj(): string
+    public function formpkmrj($body_id): string
     {
 
-        $tampilpkmrj =  $this->mdata->tampildata();
-
-        $infopkmrj = array(
-            'dataAssessmentpkmrj' => $tampilpkmrj,
-        );
+        $infopkmrj['psn'] = $this->mdata->formpasien($body_id);
 
 
         return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan', $infopkmrj);
     }
 
-    public function formcpptrj(): string
+    public function formcpptrj($body_id): string
     {
 
-        $tampilcpptrj =  $this->mdata->tampildata();
-
-        $infocpptrj = array(
-            'dataAssessmentcpptrj' => $tampilcpptrj,
-        );
+        $infocpptrj['psn'] = $this->mdata->formpasien($body_id);
 
 
         return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $infocpptrj);
@@ -111,3 +84,98 @@ class Formulir extends BaseController
         return redirect()->to('home/index');
     }
 }
+
+// public function formptk(): string
+//     {
+
+//         $tampilptk =  $this->mdata->tampildata();
+
+//         $infoptk = array(
+//             'dataAssessmentptk' => $tampilptk,
+//         );
+
+//         return view('form/form_penolakan_tindakan_kedokteran', $infoptk);
+//     }
+
+//     public function formpsa(): string
+//     {
+
+//         $tampilpsa =  $this->mdata->tampildata();
+
+//         $infopsa = array(
+//             'dataAssessmentpsa' => $tampilpsa,
+//         );
+
+//         return view('form/form_persetujuan_anestesi', $infopsa);
+//     }
+
+//     public function formpta(): string
+//     {
+//         $tampilpta =  $this->mdata->tampildata();
+
+//         $infopta = array(
+//             'dataAssessmentpta' => $tampilpta,
+//         );
+
+//         return view('form/form_penolakan_anestesi', $infopta);
+//     }
+
+//     public function formtidk(): string
+//     {
+
+//         $tampiltidk =  $this->mdata->tampildata();
+
+//         $infotidk = array(
+//             'dataAssessmenttidk' => $tampiltidk,
+//         );
+
+
+//         return view('form/form_tindakan_invansif_diluar_ko', $infotidk);
+//     }
+
+//     public function formbpak(): string
+//     {
+
+//         $tampildata =  $this->mdata->tampildata();
+
+//         $info = array(
+//             'dataAssessmentformptk' => $tampildata,
+//         );
+
+//         return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $info);
+//     }
+
+//     public function formpkmrj(): string
+//     {
+
+//         $tampilpkmrj =  $this->mdata->tampildata();
+
+//         $infopkmrj = array(
+//             'dataAssessmentpkmrj' => $tampilpkmrj,
+//         );
+
+
+//         return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan', $infopkmrj);
+//     }
+
+//     public function formcpptrj(): string
+//     {
+
+//         $tampilcpptrj =  $this->mdata->tampildata();
+
+//         $infocpptrj = array(
+//             'dataAssessmentcpptrj' => $tampilcpptrj,
+//         );
+
+
+//         return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $infocpptrj);
+//     }
+
+
+//     public function addaksi()
+//     {
+//         $data['data'] = $this->mdata->tambahdata();
+
+//         return redirect()->to('home/index');
+//     }
+// }

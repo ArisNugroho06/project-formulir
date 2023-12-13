@@ -29,6 +29,32 @@ class Assessment_model extends Model
         return $query->getResult();
     }
 
+
+    public function tampilsemuadata()
+    {
+
+        $sql = "SELECT * FROM pasien";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+
+    public function formpasien($body_id)
+    {
+        $sql = "SELECT * FROM pasien where BODY_ID='$body_id'";
+
+        $query = $this->db->query($sql);
+
+        //uraikan hasil query dalam bentuk array
+        $hasil = $query->getResult();
+
+        return $hasil;
+    }
+
     public function tambahdata()
     {
         $body_id = $this->request->getPost('body_id');
