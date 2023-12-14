@@ -495,7 +495,7 @@ foreach ($dataAssessmentformptk as $row) {
     </script>
 
     <script>
-        $("#temperature, #weight, #height").keydown(function(e) {
+        $("#temperature, #weight, #height, #tension_upper, #tension_bellow, #nadi, #nafas").keydown(function(e) {
             !0 == e.shiftKey && e.preventDefault(), e.keyCode >= 48 && e.keyCode <= 57 || e.keyCode >= 96 && e.keyCode <= 105 || 8 == e.keyCode || 9 == e.keyCode || 37 == e.keyCode || 39 == e.keyCode || 46 == e.keyCode || 190 == e.keyCode || e.preventDefault(), -1 !== $(this).val().indexOf(".") && 190 == e.keyCode && e.preventDefault()
         });
     </script>
@@ -509,7 +509,7 @@ foreach ($dataAssessmentformptk as $row) {
     </div>
 
     <div class="container mt-5">
-        <form action="<?= site_url('formulir/addaksi') ?>" method="post">
+        <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
             <table class="table text">
                 <tr>
                     <td width="5%" align="right">

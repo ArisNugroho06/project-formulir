@@ -155,7 +155,7 @@ foreach ($dataAssessmentptk as $row) {
   <div class="container mt-5" style="text-align: right">
     <h2>RM 08</h2>
   </div>
-  <form action="<?= site_url('formulir/addaksi') ?>" method="post">
+  <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
     <div class="container mt-3">
       <table class="table table-bordered" style="border: 1px solid black">
         <tr>

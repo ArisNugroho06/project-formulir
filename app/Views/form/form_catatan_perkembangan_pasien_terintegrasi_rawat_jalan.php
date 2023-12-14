@@ -1,5 +1,6 @@
 <!-- $db = db_connect();
 foreach ($dataAssessmentcpptrj as $row) {
+    <canvas id="sig' + i5 + '" width="198" height="123">Your browser doesn\'t support signing</canvas>
 }; -->
 
 
@@ -35,13 +36,13 @@ foreach ($dataAssessmentcpptrj as $row) {
 
     <script>
         $(function() {
-            var sig = $('#sig').signature();
+            var sig = $('#TTD').signature();
         });
     </script>
 
     <script>
         $(function() {
-            var sig = $('#sig2').signature();
+            var sig = $('#TTD_1').signature();
         });
     </script>
 
@@ -65,13 +66,14 @@ foreach ($dataAssessmentcpptrj as $row) {
                 .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i1 + '" name="v_' + i1 + '" size="20px" placeholder="Profesi"></div>'))
                 .append($("<td>").html('<div class="form-group"><textarea class="form-control" id="v_' + i2 + '" name="v_' + i2 + '" rows="10" cols="5" placeholder="Hasil"></textarea></div>'))
                 .append($("<td>").html('<div class="form-group"><textarea class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" rows="10" cols="5" placeholder="Instruksi Kesehatan"></textarea></div>'))
-                .append($("<td>").html('<div class="form-group"><input type="datetime-local" id="v_' + i4 + '" name="v_' + i4 + '" size="25px"><br><label>DPJP</label><br><div id="sig' + i5 + '" class="kbw-signature"><canvas id="sig' + i5 + '" width="198" height="123">Your browser doesn\'t support signing</canvas></div><br><input type="text" id="v_' + i6 + '" name="v_' + i6 + '" size="25px"></div>'))
+                .append($("<td>").html('<div class="form-group"><input type="datetime-local" id="v_' + i4 + '" name="v_' + i4 + '" size="25px"><br><label>DPJP</label><br><div id="TTD_' + i5 + '" class="kbw-signature"></div><br><input type="text" id="v_' + i6 + '" name="v_' + i6 + '" size="25px"></div>'))
+                .append($("<script>").html('$(function() { var sig = $("#TTD_' + i5 + '").signature();  });'))
             )
 
             i += 6;
             ttd += 1;
 
-            initiateSign("sig" + i5)
+            initiateSign("TTD" + i5)
 
 
         }
@@ -86,7 +88,7 @@ foreach ($dataAssessmentcpptrj as $row) {
     </div>
 
     <div class="container mt-5">
-        <form action="<?= site_url('formulir/addaksi') ?>" method="post">
+        <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
             <table class="table text">
                 <tr>
                     <td width="5%" align="right">
@@ -204,7 +206,7 @@ foreach ($dataAssessmentcpptrj as $row) {
                     <div class="form-group">
                         <input type="datetime-local" id="v_08" name="v_08" size="25px">
                         <label>DPJP</label><br>
-                        <div id="sig"></div><br>
+                        <div id="TTD"></div><br>
                         <input type="text" id="v_09" name="v_09" size="25px">
                     </div>
                 </td>
