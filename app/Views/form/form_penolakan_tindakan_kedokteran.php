@@ -32,87 +32,65 @@ foreach ($dataAssessmentptk as $row) {
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
   <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+
   <script>
     $(function() {
-      var sig = $('#sig').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
+      var sig = {
+        container: $('#ttd').signature({
+          color: '#0000ff'
+        }),
+
+        formSave: function(formData) {
+          formData.append("ttd", b4sign.container.signature('toJSON'));
+          $.ajax({
+            url: "<?= site_url('formulir/addaksi') ?>",
+            method: 'POST',
+            data: formData,
+            processData: false,
+            contentType: false,
+            dataType: 'json',
+          });
+        },
+      }
+      sig.container;
+
+      $(document).on('submit', '#form', function(event) {
+        b4sign.formSave(new FormData(this));
       });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig1').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_1').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig2').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_2').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig3').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_3').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig4').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_4').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig5').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_5').signature();
     });
   </script>
 
@@ -150,12 +128,13 @@ foreach ($dataAssessmentptk as $row) {
 <body>
 
   <div class="container mt-5">
-    <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
   </div>
   <div class="container mt-5" style="text-align: right">
     <h2>RM 08</h2>
   </div>
-  <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+  <form action="<?= site_url('formulir/addaksi') ?>" method="post" id="form" autocomplete="off">
+    <input type="hidden" id="form" name="form" value="F1">
     <div class="container mt-3">
       <table class="table table-bordered" style="border: 1px solid black">
         <tr>
@@ -208,7 +187,9 @@ foreach ($dataAssessmentptk as $row) {
                       <label class="col-form-label">Umur</label>
                     </div>
                     <div class="col-md-9">
-                      <input class="form-control" type="text" name="ageyear " id="ageyear" value="<?php echo $psn[0]->AGEYEAR . 't ' .  $psn[0]->AGEMONTH . 'b  ' . $psn[0]->AGEDAY . 'h'; ?>" readonly>
+                      <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $psn[0]->AGEYEAR . 't ' .  $psn[0]->AGEMONTH . 'b ' . $psn[0]->AGEDAY . 'h'; ?>" readonly>
+                      <input type="hidden" name="agemonth" id="agemonth" value="<?php echo $psn[0]->AGEMONTH; ?>">
+                      <input type="hidden" name="ageday" id="ageday" value="<?php echo $psn[0]->AGEDAY; ?>">
                     </div>
                   </div>
                 </div>
@@ -605,7 +586,7 @@ foreach ($dataAssessmentptk as $row) {
         </td>
         <td class="text-center" width="15%">
           <p>Tanda Tangan</p>
-          <div id="sig"></div>
+          <div id="ttd"></div>
         </td>
       </tr>
       <tr>
@@ -616,7 +597,7 @@ foreach ($dataAssessmentptk as $row) {
         </td>
         <td>
           <p class="text-center" width="15%">Tanda Tangan</p>
-          <div id="sig1"></div>
+          <div id="ttd_1"></div>
         </td>
       </tr>
       <tr>
@@ -677,16 +658,16 @@ foreach ($dataAssessmentptk as $row) {
         </tr>
         <tr>
           <td>
-            <div id="sig2"></div>
+            <div id="ttd_2"></div>
           </td>
           <td>
-            <div id="sig3"></div>
+            <div id="ttd_3"></div>
           </td>
           <td>
-            <div id="sig4"></div>
+            <div id="ttd_4"></div>
           </td>
           <td>
-            <div id="sig5"></div>
+            <div id="ttd_5"></div>
           </td>
         </tr>
         <tr>
@@ -707,10 +688,9 @@ foreach ($dataAssessmentptk as $row) {
     </div>
 
     <div class="d-grid gap-2 mb-3">
-      <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+      <input class="btn btn-primary" type="submit" id="submit" name="submit" value="Simpan">
     </div>
   </form>
-
   </div>
 
 
@@ -724,6 +704,9 @@ foreach ($dataAssessmentptk as $row) {
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
+
+
+
 </body>
 
 </html>

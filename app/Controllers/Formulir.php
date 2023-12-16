@@ -81,7 +81,7 @@ class Formulir extends BaseController
     {
         $data['data'] = $this->mdata->tambahdata();
 
-        return redirect()->to('home/index');
+        return redirect()->to('home/datapasien');
     }
 }
 

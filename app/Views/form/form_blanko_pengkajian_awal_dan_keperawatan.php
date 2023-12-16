@@ -505,11 +505,12 @@ foreach ($dataAssessmentformptk as $row) {
 <body>
 
     <div class="container mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
     </div>
 
     <div class="container mt-5">
         <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+            <input type="hidden" id="form" name="form" value="F5">
             <table class="table text">
                 <tr>
                     <td width="5%" align="right">

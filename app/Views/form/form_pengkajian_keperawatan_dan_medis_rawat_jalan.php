@@ -33,7 +33,7 @@ foreach ($dataAssessmentpkmrj as $row) {
 
         <script>
             $(function() {
-                var sig = $('#sig').signature();
+                var sig = $('#ttd').signature();
                 $('#disable').click(function() {
                     var disable = $(this).text() === 'Disable';
                     $(this).text(disable ? 'Enable' : 'Disable');
@@ -47,7 +47,7 @@ foreach ($dataAssessmentpkmrj as $row) {
 
         <script>
             $(function() {
-                var sig = $('#sig1').signature();
+                var sig = $('#ttd_1').signature();
                 $('#disable').click(function() {
                     var disable = $(this).text() === 'Disable';
                     $(this).text(disable ? 'Enable' : 'Disable');
@@ -198,11 +198,12 @@ foreach ($dataAssessmentpkmrj as $row) {
 <body>
 
     <div class="container mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
     </div>
 
     <div class="container mt-5">
         <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+            <input type="hidden" id="form" name="form" value="F6">
             <table class="table text">
                 <tr>
                     <td width="5%" align="right">
@@ -1016,12 +1017,12 @@ foreach ($dataAssessmentpkmrj as $row) {
                             <tr>
                                 <td width="50%" class="text-center">
                                     <label>Dokter Pemeriksa</label><br>
-                                    <div id="sig"></div><br>
+                                    <div id="ttd"></div><br>
                                     <input type="text" id="v_67" name="v_67" size="25px">
                                 </td>
                                 <td width="50%" class="text-center">
                                     <label>Perawat Yang Melakukan Pengkajian</label><br>
-                                    <div id="sig1"></div><br>
+                                    <div id="ttd_1"></div><br>
                                     <input type="text" id="v_68" name="v_68" size="25px">
                                 </td>
                             </tr>

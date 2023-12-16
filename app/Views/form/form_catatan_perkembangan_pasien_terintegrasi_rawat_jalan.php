@@ -36,13 +36,13 @@ foreach ($dataAssessmentcpptrj as $row) {
 
     <script>
         $(function() {
-            var sig = $('#TTD').signature();
+            var sig = $('#ttd').signature();
         });
     </script>
 
     <script>
         $(function() {
-            var sig = $('#TTD_1').signature();
+            var sig = $('#ttd_1').signature();
         });
     </script>
 
@@ -51,6 +51,7 @@ foreach ($dataAssessmentcpptrj as $row) {
         // JavaScript Document
         var i = 10;
         var ttd = 0;
+        var no = 1;
 
         function addRow(tableID) {
 
@@ -60,20 +61,23 @@ foreach ($dataAssessmentcpptrj as $row) {
             i4 = i + 4;
             i5 = ttd + 1;
             i6 = i + 5;
+            i7 = no + 1;
 
             $("#" + tableID).append($("<tr>")
+                .append($("<td>").html(i7))
                 .append($("<td>").html('<div class="form-group"><input type="datetime-local" class="form-control" required="required" name="v_' + i + '" size="20px"></div>'))
                 .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i1 + '" name="v_' + i1 + '" size="20px" placeholder="Profesi"></div>'))
                 .append($("<td>").html('<div class="form-group"><textarea class="form-control" id="v_' + i2 + '" name="v_' + i2 + '" rows="10" cols="5" placeholder="Hasil"></textarea></div>'))
-                .append($("<td>").html('<div class="form-group"><textarea class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" rows="10" cols="5" placeholder="Instruksi Kesehatan"></textarea></div>'))
-                .append($("<td>").html('<div class="form-group"><input type="datetime-local" id="v_' + i4 + '" name="v_' + i4 + '" size="25px"><br><label>DPJP</label><br><div id="TTD_' + i5 + '" class="kbw-signature"></div><br><input type="text" id="v_' + i6 + '" name="v_' + i6 + '" size="25px"></div>'))
-                .append($("<script>").html('$(function() { var sig = $("#TTD_' + i5 + '").signature();  });'))
+                .append($("<td>").html('<div class="form-group"><textarea class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" rows="10" cols="5" placeholder="Instruksi"></textarea></div>'))
+                .append($("<td>").html('<div class="form-group"><input type="datetime-local" id="v_' + i4 + '" name="v_' + i4 + '" size="25px"><br><label>DPJP</label><br><div id="ttd_' + i5 + '" class="kbw-signature"></div><br><input type="text" id="v_' + i6 + '" name="v_' + i6 + '" size="25px"></div>'))
+                .append($("<script>").html('$(function() { var sig = $("#ttd_' + i5 + '").signature();  });'))
             )
 
             i += 6;
             ttd += 1;
+            no += 1;
 
-            initiateSign("TTD" + i5)
+            // initiateSign("ttd" + i5)
 
 
         }
@@ -83,12 +87,13 @@ foreach ($dataAssessmentcpptrj as $row) {
 
 <body>
 
-    <div class="container mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    <div class="container-fluid fixed mt-5">
+        <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
     </div>
 
-    <div class="container mt-5">
+    <div class="container-fluid fixed mt-5">
         <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+            <input type="hidden" id="form" name="form" value="F7">
             <table class="table text">
                 <tr>
                     <td width="5%" align="right">
@@ -164,6 +169,7 @@ foreach ($dataAssessmentcpptrj as $row) {
     <table class="w-full table table-striped table-bordered table-hover text-center" style="border: 2px solid black">
         <tr>
             <thead>
+                <th>NO</th>
                 <th width="10%">TANGGAL/JAM</th>
                 <th width="10%">PROFESI</th>
                 <th width="30%">
@@ -182,6 +188,7 @@ foreach ($dataAssessmentcpptrj as $row) {
         </tr>
         <tbody id="tbody2">
             <tr>
+                <td>1</td>
                 <td>
                     <div class="form-group">
                         <input type="datetime-local" class="form-control" required="required" id="v_04" name="v_04" size="20px">
@@ -204,16 +211,16 @@ foreach ($dataAssessmentcpptrj as $row) {
                 </td>
                 <td>
                     <div class="form-group">
-                        <input type="datetime-local" id="v_08" name="v_08" size="25px">
+                        <input type="datetime-local" id="v_08" name="v_08" size="25px"><br>
                         <label>DPJP</label><br>
-                        <div id="TTD"></div><br>
+                        <div id="ttd"></div><br>
                         <input type="text" id="v_09" name="v_09" size="25px">
                     </div>
                 </td>
             </tr>
         </tbody>
         <tfoot>
-            <td colspan="5" align="center">
+            <td colspan="6" align="center">
                 <button type="button" class="btn btn-primary" onclick="addRow('tbody2')">Tambah Baris</button>
             </td>
         </tfoot>

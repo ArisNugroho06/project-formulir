@@ -35,85 +35,37 @@ foreach ($dataAssessmentpsa as $row) {
   <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
   <script>
     $(function() {
-      var sig = $('#sig').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig1').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_1').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig2').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_2').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig3').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_3').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig4').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_4').signature();
     });
   </script>
 
   <script>
     $(function() {
-      var sig = $('#sig5').signature();
-      $('#disable').click(function() {
-        var disable = $(this).text() === 'Disable';
-        $(this).text(disable ? 'Enable' : 'Disable');
-        sig.signature(disable ? 'disable' : 'enable');
-      });
-      $('#clear').click(function() {
-        sig.signature('clear');
-      });
+      var sig = $('#ttd_5').signature();
     });
   </script>
 
@@ -151,7 +103,7 @@ foreach ($dataAssessmentpsa as $row) {
 <body>
 
   <div class="container mt-5">
-    <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
   </div>
 
 
@@ -160,6 +112,7 @@ foreach ($dataAssessmentpsa as $row) {
   </div>
   <div class="container mt-3">
     <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+      <input type="hidden" id="form" name="form" value="F3">
       <table class="table table-bordered" style="border: 1px solid black">
         <tr>
           <td width="50%">
@@ -509,7 +462,7 @@ foreach ($dataAssessmentpsa as $row) {
       </td>
       <td class="text-center" width="15%">
         <p>Tanda Tangan</p>
-        <div id="sig"></div>
+        <div id="ttd"></div>
       </td>
     </tr>
     <tr>
@@ -522,7 +475,7 @@ foreach ($dataAssessmentpsa as $row) {
         <p class="text-center" width="15%">
           Tanda Tangan
         </p>
-        <div id="sig1"></div>
+        <div id="ttd_1"></div>
       </td>
     </tr>
     <tr>
@@ -583,16 +536,16 @@ foreach ($dataAssessmentpsa as $row) {
       </tr>
       <tr>
         <td>
-          <div id="sig2"></div>
+          <div id="ttd_2"></div>
         </td>
         <td>
-          <div id="sig3"></div>
+          <div id="ttd_3"></div>
         </td>
         <td>
-          <div id="sig4"></div>
+          <div id="ttd_4"></div>
         </td>
         <td>
-          <div id="sig5"></div>
+          <div id="ttd_5"></div>
         </td>
       </tr>
       <tr>

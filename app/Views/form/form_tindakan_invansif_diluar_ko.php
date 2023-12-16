@@ -34,7 +34,7 @@ foreach ($dataAssessmenttidk as $row) {
     <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
     <script>
         $(function() {
-            var sig = $('#TTD').signature();
+            var sig = $('#ttd').signature();
             $('#disable').click(function() {
                 var disable = $(this).text() === 'Disable';
                 $(this).text(disable ? 'Enable' : 'Disable');
@@ -47,7 +47,7 @@ foreach ($dataAssessmenttidk as $row) {
     </script>
     <script>
         $(function() {
-            var sig = $('#TTD_1').signature();
+            var sig = $('#ttd_1').signature();
             $('#disable').click(function() {
                 var disable = $(this).text() === 'Disable';
                 $(this).text(disable ? 'Enable' : 'Disable');
@@ -60,7 +60,7 @@ foreach ($dataAssessmenttidk as $row) {
     </script>
     <script>
         $(function() {
-            var sig = $('#TTD_2').signature();
+            var sig = $('#ttd_2').signature();
             $('#disable').click(function() {
                 var disable = $(this).text() === 'Disable';
                 $(this).text(disable ? 'Enable' : 'Disable');
@@ -134,12 +134,14 @@ foreach ($dataAssessmenttidk as $row) {
     </script>
 
 </head>
+<div class="container-fluid fixed mt-5">
+    <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
+</div>
 
 <body>
     <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
-        <div class="container mt-5">
-            <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
-        </div>
+        <input type="hidden" id="form" name="form" value="F4">
+
 
         <div class="container-fluid" style="text-align: center">
             <h4>RSUD Dr. M. YUNUS BENGKULU</h4>
@@ -1115,19 +1117,19 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Operator</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="TTD"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd"></div>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_25" name="v_25" size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Perawat</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="TTD_1"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_1"></div>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_26" name="v_26" size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Dokter Anastesi</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="TTD_2"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_2"></div>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_27" name="v_27" size="25px">
                         <br>
 
