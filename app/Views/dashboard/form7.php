@@ -146,10 +146,10 @@
                         <td>
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/updateform7/' . $row->BODY_ID) ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= site_url('aksi/updateform7/' . $row->no) ?>" class="btn btn-warning">Update</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/deleteform7/' . $row->BODY_ID) ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= site_url('home/deleteform7/' . $row->no) ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </td>

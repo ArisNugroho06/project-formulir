@@ -92,7 +92,7 @@ foreach ($dataAssessmentcpptrj as $row) {
     </div>
 
     <div class="container-fluid fixed mt-5">
-        <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+        <form action="<?= site_url('home/addaksi') ?>" method="post" autocomplete="off">
             <input type="hidden" id="form" name="form" value="F7">
             <table class="table text">
                 <tr>

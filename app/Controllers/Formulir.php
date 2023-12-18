@@ -17,6 +17,7 @@ class Formulir extends BaseController
         $this->mdata = new Assessment_model();
     }
 
+    //menapilkan data data dari tabel pasien ketika akan mengisi form baru
 
     public function formptk($body_id): string
     {
@@ -76,106 +77,71 @@ class Formulir extends BaseController
         return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $infocpptrj);
     }
 
+    //menampilkan semua data pasien saat akan mengisi formulir baru
 
-    public function addaksi()
+    public function datapasien()
     {
-        $data['data'] = $this->mdata->tambahdata();
 
-        return redirect()->to('home/datapasien');
+        $contoh['daftarpasien'] = $this->mdata->tampilsemuadata();
+
+        return view('dashboard/datapasien', $contoh);
+    }
+
+    //menampilkan data formulir yang telah diisi sesuai denga id formulir yang telah diisi
+
+    public function form1()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform1();
+
+        return view('dashboard/form1', $contoh);
+    }
+
+    public function form2()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform2();
+
+        return view('dashboard/form2', $contoh);
+    }
+
+    public function form3()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform3();
+
+        return view('dashboard/form3', $contoh);
+    }
+
+    public function form4()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform4();
+
+        return view('dashboard/form4', $contoh);
+    }
+
+    public function form5()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform5();
+
+        return view('dashboard/form5', $contoh);
+    }
+
+    public function form6()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform6();
+
+        return view('dashboard/form6', $contoh);
+    }
+
+    public function form7()
+    {
+
+        $contoh['daftarpasien'] = $this->mdata->tampildataform7();
+
+        return view('dashboard/form7', $contoh);
     }
 }
-
-// public function formptk(): string
-//     {
-
-//         $tampilptk =  $this->mdata->tampildata();
-
-//         $infoptk = array(
-//             'dataAssessmentptk' => $tampilptk,
-//         );
-
-//         return view('form/form_penolakan_tindakan_kedokteran', $infoptk);
-//     }
-
-//     public function formpsa(): string
-//     {
-
-//         $tampilpsa =  $this->mdata->tampildata();
-
-//         $infopsa = array(
-//             'dataAssessmentpsa' => $tampilpsa,
-//         );
-
-//         return view('form/form_persetujuan_anestesi', $infopsa);
-//     }
-
-//     public function formpta(): string
-//     {
-//         $tampilpta =  $this->mdata->tampildata();
-
-//         $infopta = array(
-//             'dataAssessmentpta' => $tampilpta,
-//         );
-
-//         return view('form/form_penolakan_anestesi', $infopta);
-//     }
-
-//     public function formtidk(): string
-//     {
-
-//         $tampiltidk =  $this->mdata->tampildata();
-
-//         $infotidk = array(
-//             'dataAssessmenttidk' => $tampiltidk,
-//         );
-
-
-//         return view('form/form_tindakan_invansif_diluar_ko', $infotidk);
-//     }
-
-//     public function formbpak(): string
-//     {
-
-//         $tampildata =  $this->mdata->tampildata();
-
-//         $info = array(
-//             'dataAssessmentformptk' => $tampildata,
-//         );
-
-//         return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $info);
-//     }
-
-//     public function formpkmrj(): string
-//     {
-
-//         $tampilpkmrj =  $this->mdata->tampildata();
-
-//         $infopkmrj = array(
-//             'dataAssessmentpkmrj' => $tampilpkmrj,
-//         );
-
-
-//         return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan', $infopkmrj);
-//     }
-
-//     public function formcpptrj(): string
-//     {
-
-//         $tampilcpptrj =  $this->mdata->tampildata();
-
-//         $infocpptrj = array(
-//             'dataAssessmentcpptrj' => $tampilcpptrj,
-//         );
-
-
-//         return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $infocpptrj);
-//     }
-
-
-//     public function addaksi()
-//     {
-//         $data['data'] = $this->mdata->tambahdata();
-
-//         return redirect()->to('home/index');
-//     }
-// }

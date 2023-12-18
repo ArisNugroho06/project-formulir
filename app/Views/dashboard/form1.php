@@ -126,7 +126,7 @@
 
             <thead class="text-center">
                 <tr>
-
+                    <th>No</th>
                     <th>RM</th>
                     <th>Nama</th>
                     <th>Alamat</th>
@@ -139,10 +139,12 @@
                 </tr>
             </thead>
 
-            <?php foreach ($daftarpasien as $row) { ?>
+            <?php $i = 1;
+            foreach ($daftarpasien as $row) { ?>
 
                 <tbody>
                     <tr>
+                        <td><?= $i; ?></td>
                         <td><?= $row->NO_REGISTRATION; ?></td>
                         <td><?= $row->THENAME; ?></td>
                         <td><?= $row->THEADDRESS; ?></td>
@@ -154,16 +156,17 @@
                         <td>
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/updateform1/' . $row->BODY_ID) ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= site_url('home/updateform1/' . $row->no) ?>" class="btn btn-warning">Update</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/deleteform1/' . $row->BODY_ID) ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= site_url('home/deleteform1/' . $row->no) ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </td>
                     </tr>
                 </tbody>
-            <?php }; ?>
+            <?php $i++;
+            }; ?>
         </table>
     </div>
 

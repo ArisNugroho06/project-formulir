@@ -103,7 +103,7 @@
         <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
-    <h3 class="text-center text-uppercase mt-5">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan</h3>
+    <h3 class="text-center text-uppercase mt-5">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan Bagian II</h3>
 
     <div class="container-fluid fixed">
         <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">
@@ -146,10 +146,10 @@
                         <td>
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/updateform6/' . $row->BODY_ID) ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= site_url('aksi/updateform6/' . $row->no) ?>" class="btn btn-warning">Update</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/deleteform6/' . $row->BODY_ID) ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= site_url('home/deleteform6/' . $row->no) ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </td>

@@ -159,7 +159,7 @@ foreach ($dataAssessmentpsa as $row) {
     <h2>RSUD Dr. M. YUNUS BENGKULU</h2>
   </div>
   <div class="container mt-3">
-    <form action="<?= site_url('formulir/addaksi') ?>" method="post" autocomplete="off">
+    <form action="<?= site_url('home/addaksi') ?>" method="post" autocomplete="off">
       <input type="hidden" id="form" name="form" value="F2">
       <table class="table table-bordered" style="border: 1px solid black">
         <tr>

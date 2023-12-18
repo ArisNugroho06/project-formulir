@@ -10,10 +10,6 @@ use CodeIgniter\Controller;
 
 class Home extends BaseController
 {
-    // public function index(): string
-    // {
-    //     return view('welcome_message');
-    // }
 
     protected $mdata;
 
@@ -22,79 +18,87 @@ class Home extends BaseController
         $this->mdata = new Assessment_model();
     }
 
-    // public function index(): string
-    // {
-    //     return view('layout');
-    // }
+    //menampilkan menu utama pada halaman dashboard
 
     public function index()
     {
-        $contoh['daftarpasien'] = $this->mdata->tampilsemuadata();
-
-        return view('layout', $contoh);
+        return view('layout');
     }
 
-    public function datapasien()
+    //menambahkan data formulir yang telah diisi ke dalam database assessment_info
+
+    public function addaksi()
     {
+        $data['data'] = $this->mdata->tambahdata();
 
-        $contoh['daftarpasien'] = $this->mdata->tampilsemuadata();
-
-        return view('dashboard/datapasien', $contoh);
+        return redirect()->to('formulir/datapasien');
     }
 
-    public function form1()
+
+    //menghapus form dari masing masing tabel 
+
+    public function deleteform1($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform1();
-
-        return view('dashboard/form1', $contoh);
+        return redirect()->to('formulir/form1');
     }
 
-    public function form2()
+    public function deleteform2($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform2();
-
-        return view('dashboard/form2', $contoh);
+        return redirect()->to('formulir/form2');
     }
 
-    public function form3()
+    public function deleteform3($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform3();
-
-        return view('dashboard/form3', $contoh);
+        return redirect()->to('formulir/form3');
     }
 
-    public function form4()
+    public function deleteform4($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform4();
-
-        return view('dashboard/form4', $contoh);
+        return redirect()->to('formulir/form4');
     }
 
-    public function form5()
+    public function deleteform5($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform5();
-
-        return view('dashboard/form5', $contoh);
+        return redirect()->to('formulir/form5');
     }
 
-    public function form6()
+    public function deleteform6($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform6();
-
-        return view('dashboard/form6', $contoh);
+        return redirect()->to('formulir/form6');
     }
 
-    public function form7()
+    public function deleteform7($no)
     {
+        $this->mdata->deleteform($no);
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform7();
+        return redirect()->to('formulir/form7');
+    }
 
-        return view('dashboard/form7', $contoh);
+    //edit masing masing formulir sesuai dengan no pada tabel assessment_info
+
+    public function updateform1($no)
+    {
+        $contoh['edit'] = $this->mdata->dataform1($no);
+
+        return view('update/updateform1', $contoh);
+    }
+
+    public function editform($no)
+    {
+        $contoh['edit'] = $this->mdata->editform($no);
+
+        return redirect()->to('formulir/form1');
     }
 }
