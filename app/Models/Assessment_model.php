@@ -487,7 +487,7 @@ class Assessment_model extends Model
 
     //mengedit data pada setiap form
 
-    public function editform()
+    public function editformulir()
     {
         $no = $this->request->getPost('no');
 
@@ -1035,12 +1035,12 @@ class Assessment_model extends Model
 
         $this->db->query($sql);
 
-        // dd($sql);
+        dd($sql);
 
         return;
     }
 
-    public function dataform1($no)
+    public function dataform($no)
     {
         $sql = "SELECT * FROM pasien INNER JOIN assessment_info ON pasien.NO_REGISTRATION = assessment_info.NO_REGISTRATION WHERE assessment_info.no = '$no'";
 

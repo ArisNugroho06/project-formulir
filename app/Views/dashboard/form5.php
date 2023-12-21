@@ -100,7 +100,7 @@
     <?= $this->include('navbar') ?>
 
     <div class="container-fluid fixed mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
     <h3 class="text-center text-uppercase mt-5">Formulir Pengkajian Awal dan keperawatan Rawat Jalan Bagian I</h3>
@@ -126,13 +126,11 @@
 
             <thead class="text-center">
                 <tr>
-
+                    <th>No</th>
                     <th>RM</th>
                     <th>Nama</th>
                     <th>Alamat</th>
                     <th>Gender</th>
-                    <th>Tgl Lahir</th>
-                    <th>Ayah/Ibu</th>
                     <th>Tgl & Jam Datang Pasien</th>
                     <th>Rujukan</th>
                     <th>Diagnosa</th>
@@ -142,28 +140,28 @@
                 </tr>
             </thead>
 
-            <?php foreach ($daftarpasien as $row) { ?>
+            <?php $i = 1;
+            foreach ($data as $row) { ?>
 
                 <tbody>
                     <tr>
-                        <td><?= $row->NO_REGISTRATION; ?></td>
-                        <td><?= $row->THENAME; ?></td>
-                        <td><?= $row->THEADDRESS; ?></td>
-                        <td><?= $row->GENDER; ?></td>
-                        <td><?= $row->DATE_OF_BIRTH; ?></td>
-                        <td><?= $row->FATHER . '/' . $row->MOTHER; ?></td>
-                        <td><?= $row->EXAMINATION_DATE; ?></td>
-                        <td><?= $row->PPKRUJUKAN; ?></td>
-                        <td><?= $row->CONCLUSION; ?></td>
-                        <td><?= $row->ANAMNASE; ?></td>
-                        <td><?= $row->CLINIC_ID; ?></td>
+                        <td><?= $i++; ?></td>
+                        <td><?= $row['NO_REGISTRATION'] ?></td>
+                        <td><?= $row['THENAME'] ?></td>
+                        <td><?= $row['THEADDRESS'] ?></td>
+                        <td><?= $row['GENDER'] ?></td>
+                        <td><?= $row['EXAMINATION_DATE'] ?></td>
+                        <td><?= $row['PPKRUJUKAN'] ?></td>
+                        <td><?= $row['CONCLUSION'] ?></td>
+                        <td><?= $row['ANAMNASE'] ?></td>
+                        <td><?= $row['CLINIC_ID'] ?></td>
                         <td>
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/updateform5/' . $row->no) ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= site_url('home/updateform5/' . $row['no']) ?>" class="btn btn-warning">Update</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('home/deleteform5/' . $row->no) ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= site_url('home/deleteform5/' . $row['no']) ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </td>

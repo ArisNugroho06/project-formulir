@@ -100,7 +100,7 @@
     <?= $this->include('navbar') ?>
 
     <div class="container-fluid fixed mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
     <h3 class="text-center text-uppercase mt-5">Formulir Tindakan Invasif Diuar Kamar Operasi</h3>
@@ -126,34 +126,34 @@
 
             <thead class="text-center">
                 <tr>
-
+                    <th>No</th>
                     <th>RM</th>
                     <th>Nama</th>
                     <th>Gender</th>
-                    <th>Tgl Lahir</th>
                     <th>Ruangan</th>
                     <th>Nama Keluarga</th>
                     <th width="14%">Keterangan</th>
                 </tr>
             </thead>
 
-            <?php foreach ($daftarpasien as $row) { ?>
+            <?php $i = 1;
+            foreach ($data as $row) { ?>
 
                 <tbody>
                     <tr>
-                        <td><?= $row->NO_REGISTRATION; ?></td>
-                        <td><?= $row->THENAME; ?></td>
-                        <td><?= $row->GENDER; ?></td>
-                        <td><?= $row->DATE_OF_BIRTH; ?></td>
-                        <td><?= $row->CLASS_ROOM_ID; ?></td>
-                        <td><?= $row->ALLOANAMNESIS_CONTACT ?></td>
+                        <td><?= $i++; ?></td>
+                        <td><?= $row['NO_REGISTRATION'] ?></td>
+                        <td><?= $row['THENAME'] ?></td>
+                        <td><?= $row['GENDER'] ?></td>
+                        <td><?= $row['CLASS_ROOM_ID'] ?></td>
+                        <td><?= $row['ALLOANAMNESIS_CONTACT'] ?></td>
                         <td>
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/updateform4/' . $row->no) ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= site_url('home/updateform4/' . $row['no']) ?>" class="btn btn-warning">Update</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('home/deleteform4/' . $row->no) ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= site_url('home/deleteform4/' . $row['no']) ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </td>

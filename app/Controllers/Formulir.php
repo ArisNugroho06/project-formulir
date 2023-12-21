@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 
 //inisialisasi model yang akan digunakan
-use App\Models\Assessment_model;
+use App\Models\ModelPasien;
 
 class Formulir extends BaseController
 {
@@ -14,134 +14,92 @@ class Formulir extends BaseController
 
     public function __construct()
     {
-        $this->mdata = new Assessment_model();
-    }
-
-    //menapilkan data data dari tabel pasien ketika akan mengisi form baru
-
-    public function formptk($body_id): string
-    {
-
-        $infoptk['psn'] = $this->mdata->formpasien($body_id);
-
-        return view('form/form_penolakan_tindakan_kedokteran', $infoptk);
-    }
-
-    public function formpsa($body_id): string
-    {
-
-        $infopsa['psn'] = $this->mdata->formpasien($body_id);
-
-        return view('form/form_persetujuan_anestesi', $infopsa);
-    }
-
-    public function formpta($body_id): string
-    {
-        $infopta['psn'] = $this->mdata->formpasien($body_id);
-
-        return view('form/form_penolakan_anestesi', $infopta);
-    }
-
-    public function formtidk($body_id): string
-    {
-
-        $infotidk['psn'] = $this->mdata->formpasien($body_id);
-
-
-        return view('form/form_tindakan_invansif_diluar_ko', $infotidk);
-    }
-
-    public function formbpak($body_id): string
-    {
-
-        $infobpak['psn'] = $this->mdata->formpasien($body_id);
-
-        return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $infobpak);
-    }
-
-    public function formpkmrj($body_id): string
-    {
-
-        $infopkmrj['psn'] = $this->mdata->formpasien($body_id);
-
-
-        return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan', $infopkmrj);
-    }
-
-    public function formcpptrj($body_id): string
-    {
-
-        $infocpptrj['psn'] = $this->mdata->formpasien($body_id);
-
-
-        return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $infocpptrj);
+        $this->mdata = new ModelPasien();
     }
 
     //menampilkan semua data pasien saat akan mengisi formulir baru
 
     public function datapasien()
     {
+        $datapasien = $this->mdata->findAll();
 
-        $contoh['daftarpasien'] = $this->mdata->tampilsemuadata();
+        $data = [
+            'daftarpasien' => $datapasien
+        ];
 
-        return view('dashboard/datapasien', $contoh);
+        return view('dashboard/datapasien', $data);
     }
 
-    //menampilkan data formulir yang telah diisi sesuai denga id formulir yang telah diisi
+    //menapilkan data data dari tabel pasien ketika akan mengisi form baru
 
-    public function form1()
+    public function formptk($no_registration)
     {
+        $datapasien = [
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform1();
-
-        return view('dashboard/form1', $contoh);
+        return view('form/form_penolakan_tindakan_kedokteran', $datapasien);
     }
 
-    public function form2()
+    public function formpsa($no_registration)
     {
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform2();
+        $datapasien = [
+            'psn2' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        return view('dashboard/form2', $contoh);
+        return view('form/form_persetujuan_anestesi', $datapasien);
     }
 
-    public function form3()
+    public function formpta($no_registration)
     {
+        $datapasien = [
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform3();
-
-        return view('dashboard/form3', $contoh);
+        return view('form/form_penolakan_anestesi', $datapasien);
     }
 
-    public function form4()
+    public function formtidk($no_registration)
     {
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform4();
+        $datapasien = [
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        return view('dashboard/form4', $contoh);
+
+        return view('form/form_tindakan_invansif_diluar_ko', $datapasien);
     }
 
-    public function form5()
+    public function formbpak($no_registration)
     {
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform5();
+        $datapasien = [
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        return view('dashboard/form5', $contoh);
+        return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $datapasien);
     }
 
-    public function form6()
+    public function formpkmrj($no_registration)
     {
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform6();
+        $datapasien = [
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        return view('dashboard/form6', $contoh);
+
+        return view('form/form_pengkajian_keperawatan_dan_medis_rawat_jalan', $datapasien);
     }
 
-    public function form7()
+    public function formcpptrj($no_registration)
     {
 
-        $contoh['daftarpasien'] = $this->mdata->tampildataform7();
+        $datapasien = [
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+        ];
 
-        return view('dashboard/form7', $contoh);
+
+        return view('form/form_catatan_perkembangan_pasien_terintegrasi_rawat_jalan', $datapasien);
     }
 }

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 //inisialisasi model yang akan digunakan
 
-use App\Models\Assessment_model;
+use App\Models\ModelPasien;
 //INISIALISASI AGAR BISA TERIMA DATA POST/GET, valisadi dll
 use CodeIgniter\Controller;
 
@@ -15,7 +15,7 @@ class Home extends BaseController
 
     public function __construct()
     {
-        $this->mdata = new Assessment_model();
+        $this->mdata = new ModelPasien();
     }
 
     //menampilkan menu utama pada halaman dashboard
@@ -88,17 +88,33 @@ class Home extends BaseController
 
     //edit masing masing formulir sesuai dengan no pada tabel assessment_info
 
+    //ambil data dari database
     public function updateform1($no)
     {
-        $contoh['edit'] = $this->mdata->dataform1($no);
+        $contoh['edit'] = $this->mdata->dataform($no);
 
         return view('update/updateform1', $contoh);
     }
-
-    public function editform($no)
+    //jalankan fungsi untuk update data ke database
+    public function editform1($no)
     {
-        $contoh['edit'] = $this->mdata->editform($no);
+        $contoh['edit'] = $this->mdata->editformulir($no);
 
         return redirect()->to('formulir/form1');
+    }
+
+
+    public function updateform2($no)
+    {
+        $contoh['editf2'] = $this->mdata->dataform($no);
+
+        return view('update/updateform2', $contoh);
+    }
+
+    public function editform2($no)
+    {
+        $contoh['editf2'] = $this->mdata->editformulir($no);
+
+        return redirect()->to('formulir/form2');
     }
 }

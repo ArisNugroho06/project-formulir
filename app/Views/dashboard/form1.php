@@ -16,6 +16,11 @@
     <link href="<?= base_url('bootstrap-5.0.2-dist/css/bootstrap.min.css') ?>" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
@@ -100,29 +105,13 @@
     <?= $this->include('navbar') ?>
 
     <div class="container-fluid fixed mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
     <h3 class="text-center text-uppercase mt-5">Formulir Penolakan Tindakan Kedokteran</h3>
 
     <div class="container-fluid fixed">
         <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">
-
-            <!-- <form class="d-flex mt-3 mb-3" action=" site_url('formulir/search') " method="post">
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <div class="row align-items-center">
-                            <div class="col-md-9">
-                                <input class="form-control me-2" type="search" name="idpasien" placeholder="Cari Data Pasien" aria-label="Search">
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-outline-primary" type="submit">Cari</button>
-                            </div>
-
-                        </div>
-                    </div>
-            </form> -->
-
 
             <thead class="text-center">
                 <tr>
@@ -132,41 +121,34 @@
                     <th>Alamat</th>
                     <th>Gender</th>
                     <th width="9%">Umur</th>
-                    <th width="9%">Tgl Lahir</th>
                     <th>Ruangan</th>
                     <th>Tgl & Jam Datang Pasien</th>
-                    <th width="14%">Keterangan</th>
+                    <th width="13%">Keterangan</th>
                 </tr>
             </thead>
 
             <?php $i = 1;
-            foreach ($daftarpasien as $row) { ?>
+            foreach ($data as $row) { ?>
 
                 <tbody>
                     <tr>
-                        <td><?= $i; ?></td>
-                        <td><?= $row->NO_REGISTRATION; ?></td>
-                        <td><?= $row->THENAME; ?></td>
-                        <td><?= $row->THEADDRESS; ?></td>
-                        <td><?= $row->GENDER; ?></td>
-                        <td><?= $row->AGEYEAR . 't  ' .  $row->AGEMONTH . 'b  ' . $row->AGEDAY . 'h'; ?></td>
-                        <td><?= $row->DATE_OF_BIRTH; ?></td>
-                        <td><?= $row->CLASS_ROOM_ID; ?></td>
-                        <td><?= $row->EXAMINATION_DATE; ?></td>
-                        <td>
-                            <div class="row align-items-center">
-                                <div class="col-md-6">
-                                    <a href="<?= site_url('home/updateform1/' . $row->no) ?>" class="btn btn-warning">Update</a>
-                                </div>
-                                <div class="col-md-6">
-                                    <a href="<?= site_url('home/deleteform1/' . $row->no) ?>" class="btn btn-danger">Delete</a>
-                                </div>
-                            </div>
+                        <td><?= $i++ ?></td>
+                        <td><?= $row['NO_REGISTRATION'] ?></td>
+                        <td><?= $row['THENAME'] ?></td>
+                        <td><?= $row['THEADDRESS'] ?></td>
+                        <td><?= $row['GENDER'] ?></td>
+                        <td><?= $row['AGEYEAR'] . 't  ' .  $row['AGEMONTH'] . 'b  ' . $row['AGEDAY'] . 'h' ?></td>
+                        <td><?= $row['CLASS_ROOM_ID'] ?></td>
+                        <td><?= $row['EXAMINATION_DATE'] ?></td>
+                        <td align="center">
+                            <a href="<?= site_url('detail/form1/' . $row['no']) ?>" class="btn btn-info"><i class="bi bi-eye-fill text-primary"></i></a>
+                            <a href="<?= site_url('update/form1/' . $row['no']) ?>" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></a>
+                            <a href="<?= site_url('delete/form1/' . $row['no']) ?>" class="btn btn-danger"><i class="bi bi-trash-fill text-light"></i></a>
                         </td>
                     </tr>
                 </tbody>
-            <?php $i++;
-            }; ?>
+            <?php
+            } ?>
         </table>
     </div>
 

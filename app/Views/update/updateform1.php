@@ -128,15 +128,15 @@ foreach ($dataAssessmentptk as $row) {
 <body>
 
     <div class="container mt-5">
-        <a class="btn btn-primary" href="<?= site_url('formulir/form1') ?>" role="button">Back</a>
+        <a class="btn btn-primary" href="<?= site_url('dataformulir/form1') ?>" role="button">Back</a>
     </div>
     <div class="container mt-5" style="text-align: right">
         <h2>RM 08</h2>
     </div>
-    <form action="<?php echo site_url('home/editform/' . $edit[0]->no); ?>" method="post" id="form" autocomplete="off">
+    <form action="<?php echo site_url('home/editform1/' . $edit['no']); ?>" method="post" id="form" autocomplete="off">
         <input type="hidden" id="form" name="form" value="F1">
 
-        <input type="hidden" name="no" id="no" value="<?= $edit[0]->no ?>">
+        <input type="hidden" name="no" id="no" value="<?= $edit['no'] ?>">
         <div class="container mt-3">
             <table class="table table-bordered" style="border: 1px solid black">
                 <tr>
@@ -159,7 +159,7 @@ foreach ($dataAssessmentptk as $row) {
                                     <label class="col-form-label">No RM</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $edit[0]->NO_REGISTRATION; ?>" readonly>
+                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $edit['NO_REGISTRATION'] ?>" readonly>
                                 </div>
                             </div>
 
@@ -168,30 +168,30 @@ foreach ($dataAssessmentptk as $row) {
                                     <label class="col-form-label">Nama Lengkap</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $edit[0]->THENAME; ?>" readonly>
+                                    <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $edit['THENAME'] ?>" readonly>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="col-md-8">
+                                <!-- <div class="col-md-8">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
                                             <label class="col-form-label">Tanggal Lahir</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $edit[0]->DATE_OF_BIRTH; ?>" readonly>
+                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<php echo $edit['DATE_OF_BIRTH'] ?>" readonly>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
                                 <div class="col-md-4">
                                     <div class="row align-items-center">
                                         <div class="col-md-3">
                                             <label class="col-form-label">Umur</label>
                                         </div>
                                         <div class="col-md-9">
-                                            <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $edit[0]->AGEYEAR . 't ' .  $edit[0]->AGEMONTH . 'b ' . $edit[0]->AGEDAY . 'h'; ?>" readonly>
-                                            <input type="hidden" name="agemonth" id="agemonth" value="<?php echo $edit[0]->AGEMONTH; ?>">
-                                            <input type="hidden" name="ageday" id="ageday" value="<?php echo $edit[0]->AGEDAY; ?>">
+                                            <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $edit['AGEYEAR'] . 't ' .  $edit['AGEMONTH'] . 'b ' . $edit['AGEDAY'] . 'h'; ?>" readonly>
+                                            <input type="hidden" name="agemonth" id="agemonth" value="<?php echo $edit['AGEMONTH'] ?>">
+                                            <input type="hidden" name="ageday" id="ageday" value="<?php echo $edit['AGEDAY'] ?>">
                                         </div>
                                     </div>
                                 </div>
@@ -202,15 +202,7 @@ foreach ($dataAssessmentptk as $row) {
                                     <label class="col-form-label">Jenis Kelamin</label>
                                 </div>
                                 <div class="col-md-4">
-                                    <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $edit[0]->GENDER; ?>" readonly>
-                                    <!-- <div class="form-check-inline">
-                    <input type="radio" class="form-check-input" name="gender" value="laki">
-                    <label>Laki-laki</label>
-                  </div>
-                  <div class="form-check-inline">
-                    <input type="radio" class="form-check-input" name="gender" value="perempuan">
-                    <label>Perempuan</label>
-                  </div> -->
+                                    <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $edit['GENDER'] ?>" readonly>
                                 </div>
                             </div>
 
@@ -219,7 +211,7 @@ foreach ($dataAssessmentptk as $row) {
                                     <label class="col-form-label">Alamat</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $edit[0]->THEADDRESS; ?></textarea>
+                                    <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $edit['THEADDRESS'] ?></textarea>
                                 </div>
                             </div>
 
@@ -228,7 +220,7 @@ foreach ($dataAssessmentptk as $row) {
                                     <label class="col-form-label">Dokter Penanggung Jawab Pasien</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="v_01" id="v_01" value="<?php echo $edit[0]->V_01; ?>">
+                                    <input class="form-control" type="text" name="v_01" id="v_01" value="<?php echo $edit['V_01'] ?>">
                                 </div>
                             </div>
 
@@ -239,7 +231,7 @@ foreach ($dataAssessmentptk as $row) {
                                     <label class="col-form-label">Ruangan</label>
                                 </div>
                                 <div class="col-md-8">
-                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $edit[0]->CLASS_ROOM_ID; ?>" readonly>
+                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $edit['CLASS_ROOM_ID'] ?>" readonly>
                                 </div>
                             </div>
 
@@ -250,7 +242,7 @@ foreach ($dataAssessmentptk as $row) {
                                             <label class="col-form-label">Tanggal dan Jam</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $edit[0]->EXAMINATION_DATE; ?>" readonly>
+                                            <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $edit['EXAMINATION_DATE'] ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -267,7 +259,7 @@ foreach ($dataAssessmentptk as $row) {
                 <label class="col-form-label">Dokter Pelaksana Tindakan</label>
             </div>
             <div class="col-md-10">
-                <input class="form-control" type="text" name="v_02" id="v_02" value="<?php echo $edit[0]->V_02; ?>">
+                <input class="form-control" type="text" name="v_02" id="v_02" value="<?php echo $edit['V_02'] ?>">
             </div>
         </div>
 
@@ -280,10 +272,10 @@ foreach ($dataAssessmentptk as $row) {
                     <div class="col-md-8">
                         <select class="form-control" id="t_01" name="t_01">
                             <?php
-                            $edit[0]->T_01 = ($edit[0]->T_01 == 'Penerima Informasi' ? 'selected' : '');
-                            echo "<option value='1' " . $edit[0]->T_01 . ">Penerima Informasi</option>";
-                            $edit[0]->T_01 = ($edit[0]->T_01 == 'Pemberi Persetujuan' ? 'selected' : '');
-                            echo "<option value='2' " . $edit[0]->T_01 . ">Pemberi Persetujuan</option>";
+                            $edit['T_01'] = ($edit['T_01'] == 'Penerima Informasi' ? 'selected' : '');
+                            echo "<option value='1' " . $edit['T_01'] . ">Penerima Informasi</option>";
+                            $edit['T_01'] = ($edit['T_01'] == 'Pemberi Persetujuan' ? 'selected' : '');
+                            echo "<option value='2' " . $edit['T_01'] . ">Pemberi Persetujuan</option>";
                             ?>
                         </select>
                     </div>
@@ -292,7 +284,7 @@ foreach ($dataAssessmentptk as $row) {
             <div class="col-md-5">
                 <div class="row align-items-center">
                     <div class="col-md-12">
-                        <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $edit[0]->V_03; ?>">
+                        <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $edit['V_03'] ?>">
                     </div>
                 </div>
             </div>
@@ -314,12 +306,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Diagnosis (WD & DD)</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_04" id="v_04" value="<?php echo $edit[0]->V_04; ?>">
+                            <input class="form-control" type="text" name="v_04" id="v_04" value="<?php echo $edit['V_04'] ?>">
                         </div>
                     </td>
                     <td class="text-center">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_02_wddd" name="t_02" <?php echo ($edit[0]->T_02 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_02_wddd" name="t_02" value="1" <?php echo ($edit['T_02'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -329,12 +321,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Dasar Diagnosis</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_05" id="v_05" value="<?php echo $edit[0]->V_05; ?>">
+                            <input class="form-control" type="text" name="v_05" id="v_05" value="<?php echo $edit['V_05'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_03_diagnosis" name="t_03" <?php echo ($edit[0]->T_03 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_03_diagnosis" name="t_03" value="1" <?php echo ($edit['T_03'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -344,12 +336,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Tindakan Kedokteran</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_06" id="v_06" value="<?php echo $edit[0]->V_06; ?>">
+                            <input class="form-control" type="text" name="v_06" id="v_06" value="<?php echo $edit['V_06'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_04_kedokteran" name="t_04" <?php echo ($edit[0]->T_04 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_04_kedokteran" name="t_04" value="1" <?php echo ($edit['T_04'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -359,12 +351,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Indikasi Tindakan</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" id="v_07" name="v_07" value="<?php echo $edit[0]->V_07; ?>">
+                            <input class="form-control" type="text" id="v_07" name="v_07" value="<?php echo $edit['V_07'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_05_tindakan" name="t_05" <?php echo ($edit[0]->T_05 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_05_tindakan" name="t_05" value="1" <?php echo ($edit['T_05'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -384,12 +376,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_08" id="v_08" value="<?php echo $edit[0]->V_08; ?>">
+                            <input class="form-control" type="text" name="v_08" id="v_08" value="<?php echo $edit['V_08'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_06_sedasi" name="t_06" <?php echo ($edit[0]->T_06 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_06_sedasi" name="t_06" value="1" <?php echo ($edit['T_06'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -399,12 +391,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_09" id="v_09" value="<?php echo $edit[0]->V_09; ?>">
+                            <input class="form-control" type="text" name="v_09" id="v_09" value="<?php echo $edit['V_09'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_07_uraian" name="t_07" <?php echo ($edit[0]->T_07 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_07_uraian" name="t_07" value="1" <?php echo ($edit['T_07'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -414,12 +406,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Tujuan</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_10" id="v_10" value="<?php echo $edit[0]->V_10; ?>">
+                            <input class="form-control" type="text" name="v_10" id="v_10" value="<?php echo $edit['V_10'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_08_tujuan" name="t_08" <?php echo ($edit[0]->T_08 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_08_tujuan" name="t_08" value="1" <?php echo ($edit['T_08'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -429,12 +421,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Risiko</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_11" id="v_11" value="<?php echo $edit[0]->V_11; ?>">
+                            <input class="form-control" type="text" name="v_11" id="v_11" value="<?php echo $edit['V_11'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_09_risiko" name="t_09" <?php echo ($edit[0]->T_09 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_09_risiko" name="t_09" value="1" <?php echo ($edit['T_09'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -444,12 +436,12 @@ foreach ($dataAssessmentptk as $row) {
                     <td>Komplikasi</td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_12" id="v_12" value="<?php echo $edit[0]->V_12; ?>">
+                            <input class="form-control" type="text" name="v_12" id="v_12" value="<?php echo $edit['V_12'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_010_komplikasi" name="t_010" <?php echo ($edit[0]->T_010 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_010_komplikasi" name="t_010" value="1" <?php echo ($edit['T_010'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -468,12 +460,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_13" id="v_13" value="<?php echo $edit[0]->V_13; ?>">
+                            <input class="form-control" type="text" name="v_13" id="v_13" value="<?php echo $edit['V_13'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_011_pvital" name="t_011" <?php echo ($edit[0]->T_011 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_011_pvital" name="t_011" value="1" <?php echo ($edit['T_011'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -483,12 +475,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_14" id="v_14" value="<?php echo $edit[0]->V_14; ?>">
+                            <input class="form-control" type="text" name="v_14" id="v_14" value="<?php echo $edit['V_14'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_012_pfungsi" name="t_012" <?php echo ($edit[0]->T_012 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_012_pfungsi" name="t_012" value="1" <?php echo ($edit['T_012'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -498,12 +490,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_15" id="v_15" value="<?php echo $edit[0]->V_15; ?>">
+                            <input class="form-control" type="text" name="v_15" id="v_15" value="<?php echo $edit['V_15'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_013_pkesembuhan" name="t_013" <?php echo ($edit[0]->T_013 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_013_pkesembuhan" name="t_013" value="1" <?php echo ($edit['T_013'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -517,13 +509,13 @@ foreach ($dataAssessmentptk as $row) {
                     <td>
                         <div class="form-group">
                             <br>
-                            <input class="form-control" type="text" name="v_16" id="v_16" value="<?php echo $edit[0]->V_16; ?>">
+                            <input class="form-control" type="text" name="v_16" id="v_16" value="<?php echo $edit['V_16'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
                             <br>
-                            <input class="form-check-input" type="checkbox" id="t_014_alternatif" name="t_014" <?php echo ($edit[0]->T_014 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_014_alternatif" name="t_014" value="1" <?php echo ($edit['T_014'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -540,12 +532,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_17" id="v_17" value="<?php echo $edit[0]->V_17; ?>">
+                            <input class="form-control" type="text" name="v_17" id="v_17" value="<?php echo $edit['V_17'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_015_perluasan" name="t_015" <?php echo ($edit[0]->T_015 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_015_perluasan" name="t_015" value="1" <?php echo ($edit['T_015'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -555,12 +547,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_18" id="v_18" value="<?php echo $edit[0]->V_18; ?>">
+                            <input class="form-control" type="text" name="v_18" id="v_18" value="<?php echo $edit['V_18'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_016_konsultasi" name="t_016" <?php echo ($edit[0]->T_016 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_016_konsultasi" name="t_016" value="1" <?php echo ($edit['T_016'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -570,12 +562,12 @@ foreach ($dataAssessmentptk as $row) {
                     </td>
                     <td>
                         <div class="form-group">
-                            <input class="form-control" type="text" name="v_19" id="v_19" value="<?php echo $edit[0]->V_19; ?>">
+                            <input class="form-control" type="text" name="v_19" id="v_19" value="<?php echo $edit['V_19'] ?>">
                         </div>
                     </td>
                     <td>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_017_resusitasi" name="t_017" <?php echo ($edit[0]->T_017 == 1 ? 'checked' : ''); ?>>
+                            <input class="form-check-input" type="checkbox" id="t_017_resusitasi" name="t_017" value="1" <?php echo ($edit['T_017'] == "1"  ? 'checked' : ''); ?>>
                         </div>
                     </td>
                 </tr>
@@ -620,35 +612,23 @@ foreach ($dataAssessmentptk as $row) {
             <tr>
                 <td>
                     <p>
-                        Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_20" id="v_20" value="<?php echo $edit[0]->V_20; ?>"> umur <input type="text" name="v_21" id="v_21" value="<?php echo $edit[0]->V_21; ?>"> tahun,
-                        <input type="radio" class="form-check-input" name="t_018" id="t_018_laki" checked=<?php if ($row[0] = "Laki-Laki") {
-                                                                                                                echo "true";
-                                                                                                            } ?>>
+                        Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_20" id="v_20" value="<?php echo $edit['V_20'] ?>"> umur <input type="text" name="v_21" id="v_21" value="<?php echo $edit['V_21'] ?>"> tahun,
+                        <input type="radio" class="form-check-input" name="t_018" id="t_018_laki" value="1" <?php if ($edit['T_018'] == "1") echo 'checked' ?>>
                         <label for="t_018_laki">Laki-laki</label>
-                        <input type="radio" class="form-check-input" name="t_018" id="t_018_perempuan" value="2" checked=<?php if ($row[0] = "Perempuan") {
-                                                                                                                                echo "true";
-                                                                                                                            } ?>>
+                        <input type="radio" class="form-check-input" name="t_018" id="t_018_perempuan" value="2" <?php if ($edit['T_018'] == "2") echo 'checked' ?>>
                         <label for="t_018_perempuan">Perempuan</label>,
-                        alamat <input type="text" name="v_22" id="v_22" value="<?php echo $edit[0]->V_22; ?>"> dengan ini menyatakan <strong>PENOLAKAN</strong> untuk dilakukannya tindakan <input type="text" name="v_23" id="v_23" value="<?php echo $edit[0]->V_23; ?>"> terhadap
-                        <input type="radio" class="form-check-input" name="t_019" id="t_019_saya" value="1" checked=<?php if ($row[0] = "saya") {
-                                                                                                                        echo "true";
-                                                                                                                    } ?>>
+                        alamat <input type="text" name="v_22" id="v_22" value="<?php echo $edit['V_22'] ?>"> dengan ini menyatakan <strong>PENOLAKAN</strong> untuk dilakukannya tindakan <input type="text" name="v_23" id="v_23" value="<?php echo $edit['V_23'] ?>"> terhadap
+                        <input type="radio" class="form-check-input" name="t_019" id="t_019_saya" value="1" <?php if ($edit['T_019'] == "1") echo 'checked' ?>>
                         <label for="t_019_saya">saya /</label>
-                        <input type="radio" class="form-check-input" name="t_019" id="t_019_status" value="2" checked=<?php if ($row[0] = " ") {
-                                                                                                                            echo "true";
-                                                                                                                        } ?>>
-                        <label><input type="text" name="v_24" id="v_24" disabled="disabled" value="<?php echo $edit[0]->V_24; ?>"></label>
+                        <input type="radio" class="form-check-input" name="t_019" id="t_019_status" value="2" <?php if ($edit['T_019'] == "2") echo 'checked' ?>>
+                        <label><input type="text" name="v_24" id="v_24" disabled="disabled" value="<?php echo $edit['V_24'] ?>"></label>
                         saya <br>
-                        bernama <input type="text" name="v_25" id="v_25" disabled="disabled" value="<?php echo $edit[0]->V_25; ?>"> umur <input type="text" name="v_26" id="v_26" disabled="disabled" value="<?php echo $edit[0]->V_26; ?>"> tahun,
-                        <input type="radio" class="form-check-input" name="t_020" id="t_020_laki" value="1" checked=<?php if ($row[0] = "Laki-laki") {
-                                                                                                                        echo "true";
-                                                                                                                    } ?>disabled="disabled">
+                        bernama <input type="text" name="v_25" id="v_25" disabled="disabled" value="<?php echo $edit['V_25'] ?>"> umur <input type="text" name="v_26" id="v_26" disabled="disabled" value="<?php echo $edit['V_26'] ?>"> tahun,
+                        <input type="radio" class="form-check-input" name="t_020" id="t_020_laki" value="1" <?php if ($edit['T_020'] == "1") echo 'checked' ?> disabled="disabled">
                         <label for="t_020_laki">Laki-laki</label>
-                        <input type="radio" class="form-check-input" name="t_020" id="t_020_perempuan" value="2" checked=<?php if ($row[0] = "Perempuan") {
-                                                                                                                                echo "true";
-                                                                                                                            } ?> disabled="disabled">
+                        <input type="radio" class="form-check-input" name="t_020" id="t_020_perempuan" value="2" <?php if ($edit['T_020'] == "2") echo 'checked' ?> disabled="disabled">
                         <label for="t_020_perempuan">Perempuan</label>,
-                        alamat <input type="text" name="v_27" id="v_27" disabled="disabled" value="<?php echo $edit[0]->V_27; ?>">
+                        alamat <input type="text" name="v_27" id="v_27" disabled="disabled" value="<?php echo $edit['V_27'] ?>">
                     </p>
                 </td>
             </tr>
@@ -665,7 +645,7 @@ foreach ($dataAssessmentptk as $row) {
         <div class="container mt-5">
             <table class="table text-center">
                 <tr>
-                    <p>Bengkulu, <input type="datetime-local" name="v_28" id="v_28" value="<?php echo $edit[0]->V_28; ?>"></p>
+                    <p>Bengkulu, <input type="datetime-local" name="v_28" id="v_28" value="<?php echo $edit['V_28'] ?>"></p>
                 </tr>
                 <tr>
                     <td>Yang Menyatakan</td>
@@ -689,23 +669,23 @@ foreach ($dataAssessmentptk as $row) {
                 </tr>
                 <tr>
                     <td>
-                        <input type="text" name="v_29" id="v_29" value="<?php echo $edit[0]->V_29; ?>">
+                        <input type="text" name="v_29" id="v_29" value="<?php echo $edit['V_29'] ?>">
                     </td>
                     <td>
-                        <input type="text" name="v_30" id="v_30" value="<?php echo $edit[0]->V_30; ?>">
+                        <input type="text" name="v_30" id="v_30" value="<?php echo $edit['V_30'] ?>">
                     </td>
                     <td>
-                        <input type="text" name="v_31" id="v_31" value="<?php echo $edit[0]->V_31; ?>">
+                        <input type="text" name="v_31" id="v_31" value="<?php echo $edit['V_31'] ?>">
                     </td>
                     <td>
-                        <input type="text" name="v_32" id="v_32" value="<?php echo $edit[0]->V_32; ?>">
+                        <input type="text" name="v_32" id="v_32" value="<?php echo $edit['V_32'] ?>">
                     </td>
                 </tr>
             </table>
         </div>
 
         <div class="d-grid gap-2 mb-3">
-            <input class="btn btn-primary" type="submit" id="submit" name="submit" value="Simpan">
+            <input class="btn btn-primary" type="submit" id="submit" name="submit" value="Update">
         </div>
     </form>
     </div>

@@ -100,29 +100,13 @@
     <?= $this->include('navbar') ?>
 
     <div class="container-fluid fixed mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
     <h3 class="text-center mt-5">DATA PASIEN</h3>
 
     <div class="container-fluid fixed">
         <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">
-
-            <!-- <form class="d-flex mt-3 mb-3" action=" site_url('formulir/search') " method="post">
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <div class="row align-items-center">
-                            <div class="col-md-9">
-                                <input class="form-control me-2" type="search" name="idpasien" placeholder="Cari Data Pasien" aria-label="Search">
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-outline-primary" type="submit">Cari</button>
-                            </div>
-
-                        </div>
-                    </div>
-            </form> -->
-
 
             <thead class="text-center">
                 <tr>
@@ -148,29 +132,29 @@
                             <div class="dropdown">
                                 <button class="dropbtn">Formulir</button>
                                 <div class="dropdown-content">
-                                    <a href="<?= site_url('formulir/formptk/' . $row->BODY_ID) ?>">Formulir Penolakan Tindakan Kedokteran</a>
-                                    <a href="<?= site_url('formulir/formpsa/' . $row->BODY_ID) ?>">Formulir Persetujuan Tindakan Anestesi Lokal</a>
-                                    <a href="<?= site_url('formulir/formpta/' . $row->BODY_ID) ?>">Formulir Penolakan Tindakan Anestesi Lokal</a>
-                                    <a href="<?= site_url('formulir/formtidk/' . $row->BODY_ID) ?>">Formulir Tindakan Invasif Diuar Kamar Operasi</a>
-                                    <a href="<?= site_url('formulir/formbpak/' . $row->BODY_ID) ?>">Formulir Pengkajian Awal Dan Keperawatan</a>
-                                    <a href="<?= site_url('formulir/formpkmrj/' . $row->BODY_ID) ?>">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan</a>
-                                    <a href="<?= site_url('formulir/formcpptrj/' . $row->BODY_ID) ?>">Formulir Catatan Perkembangan Pasien Terintegrasi Rawat Jalan </a>
+                                    <a href="<?= site_url('formulir/formptk/' . $row['NO_REGISTRATION']) ?>">Formulir Penolakan Tindakan Kedokteran</a>
+                                    <a href="<?= site_url('formulir/formpsa/' . $row['NO_REGISTRATION']) ?>">Formulir Persetujuan Tindakan Anestesi Lokal</a>
+                                    <a href="<?= site_url('formulir/formpta/' . $row['NO_REGISTRATION']) ?>">Formulir Penolakan Tindakan Anestesi Lokal</a>
+                                    <a href="<?= site_url('formulir/formtidk/' . $row['NO_REGISTRATION']) ?>">Formulir Tindakan Invasif Diuar Kamar Operasi</a>
+                                    <a href="<?= site_url('formulir/formbpak/' . $row['NO_REGISTRATION']) ?>">Formulir Pengkajian Awal Dan Keperawatan</a>
+                                    <a href="<?= site_url('formulir/formpkmrj/' . $row['NO_REGISTRATION']) ?>">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan</a>
+                                    <a href="<?= site_url('formulir/formcpptrj/' . $row['NO_REGISTRATION']) ?>">Formulir Catatan Perkembangan Pasien Terintegrasi Rawat Jalan </a>
                                 </div>
                             </div>
                         </td>
-                        <td><?= $row->NO_REGISTRATION; ?></td>
-                        <td><?= $row->THENAME; ?></td>
-                        <td><?= $row->THEADDRESS; ?></td>
-                        <td><?= $row->GENDER; ?></td>
-                        <td><?= $row->AGEYEAR . 't  ' .  $row->AGEMONTH . 'b  ' . $row->AGEDAY . 'h'; ?></td>
-                        <td><?= $row->PLACE_OF_BIRTH . ', ' . $row->DATE_OF_BIRTH; ?></td>
-                        <td><?= $row->VISIT_DATE; ?></td>
-                        <td><?= $row->PPKRUJUKAN; ?></td>
-                        <td><?= $row->ANAMNASE; ?></td>
-                        <td><?= $row->CONCLUSION; ?></td>
+                        <td><?= $row['NO_REGISTRATION'] ?></td>
+                        <td><?= $row['THENAME'] ?></td>
+                        <td><?= $row['THEADDRESS'] ?></td>
+                        <td><?= $row['GENDER'] ?></td>
+                        <td><?= $row['AGEYEAR'] . 't  ' .  $row['AGEMONTH'] . 'b  ' . $row['AGEDAY'] . 'h' ?></td>
+                        <td><?= $row['PLACE_OF_BIRTH'] . ', ' . $row['DATE_OF_BIRTH'] ?></td>
+                        <td><?= $row['VISIT_DATE'] ?></td>
+                        <td><?= $row['PPKRUJUKAN'] ?></td>
+                        <td><?= $row['ANAMNASE'] ?></td>
+                        <td><?= $row['CONCLUSION'] ?></td>
                     </tr>
                 </tbody>
-            <?php }; ?>
+            <?php } ?>
         </table>
     </div>
 

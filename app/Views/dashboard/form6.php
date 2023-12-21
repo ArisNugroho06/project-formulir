@@ -100,7 +100,7 @@
     <?= $this->include('navbar') ?>
 
     <div class="container-fluid fixed mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
+        <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
     <h3 class="text-center text-uppercase mt-5">Formulir Pengkajian Keperawatan dan Medis Rawat Jalan Bagian II</h3>
@@ -108,48 +108,31 @@
     <div class="container-fluid fixed">
         <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">
 
-            <!-- <form class="d-flex mt-3 mb-3" action=" site_url('formulir/search') " method="post">
-                <div class="row align-items-center">
-                    <div class="col-md-3">
-                        <div class="row align-items-center">
-                            <div class="col-md-9">
-                                <input class="form-control me-2" type="search" name="idpasien" placeholder="Cari Data Pasien" aria-label="Search">
-                            </div>
-                            <div class="col-md-3">
-                                <button class="btn btn-outline-primary" type="submit">Cari</button>
-                            </div>
-
-                        </div>
-                    </div>
-            </form> -->
-
 
             <thead class="text-center">
                 <tr>
-
-                    <th>RM</th>
+                    <th width="10%">No</th>
+                    <th width="10%">RM</th>
                     <th>Nama</th>
-                    <th>Tgl Lahir</th>
-                    <th>NIK</th>
                     <th width="14%">Keterangan</th>
                 </tr>
             </thead>
 
-            <?php foreach ($daftarpasien as $row) { ?>
+            <?php $i = 1;
+            foreach ($data as $row) { ?>
 
                 <tbody>
                     <tr>
-                        <td><?= $row->NO_REGISTRATION; ?></td>
-                        <td><?= $row->THENAME; ?></td>
-                        <td><?= $row->DATE_OF_BIRTH; ?></td>
-                        <td><?= $row->THENIK; ?></td>
+                        <td><?= $i; ?></td>
+                        <td><?= $row['NO_REGISTRATION'] ?></td>
+                        <td><?= $row['THENAME'] ?></td>
                         <td>
                             <div class="row align-items-center">
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('aksi/updateform6/' . $row->no) ?>" class="btn btn-warning">Update</a>
+                                    <a href="<?= site_url('home/updateform6/' . $row['no']) ?>" class="btn btn-warning">Update</a>
                                 </div>
                                 <div class="col-md-6">
-                                    <a href="<?= site_url('home/deleteform6/' . $row->no) ?>" class="btn btn-danger">Delete</a>
+                                    <a href="<?= site_url('home/deleteform6/' . $row['no']) ?>" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </td>

@@ -505,11 +505,12 @@ foreach ($dataAssessmentformptk as $row) {
 <body>
 
     <div class="container mt-5">
-        <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
+        <a class="btn btn-primary" href="<?= site_url('formulir/datapasien') ?>" role="button">Back</a>
     </div>
 
     <div class="container mt-5">
         <form action="<?= site_url('home/addaksi') ?>" method="post" autocomplete="off">
+            <?php csrf_field(); ?>
             <input type="hidden" id="form" name="form" value="F5">
             <table class="table text">
                 <tr>
@@ -530,7 +531,7 @@ foreach ($dataAssessmentformptk as $row) {
                                 <h6><label class="col-form-label">Nomor RM</label></h6>
                             </div>
                             <div class="col-md-7">
-                                <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $psn[0]->NO_REGISTRATION; ?>" readonly>
+                                <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $psn['NO_REGISTRATION'] ?>" readonly>
                             </div>
                         </div>
                     </td>
@@ -550,13 +551,13 @@ foreach ($dataAssessmentformptk as $row) {
                                 <label class="col-form-label">Nama</label>
                             </div>
                             <div class="col-md-9">
-                                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $psn[0]->THENAME; ?>" readonly>
+                                <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $psn['THENAME'] ?>" readonly>
                             </div>
                         </div>
                     </td>
                     <td width="15%" align="center">
                         <label class="form-label">Jenis Kelamin</label>
-                        <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $psn[0]->GENDER; ?>" readonly>
+                        <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $psn['GENDER'] ?>" readonly>
 
                         <!-- <select class="form-control" name="t_01">
                             <option selected>Pilih</option> 
@@ -566,19 +567,19 @@ foreach ($dataAssessmentformptk as $row) {
                     </td>
                     <td width="15%" align="center">
                         <label class="form-label">Umur</label>
-                        <input type="text" class="form-control" name="ageyear" id="ageyear" value="<?php echo $psn[0]->AGEYEAR . 't  ' .  $psn[0]->AGEMONTH . 'b  ' . $psn[0]->AGEDAY . 'h'; ?>" readonly>
-                        <input type="hidden" name="agemonth" id="agemonth" value="<?php echo $psn[0]->AGEMONTH; ?>">
-                        <input type="hidden" name="ageday" id="ageday" value="<?php echo $psn[0]->AGEDAY; ?>">
+                        <input type="text" class="form-control" name="ageyear" id="ageyear" value="<?php echo $psn['AGEYEAR'] . 't  ' .  $psn['AGEMONTH'] . 'b  ' . $psn['AGEDAY'] . 'h' ?>" readonly>
+                        <input type="hidden" name="agemonth" id="agemonth" value="<?php echo $psn['AGEMONTH'] ?>">
+                        <input type="hidden" name="ageday" id="ageday" value="<?php echo $psn['AGEDAY'] ?>">
                     </td>
                     <td colspan="3" width="30%" align="center">
                         <div class="row align-items-center">
                             <div class="col-md-6">
                                 <label class="form-label">Tempat</label>
-                                <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" value="<?php echo $psn[0]->PLACE_OF_BIRTH; ?>" readonly>
+                                <input type="text" class="form-control" name="place_of_birth" id="place_of_birth" value="<?php echo $psn['PLACE_OF_BIRTH'] ?>" readonly>
                             </div>
                             <div class="col-md-6">
                                 <label class="form-label">Tanggal Lahir</label>
-                                <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" value="<?php echo $psn[0]->DATE_OF_BIRTH; ?>" readonly>
+                                <input type="date" class="form-control" name="date_of_birth" id="date_of_birth" value="<?php echo $psn['DATE_OF_BIRTH'] ?>" readonly>
                             </div>
                         </div>
                     </td>
@@ -590,25 +591,25 @@ foreach ($dataAssessmentformptk as $row) {
                                 <label class="col-form-label">Alamat</label>
                             </div>
                             <div class="col-md-9">
-                                <textarea class="form-control" type="text" rows="2" cols="6" name="theaddress" id="theaddress" readonly><?php echo $psn[0]->THEADDRESS; ?></textarea>
+                                <textarea class="form-control" type="text" rows="2" cols="6" name="theaddress" id="theaddress" readonly><?php echo $psn['THEADDRESS'] ?></textarea>
                             </div>
                         </div>
                     </td>
                     <td colspan="2" align="center">
                         <label class="form-label">Status Perkawinan</label>
-                        <input type="text" class="form-control" name="maritalstatusid" id="maritalstatusid" value="<?php echo $psn[0]->MARITALSTATUSID; ?>" readonly>
+                        <input type="text" class="form-control" name="maritalstatusid" id="maritalstatusid" value="<?php echo $psn['MARITALSTATUSID'] ?>" readonly>
                     </td>
                     <td align="center">
                         <label class="form-label">Pekerjaan</label>
-                        <input type="text" class="form-control" name="job_id" id="job_id" value="<?php echo $psn[0]->JOB_ID; ?>" readonly>
+                        <input type="text" class="form-control" name="job_id" id="job_id" value="<?php echo $psn['JOB_ID'] ?>" readonly>
                     </td>
                     <td align="center">
                         <label class="form-label">Agama</label>
-                        <input type="text" class="form-control" name="kode_agama" id="kode_agama" value="<?php echo $psn[0]->KODE_AGAMA; ?>" readonly>
+                        <input type="text" class="form-control" name="kode_agama" id="kode_agama" value="<?php echo $psn['KODE_AGAMA'] ?>" readonly>
                     </td>
                     <td align="center">
                         <label class="form-label">Suku Bangsa</label>
-                        <input type="text" class="form-control" name="nation_id" id="nation_id" value="<?php echo $psn[0]->NATION_ID; ?>" readonly>
+                        <input type="text" class="form-control" name="nation_id" id="nation_id" value="<?php echo $psn['NATION_ID'] ?>" readonly>
                     </td>
                 </tr>
                 <tr>
@@ -625,7 +626,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <div class="col-md-8">
                                 <div class="row align-items-center">
                                     <div class="col-md-12">
-                                        <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $psn[0]->ALLOANAMNESIS_CONTACT; ?>" readonly>
+                                        <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $psn['ALLOANAMNESIS_CONTACT'] ?>" readonly>
                                     </div>
                                 </div>
                             </div>
@@ -633,11 +634,11 @@ foreach ($dataAssessmentformptk as $row) {
                     </td>
                     <td colspan="2" align="center">
                         <label class="form-label">Alamat</label>
-                        <textarea type="text" class="form-control" name="alloanamnesis_address" id="alloanamnesis_address" readonly><?php echo $psn[0]->ALLOANAMNESIS_ADDRESS; ?></textarea>
+                        <textarea type="text" class="form-control" name="alloanamnesis_address" id="alloanamnesis_address" readonly><?php echo $psn['ALLOANAMNESIS_ADDRESS'] ?></textarea>
                     </td>
                     <td colspan="3" align="center">
                         <label class="form-label">Hubungan Keluarga</label>
-                        <input type="text" class="form-control" name="alloanamnesis_hub" id="alloanamnesis_hub" value="<?php echo $psn[0]->ALLOANAMNESIS_HUB; ?>" readonly>
+                        <input type="text" class="form-control" name="alloanamnesis_hub" id="alloanamnesis_hub" value="<?php echo $psn['ALLOANAMNESIS_HUB'] ?>" readonly>
                     </td>
                 </tr>
                 <tr>
@@ -647,17 +648,17 @@ foreach ($dataAssessmentformptk as $row) {
                                 <label class="col-form-label">Nama Ayah</label>
                             </div>
                             <div class="col-md-9">
-                                <input class="form-control" type="text" name="father" id="father" value="<?php echo $psn[0]->FATHER; ?>" readonly>
+                                <input class="form-control" type="text" name="father" id="father" value="<?php echo $psn['FATHER'] ?>" readonly>
                             </div>
                         </div>
                     </td>
                     <td colspan="2" align="center">
                         <label class="form-label">Nama Ibu</label>
-                        <input type="text" class="form-control" name="mother" id="mother" value="<?php echo $psn[0]->MOTHER; ?>" readonly>
+                        <input type="text" class="form-control" name="mother" id="mother" value="<?php echo $psn['MOTHER'] ?>" readonly>
                     </td>
                     <td colspan="3" align="center">
                         <label class="form-label">Mulai Tanggal Berobat</label>
-                        <input type="datetime-local" class="form-control" name="visit_date" id="visit_date" value="<?php echo $psn[0]->VISIT_DATE; ?>" readonly>
+                        <input type="datetime-local" class="form-control" name="visit_date" id="visit_date" value="<?php echo $psn['VISIT_DATE'] ?>" readonly>
                     </td>
                 </tr>
             </table>
@@ -672,7 +673,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Tanggal dan Jam Datang Pasien</label>
                         </div>
                         <div class="col-md-8">
-                            <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $psn[0]->EXAMINATION_DATE; ?>" readonly>
+                            <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $psn['EXAMINATION_DATE'] ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -711,7 +712,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Rujukan</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" id="ppkrujukan" name="ppkrujukan" value="<?php echo $psn[0]->PPKRUJUKAN; ?>" readonly>
+                            <input class="form-control" type="text" id="ppkrujukan" name="ppkrujukan" value="<?php echo $psn['PPKRUJUKAN'] ?>" readonly>
                         </div>
                     </div>
                     <!-- <p>Rujukan</p> -->
@@ -761,7 +762,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <label class="col-form-label">Diagnosa Rujukan</label>
                         </div>
                         <div class="col-md-9">
-                            <input class="form-control" type="text" name="conclusion" id="conclusion" value="<?php echo $psn[0]->CONCLUSION; ?>" readonly>
+                            <input class="form-control" type="text" name="conclusion" id="conclusion" value="<?php echo $psn['CONCLUSION'] ?>" readonly>
                         </div>
                     </div>
                     <!-- </div>
@@ -778,7 +779,7 @@ foreach ($dataAssessmentformptk as $row) {
                             <strong><label class="col-form-label"> POLIKLINIK</label></strong>
                         </div>
                         <div class="col-md-3">
-                            <input class="form-control" type="text" name="clinic_id" id="clinic_id" value="<?php echo $psn[0]->CLINIC_ID; ?>" readonly>
+                            <input class="form-control" type="text" name="clinic_id" id="clinic_id" value="<?php echo $psn['CLINIC_ID'] ?>" readonly>
                         </div>
                     </div>
                 </td>
@@ -855,7 +856,7 @@ foreach ($dataAssessmentformptk as $row) {
 
                     <div class="container">
                         <h6><label class="col-form-label">1. KELUHAN UTAMA : </label></h6>
-                        <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="3" readonly><?php echo $psn[0]->ANAMNASE; ?></textarea>
+                        <textarea class="form-control" name="anamnase" id="anamnase" cols="6" rows="3" readonly><?php echo $psn['ANAMNASE'] ?></textarea>
 
                         <h6><label class="col-form-label">2. PEMERIKSAAN FISIK</label></h6>
                         <div class="row align-items-center">

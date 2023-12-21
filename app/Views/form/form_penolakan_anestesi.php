@@ -103,7 +103,7 @@ foreach ($dataAssessmentpsa as $row) {
 <body>
 
   <div class="container mt-5">
-    <a class="btn btn-primary" href="<?= site_url('home/datapasien') ?>" role="button">Back</a>
+    <a class="btn btn-primary" href="<?= site_url('formulir/datapasien') ?>" role="button">Back</a>
   </div>
 
 
@@ -112,6 +112,7 @@ foreach ($dataAssessmentpsa as $row) {
   </div>
   <div class="container mt-3">
     <form action="<?= site_url('home/addaksi') ?>" method="post" autocomplete="off">
+      <?php csrf_field(); ?>
       <input type="hidden" id="form" name="form" value="F3">
       <table class="table table-bordered" style="border: 1px solid black">
         <tr>
@@ -136,7 +137,7 @@ foreach ($dataAssessmentpsa as $row) {
                   <label class="col-form-label">No RM</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $psn[0]->NO_REGISTRATION; ?>" readonly>
+                  <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $psn['NO_REGISTRATION'] ?>" readonly>
                 </div>
               </div>
 
@@ -145,7 +146,7 @@ foreach ($dataAssessmentpsa as $row) {
                   <label class="col-form-label">Nama Lengkap</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $psn[0]->THENAME; ?>" readonly>
+                  <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $psn['THENAME'] ?>" readonly>
                 </div>
               </div>
 
@@ -156,7 +157,7 @@ foreach ($dataAssessmentpsa as $row) {
                       <label class="col-form-label">Tanggal Lahir</label>
                     </div>
                     <div class="col-md-7">
-                      <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $psn[0]->DATE_OF_BIRTH; ?>" readonly>
+                      <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $psn['DATE_OF_BIRTH'] ?>" readonly>
                     </div>
                   </div>
                 </div>
@@ -166,7 +167,9 @@ foreach ($dataAssessmentpsa as $row) {
                       <label class="col-form-label">Umur</label>
                     </div>
                     <div class="col-md-9">
-                      <input class="form-control" type="text" name="ageyear " id="ageyear" value="<?php echo $psn[0]->AGEYEAR . 't  ' .  $psn[0]->AGEMONTH . 'b  ' . $psn[0]->AGEDAY . 'h'; ?>" readonly>
+                      <input class="form-control" type="text" name="ageyear" id="ageyear" value="<?php echo $psn['AGEYEAR'] . 't ' .  $psn['AGEMONTH'] . 'b ' . $psn['AGEDAY'] . 'h' ?>" readonly>
+                      <input type="hidden" name="agemonth" id="agemonth" value="<?php echo $psn['AGEMONTH'] ?>">
+                      <input type="hidden" name="ageday" id="ageday" value="<?php echo $psn['AGEDAY'] ?>">
                     </div>
                   </div>
                 </div>
@@ -177,7 +180,7 @@ foreach ($dataAssessmentpsa as $row) {
                   <label class="col-form-label">Jenis Kelamin</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $psn[0]->GENDER; ?>" readonly>
+                  <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $psn['GENDER'] ?>" readonly>
                   <!-- <div class="form-check-inline">
                     <input type="radio" class="form-check-input" name="gender" value="laki">
                     <label>Laki-laki</label>
@@ -195,7 +198,7 @@ foreach ($dataAssessmentpsa as $row) {
                   <label class="col-form-label">Alamat</label>
                 </div>
                 <div class="col-md-9">
-                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $psn[0]->THEADDRESS; ?></textarea>
+                  <textarea class="form-control" name="theaddress" id="theaddress" cols="6" rows="2" readonly><?php echo $psn['THEADDRESS'] ?></textarea>
                 </div>
               </div>
 
@@ -215,7 +218,7 @@ foreach ($dataAssessmentpsa as $row) {
                   <label class="col-form-label">Ruangan</label>
                 </div>
                 <div class="col-md-9">
-                  <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $psn[0]->CLASS_ROOM_ID; ?>" readonly>
+                  <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $psn['CLASS_ROOM_ID'] ?>" readonly>
                 </div>
               </div>
 
@@ -227,7 +230,7 @@ foreach ($dataAssessmentpsa as $row) {
                       <label class="col-form-label">Tanggal dan Jam</label>
                     </div>
                     <div class="col-md-7">
-                      <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $psn[0]->EXAMINATION_DATE; ?>" readonly>
+                      <input class="form-control" type="datetime-local" name="examination_date" id="examination_date" value="<?php echo $psn['EXAMINATION_DATE'] ?>" readonly>
                     </div>
                   </div>
                 </div>
