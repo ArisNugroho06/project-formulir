@@ -103,7 +103,13 @@
         <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
     </div>
 
-    <h3 class="text-center mt-5">DATA PASIEN</h3>
+    <h3 class="text-center my-5">DATA PASIEN</h3>
+
+    <?php if (session()->getFlashdata('pesan')) : ?>
+        <div class="alert alert-success" role="alert">
+            <?= session()->getFlashdata('pesan'); ?>
+        </div>
+    <?php endif ?>
 
     <div class="container-fluid fixed">
         <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">

@@ -111,7 +111,7 @@ foreach ($dataAssessmentpsa as $row) {
     <h2>RSUD Dr. M. YUNUS BENGKULU</h2>
   </div>
   <div class="container mt-3">
-    <form action="<?= site_url('home/addaksi') ?>" method="post" autocomplete="off">
+    <form action="<?= site_url('insert/create') ?>" method="post" autocomplete="off">
       <?php csrf_field(); ?>
       <input type="hidden" id="form" name="form" value="F3">
       <table class="table table-bordered" style="border: 1px solid black">

@@ -133,7 +133,7 @@ foreach ($dataAssessmentptk as $row) {
   <div class="container mt-5" style="text-align: right">
     <h2>RM 08</h2>
   </div>
-  <form action="<?= site_url('home/addaksi') ?>" method="post" id="form" autocomplete="off">
+  <form action="<?= site_url('insert/create') ?>" method="post" id="form" autocomplete="off">
     <?php csrf_field(); ?>
     <input type="hidden" id="form" name="form" value="F1">
     <div class="container mt-3">

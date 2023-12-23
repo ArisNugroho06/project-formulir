@@ -45,7 +45,7 @@ class Formulir extends BaseController
     {
 
         $datapasien = [
-            'psn2' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
         ];
 
         return view('form/form_persetujuan_anestesi', $datapasien);

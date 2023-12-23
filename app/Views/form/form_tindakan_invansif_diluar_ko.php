@@ -139,7 +139,7 @@ foreach ($dataAssessmenttidk as $row) {
 </div>
 
 <body>
-    <form action="<?= site_url('home/addaksi') ?>" method="post" autocomplete="off">
+    <form action="<?= site_url('insert/create') ?>" method="post" autocomplete="off">
         <?php csrf_field(); ?>
         <input type="hidden" id="form" name="form" value="F4">
 
