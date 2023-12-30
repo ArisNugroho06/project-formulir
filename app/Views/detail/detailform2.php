@@ -199,16 +199,16 @@ foreach ($dataAssessmentpsa as $row) {
                             </div>
 
                             <div class="row">
-                                <!-- <div class="col-md-7">
+                                <div class="col-md-7">
                                     <div class="row align-items-center">
                                         <div class="col-md-5">
                                             <label class="col-form-label">Tanggal Lahir</label>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<php echo $detail['DATE_OF_BIRTH'] ?>" readonly>
+                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $detail['DATE_OF_BIRTH'] ?>" readonly>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                                 <div class="col-md-5">
                                     <div class="row align-items-center">
                                         <div class="col-md-3">
@@ -297,7 +297,7 @@ foreach ($dataAssessmentpsa as $row) {
                             <label class="col-form-label">Penanggung Jawab *</label>
                         </div>
                         <div class="col-md-8">
-                            <select class="form-control" id="t_01" name="t_01" readonly>
+                            <select class="form-control" id="t_01" name="t_01" disabled>
                                 <?php
                                 $detail['T_01'] = ($detail['T_01'] == 'Penerima Informasi' ? 'selected' : '');
                                 echo "<option value='1' " . $detail['T_01'] . ">Penerima Informasi</option>";
@@ -338,7 +338,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td class="text-center">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_02" name="t_02" <?php echo ($detail['T_02'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_02" name="t_02" <?php echo ($detail['T_02'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -353,7 +353,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_03" name="t_03" <?php echo ($detail['T_03'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_03" name="t_03" <?php echo ($detail['T_03'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -368,7 +368,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_04" name="t_04" <?php echo ($detail['T_04'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_04" name="t_04" <?php echo ($detail['T_04'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -383,7 +383,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_05" name="t_05" <?php echo ($detail['T_05'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_05" name="t_05" <?php echo ($detail['T_05'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -399,7 +399,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_06" name="t_06" <?php echo ($detail['T_06'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_06" name="t_06" <?php echo ($detail['T_06'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -414,7 +414,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_07" name="t_07" <?php echo ($detail['T_07'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_07" name="t_07" <?php echo ($detail['T_07'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -441,7 +441,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_08" name="t_08" <?php echo ($detail['T_08'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_08" name="t_08" <?php echo ($detail['T_08'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -458,7 +458,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_09" name="t_09" <?php echo ($detail['T_09'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_09" name="t_09" <?php echo ($detail['T_09'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -475,7 +475,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_010" name="t_010" <?php echo ($detail['T_010'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_010" name="t_010" <?php echo ($detail['T_010'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -490,7 +490,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </td>
                         <td>
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" id="t_011" name="t_011" <?php echo ($detail['T_011'] == "1" ? 'checked' : ''); ?> readonly>
+                                <input class="form-check-input" type="checkbox" id="t_011" name="t_011" <?php echo ($detail['T_011'] == "1" ? 'checked' : ''); ?> disabled>
                             </div>
                         </td>
                     </tr>
@@ -538,20 +538,20 @@ foreach ($dataAssessmentpsa as $row) {
                     <td>
                         <p>
                             Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_11" id="v_11" value="<?php echo $detail['V_11'] ?>" readonly> umur <input type="text" name="v_12" id="v_12" value="<?php echo $detail['V_12'] ?>" readonly> tahun,
-                            <input type="radio" class="form-check-input" name="t_012" id="t_012_laki" <?php if ($detail['T_012'] == "1") echo 'checked' ?> readonly>
+                            <input type="radio" class="form-check-input" name="t_012" id="t_012_laki" <?php if ($detail['T_012'] == "1") echo 'checked' ?> disabled>
                             <label for="t_012_laki">Laki-laki</label>
-                            <input type="radio" class="form-check-input" name="t_012" id="t_012_perempuan" <?php if ($detail['T_012'] == "2") echo 'checked' ?> readonly>
+                            <input type="radio" class="form-check-input" name="t_012" id="t_012_perempuan" <?php if ($detail['T_012'] == "2") echo 'checked' ?> disabled>
                             <label for="t_012_perempuan">Perempuan</label>,
                             alamat <input type="text" name="v_13" id="v_13" value="<?php echo $detail['V_13'] ?>" readonly> dengan ini menyatakan <strong>PERSETUJUAN</strong> untuk dilakukannya tindakan <input type="text" name="v_14" id="v_14" value="<?php echo $detail['V_14'] ?>" readonly> terhadap
-                            <input type="radio" class="form-check-input" name="t_013" id="t_013_saya" <?php if ($detail['T_013'] == "1") echo 'checked' ?> readonly>
+                            <input type="radio" class="form-check-input" name="t_013" id="t_013_saya" <?php if ($detail['T_013'] == "1") echo 'checked' ?> disabled>
                             <label for="t_013_saya">saya /</label>
-                            <input type="radio" class="form-check-input" name="t_013" id="t_013_status" <?php if ($detail['T_013'] == "2") echo 'checked' ?> readonly>
+                            <input type="radio" class="form-check-input" name="t_013" id="t_013_status" <?php if ($detail['T_013'] == "2") echo 'checked' ?> disabled>
                             <label><input type="text" name="v_15" id="v_15" disabled="disabled" value="<?php echo $detail['V_15'] ?>" readonly></label>
                             saya <br>
                             bernama <input type="text" name="v_16" id="v_16" disabled="disabled" value="<?php echo $detail['V_16'] ?>" readonly> umur <input type="text" name="v_17" id="v_17" disabled="disabled" value="<?php echo $detail['V_17'] ?>" readonly> tahun,
-                            <input type="radio" class="form-check-input" name="t_014" id="t_014_laki" disabled="disabled" <?php if ($detail['T_014'] == "1") echo 'checked' ?> readonly>
+                            <input type="radio" class="form-check-input" name="t_014" id="t_014_laki" disabled="disabled" <?php if ($detail['T_014'] == "1") echo 'checked' ?> disabled>
                             <label for="t_014_laki">Laki-laki</label>
-                            <input type="radio" class="form-check-input" name="t_014" id="t_014_perempuan" disabled="disabled" <?php if ($detail['T_014'] == "2") echo 'checked' ?> readonly>
+                            <input type="radio" class="form-check-input" name="t_014" id="t_014_perempuan" disabled="disabled" <?php if ($detail['T_014'] == "2") echo 'checked' ?> disabled>
                             <label for="t_014_perempuan">Perempuan</label>,
                             alamat <input type="text" name="v_18" id="v_18" disabled="disabled" value="<?php echo $detail['V_18'] ?>" readonly>
                         </p>

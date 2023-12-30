@@ -139,7 +139,7 @@ foreach ($dataAssessmenttidk as $row) {
 </div>
 
 <body>
-    <form action="<?= site_url('update/editform') ?>" method="post" autocomplete="off">
+    <form action="<?= site_url('insert/create') ?>" method="post" autocomplete="off">
         <?php csrf_field(); ?>
         <input type="hidden" id="form" name="form" value="F4">
 
@@ -167,7 +167,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">No. Rekam Medis</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $edit['NO_REGISTRATION'] ?>" readonly>
+                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $detail['NO_REGISTRATION'] ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -177,7 +177,7 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label class="col-form-label">Nama Lengkap</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $edit['THENAME'] ?>" readonly>
+                                            <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $detail['THENAME'] ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -187,30 +187,30 @@ foreach ($dataAssessmenttidk as $row) {
                                             <label class="col-form-label">Nama Keluarga</label>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $edit['ALLOANAMNESIS_CONTACT'] ?>" readonly>
+                                            <input class="form-control" type="text" name="alloanamnesis_contact" id="alloanamnesis_contact" value="<?php echo $detail['ALLOANAMNESIS_CONTACT'] ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             <div class="row">
-                                <!-- <div class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
                                             <label class="col-form-label">Tgl. Lahir</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<php echo $edit['DATE_OF_BIRTH'] ?>" readonly>
+                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $detail['DATE_OF_BIRTH'] ?>" readonly>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                                 <div class="col-md-6">
                                     <div class="row align-items-center">
                                         <div class="col-5">
                                             <label>Jenis Kelamin</label>
                                         </div>
                                         <div class="col-7">
-                                            <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $edit['GENDER'] ?>" readonly>
+                                            <input class="form-control" type="text" name="gender" id="gender" value="<?php echo $detail['GENDER'] ?>" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -221,7 +221,7 @@ foreach ($dataAssessmenttidk as $row) {
                                     <label class="col-form-label">Ruangan</label>
                                 </div>
                                 <div class="col-md-9">
-                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $edit['CLASS_ROOM_ID'] ?>" readonly>
+                                    <input class="form-control" type="text" name="class_room_id" id="class_room_id" value="<?php echo $detail['CLASS_ROOM_ID'] ?>" readonly>
                                 </div>
                             </div>
 
@@ -247,7 +247,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">Nama Dokter</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="text" name="v_01" id="v_01" value="<?php echo $edit['V_01'] ?>">
+                                <input class="form-control" type="text" name="v_01" id="v_01" value="<?php echo $detail['V_01'] ?>" readonly>
                             </div>
                         </div>
 
@@ -256,7 +256,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">Nama Tindakan</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="text" name="v_02" id="v_02" value="<?php echo $edit['V_02'] ?>">
+                                <input class="form-control" type="text" name="v_02" id="v_02" value="<?php echo $detail['V_02'] ?>" readonly>
                             </div>
                         </div>
 
@@ -265,7 +265,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">Diagnosa Medis</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $edit['V_03'] ?>">
+                                <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $detail['V_03'] ?>" readonly>
                             </div>
                         </div>
 
@@ -274,7 +274,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">Tanggal Tindakan</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="date" name="v_04" id="v_04" value="<?php echo $edit['V_04'] ?>">
+                                <input class="form-control" type="date" name="v_04" id="v_04" value="<?php echo $detail['V_04'] ?>" readonly>
                             </div>
                         </div>
 
@@ -283,7 +283,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">Ruang Tindakan</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="text" name="v_05" id="v_05" value="<?php echo $edit['V_05'] ?>">
+                                <input class="form-control" type="text" name="v_05" id="v_05" value="<?php echo $detail['V_05'] ?>" readonly>
                             </div>
                         </div>
 
@@ -296,7 +296,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label"><strong>SIGN IN</strong> pukul</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="time" name="v_06" id="v_06" value="<?php echo $edit['V_06'] ?>">
+                                <input class="form-control" type="time" name="v_06" id="v_06" value="<?php echo $detail['V_06'] ?>" readonly>
                             </div>
                         </div>
 
@@ -310,11 +310,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_01" id="t_01_ya" <?php echo ($edit['T_01'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_01" id="t_01_ya" <?php echo ($detail['T_01'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_01_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_01" id="t_01_tidak" <?php echo ($edit['T_01'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_01" id="t_01_tidak" <?php echo ($detail['T_01'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_01_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -326,11 +326,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_02" id="t_02_ya" <?php echo ($edit['T_02'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_02" id="t_02_ya" <?php echo ($detail['T_02'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_02_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_02" id="t_02_tidak" <?php echo ($edit['T_02'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_02" id="t_02_tidak" <?php echo ($detail['T_02'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_02_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -342,11 +342,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_03" id="t_03_ya" <?php echo ($edit['T_03'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_03" id="t_03_ya" <?php echo ($detail['T_03'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_03_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_03" id="t_03_tidak" <?php echo ($edit['T_03'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_03" id="t_03_tidak" <?php echo ($detail['T_03'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_03_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -358,11 +358,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_04" id="t_04_ya" <?php echo ($edit['T_04'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_04" id="t_04_ya" <?php echo ($detail['T_04'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_04_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_04" id="t_04_tidak" <?php echo ($edit['T_04'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_04" id="t_04_tidak" <?php echo ($detail['T_04'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_04_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -374,11 +374,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_05" id="t_05_ya" <?php echo ($edit['T_05'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_05" id="t_05_ya" <?php echo ($detail['T_05'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_05_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_05" id="t_05_tidak" <?php echo ($edit['T_05'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_05" id="t_05_tidak" <?php echo ($detail['T_05'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_05_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -391,7 +391,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Minum/makan terakhir pukul</label>
                             </div>
                             <div class="col-md-7">
-                                <input class="form-control" type="time" name="v_07" id="v_07" value="<?php echo $edit['V_07'] ?>">
+                                <input class="form-control" type="time" name="v_07" id="v_07" value="<?php echo $detail['V_07'] ?>" readonly>
                             </div>
                         </div>
 
@@ -400,7 +400,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Jumlah</label>
                             </div>
                             <div class="col-md-7">
-                                <input class="form-control" type="text" name="v_08" id="v_08" value="<?php echo $edit['V_08'] ?>">
+                                <input class="form-control" type="text" name="v_08" id="v_08" value="<?php echo $detail['V_08'] ?>" readonly>
                             </div>
                         </div>
 
@@ -410,11 +410,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_06" id="t_06_ya" <?php echo ($edit['T_06'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_06" id="t_06_ya" <?php echo ($detail['T_06'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_06_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_06" id="t_06_tidak" <?php echo ($edit['T_06'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_06" id="t_06_tidak" <?php echo ($detail['T_06'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_06_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -426,11 +426,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_07" id="t_07_ya" <?php echo ($edit['T_07'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_07" id="t_07_ya" <?php echo ($detail['T_07'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_07_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_07" id="t_07_tidak" <?php echo ($edit['T_07'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_07" id="t_07_tidak" <?php echo ($detail['T_07'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_07_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -443,7 +443,7 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Hb</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_09" id="v_09" value="<?php echo $edit['V_09'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_09" id="v_09" value="<?php echo $detail['V_09'] ?>" readonly disabled="d isabled">
                                     </div>
                                 </div>
 
@@ -452,7 +452,7 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Trombosit</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_10" id="v_10" value="<?php echo $edit['V_10'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_10" id="v_10" value="<?php echo $detail['V_10'] ?>" readonly disabled="d isabled">
                                     </div>
                                 </div>
 
@@ -461,7 +461,7 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;APTT</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_11" id="v_11" value="<?php echo $edit['V_11'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_11" id="v_11" value="<?php echo $detail['V_11'] ?>" readonly disabled="d isabled">
                                     </div>
                                 </div>
                             </div>
@@ -471,7 +471,7 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">HT</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_12" id="v_12" value="<?php echo $edit['V_12'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_12" id="v_12" value="<?php echo $detail['V_12'] ?>" readonly disabled="d isabled">
                                     </div>
                                 </div>
 
@@ -480,7 +480,7 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">PT</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_13" id="v_13" value="<?php echo $edit['V_13'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_13" id="v_13" value="<?php echo $detail['V_13'] ?>" readonly disabled="d isabled">
                                     </div>
                                 </div>
 
@@ -489,7 +489,7 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">Lain2</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_14" id="v_14" value="<?php echo $edit['V_14'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_14" id="v_14" value="<?php echo $detail['V_14'] ?>" readonly disabled="d isabled">
                                     </div>
                                 </div>
                             </div>
@@ -501,7 +501,7 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_08" id="t_08_ya" <?php echo ($edit['T_08'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_08" id="t_08_ya" <?php echo ($detail['T_08'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_08_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
@@ -518,17 +518,17 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">5. Cek Pencitraan</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_15" id="v_15" value="<?php echo $edit['V_15'] ?>">
+                                        <input class="form-control" type="text" name="v_15" id="v_15" value="<?php echo $detail['V_15'] ?>" readonly>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_09" id="t_09_ya" <?php echo ($edit['T_09'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_09" id="t_09_ya" <?php echo ($detail['T_09'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_09_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_09" id="t_09_tidak" <?php echo ($edit['T_09'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_09" id="t_09_tidak" <?php echo ($detail['T_09'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_09_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -541,17 +541,17 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">6. Cek Pemeriksaan Penunjang Lain </label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_16" id="v_16" value="<?php echo $edit['V_16'] ?>">
+                                        <input class="form-control" type="text" name="v_16" id="v_16" value="<?php echo $detail['V_16'] ?>" readonly>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_010" id="t_010_ya" <?php echo ($edit['T_010'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_010" id="t_010_ya" <?php echo ($detail['T_010'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_010_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_010" id="t_010_tidak" <?php echo ($edit['T_010'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_010" id="t_010_tidak" <?php echo ($detail['T_010'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_010_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -563,11 +563,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_011" id="t_011_ya" <?php echo ($edit['T_011'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_011" id="t_011_ya" <?php echo ($detail['T_011'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_011_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_011" id="t_011_tidak" <?php echo ($edit['T_011'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_011" id="t_011_tidak" <?php echo ($detail['T_011'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_011_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -579,11 +579,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_012" id="t_012_ya" <?php echo ($edit['T_012'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_012" id="t_012_ya" <?php echo ($detail['T_012'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_012_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_012" id="t_012_tidak" <?php echo ($edit['T_012'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_012" id="t_012_tidak" <?php echo ($detail['T_012'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_012_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -595,11 +595,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_013" id="t_013_ya" <?php echo ($edit['T_013'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_013" id="t_013_ya" <?php echo ($detail['T_013'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_013_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_013" id="t_013_tidak" <?php echo ($edit['T_013'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_013" id="t_013_tidak" <?php echo ($detail['T_013'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_013_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -611,11 +611,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_014" id="t_014_ya" <?php echo ($edit['T_014'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_014" id="t_014_ya" <?php echo ($detail['T_014'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_014_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_014" id="t_014_tidak" <?php echo ($edit['T_014'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_014" id="t_014_tidak" <?php echo ($detail['T_014'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_014_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -627,11 +627,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_015" id="t_015_ya" <?php echo ($edit['T_015'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_015" id="t_015_ya" <?php echo ($detail['T_015'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_015_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_015" id="t_015_tidak" <?php echo ($edit['T_015'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_015" id="t_015_tidak" <?php echo ($detail['T_015'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_015_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -643,11 +643,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_016" id="t_016_ya" <?php echo ($edit['T_016'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_016" id="t_016_ya" <?php echo ($detail['T_016'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_016_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_016" id="t_016_tidak" <?php echo ($edit['T_016'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_016" id="t_016_tidak" <?php echo ($detail['T_016'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_016_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -665,11 +665,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_017" id="t_017_ya" <?php echo ($edit['T_017'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_017" id="t_017_ya" <?php echo ($detail['T_017'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_017_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_017" id="t_017_tidak" <?php echo ($edit['T_017'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_017" id="t_017_tidak" <?php echo ($detail['T_017'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_017_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -681,11 +681,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_ya" <?php echo ($edit['T_018'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_ya" <?php echo ($detail['T_018'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_018_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_tidak" <?php echo ($edit['T_018'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_018" id="t_018_tidak" <?php echo ($detail['T_018'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_018_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -697,11 +697,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_ya" <?php echo ($edit['T_019'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_ya" <?php echo ($detail['T_019'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_019_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_tidak" <?php echo ($edit['T_019'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_019" id="t_019_tidak" <?php echo ($detail['T_019'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_019_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -714,17 +714,17 @@ foreach ($dataAssessmenttidk as $row) {
                                         <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Lain-lain</label>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_17" id="v_17" value="<?php echo $edit['V_17'] ?>">
+                                        <input class="form-control" type="text" name="v_17" id="v_17" value="<?php echo $detail['V_17'] ?>" readonly>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_ya" <?php echo ($edit['T_020'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_ya" <?php echo ($detail['T_020'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_020_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_tidak" <?php echo ($edit['T_020'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_020" id="t_020_tidak" <?php echo ($detail['T_020'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_020_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -736,11 +736,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_ya" <?php echo ($edit['T_021'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_ya" <?php echo ($detail['T_021'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_021_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_tidak" <?php echo ($edit['T_021'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_021" id="t_021_tidak" <?php echo ($detail['T_021'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_021_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -752,11 +752,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_ya" <?php echo ($edit['T_022'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_ya" <?php echo ($detail['T_022'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_022_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_tidak" <?php echo ($edit['T_022'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_022" id="t_022_tidak" <?php echo ($detail['T_022'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_022_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -768,11 +768,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_ya" <?php echo ($edit['T_023'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_ya" <?php echo ($detail['T_023'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_023_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_tidak" <?php echo ($edit['T_023'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_023" id="t_023_tidak" <?php echo ($detail['T_023'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_023_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -784,11 +784,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_ya" <?php echo ($edit['T_024'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_ya" <?php echo ($detail['T_024'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_024_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_tidak" <?php echo ($edit['T_024'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_024" id="t_024_tidak" <?php echo ($detail['T_024'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_024_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -804,7 +804,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label"><strong>TIME OUT</strong> pukul</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="time" name="v_18" id="v_18" value="<?php echo $edit['V_18'] ?>">
+                                <input class="form-control" type="time" name="v_18" id="v_18" value="<?php echo $detail['V_18'] ?>" readonly>
                             </div>
                         </div>
 
@@ -816,11 +816,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_ya" <?php echo ($edit['T_025'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_ya" <?php echo ($detail['T_025'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_025_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_tidak" <?php echo ($edit['T_025'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_025" id="t_025_tidak" <?php echo ($detail['T_025'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_025_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -834,11 +834,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_ya" <?php echo ($edit['T_026'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_ya" <?php echo ($detail['T_026'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_026_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_tidak" <?php echo ($edit['T_026'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_026" id="t_026_tidak" <?php echo ($detail['T_026'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_026_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -850,11 +850,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_ya" <?php echo ($edit['T_027'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_ya" <?php echo ($detail['T_027'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_027_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_tidak" <?php echo ($edit['T_027'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_027" id="t_027_tidak" <?php echo ($detail['T_027'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_027_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -866,11 +866,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_ya" <?php echo ($edit['T_028'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_ya" <?php echo ($detail['T_028'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_028_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_tidak" <?php echo ($edit['T_028'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_028" id="t_028_tidak" <?php echo ($detail['T_028'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_028_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -882,11 +882,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_ya" <?php echo ($edit['T_029'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_ya" <?php echo ($detail['T_029'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_029_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_tidak" <?php echo ($edit['T_029'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_029" id="t_029_tidak" <?php echo ($detail['T_029'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_029_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -902,7 +902,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label"><strong>SIGN OUT</strong> pukul</label>
                             </div>
                             <div class="col-md-8">
-                                <input class="form-control" type="time" name="v_19" id="v_19" value="<?php echo $edit['V_19'] ?>">
+                                <input class="form-control" type="time" name="v_19" id="v_19" value="<?php echo $detail['V_19'] ?>" readonly>
                             </div>
                         </div>
 
@@ -914,11 +914,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_ya" <?php echo ($edit['T_030'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_ya" <?php echo ($detail['T_030'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_030_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_tidak" <?php echo ($edit['T_030'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_030" id="t_030_tidak" <?php echo ($detail['T_030'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_030_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -930,11 +930,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-4">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ya" <?php echo ($edit['T_031'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_ya" <?php echo ($detail['T_031'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_031_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_tidak" <?php echo ($edit['T_031'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_031" id="t_031_tidak" <?php echo ($detail['T_031'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_031_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -945,7 +945,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Nama Pasien : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="text" name="v_20" id="v_20" value="<?php echo $edit['V_20'] ?>" disabled="disabled">
+                                <input class="form-control" type="text" name="v_20" id="v_20" value="<?php echo $detail['V_20'] ?>" readonly>
                             </div>
                         </div>
 
@@ -954,7 +954,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tanggal Lahir : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="date" name="v_21" id="v_21" value="<?php echo $edit['V_21'] ?>" disabled="disabled">
+                                <input class="form-control" type="date" name="v_21" id="v_21" value="<?php echo $detail['V_21'] ?>" readonly>
                             </div>
                         </div>
 
@@ -963,7 +963,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;No. Rekam Medis : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="text" name="v_22" id="v_22" value="<?php echo $edit['V_22'] ?>" disabled="disabled">
+                                <input class="form-control" type="text" name="v_22" id="v_22" value="<?php echo $detail['V_22'] ?>" readonly>
                             </div>
                         </div>
 
@@ -973,11 +973,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-7">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_laki" <?php echo ($edit['T_032'] == "1" ? 'checked' : ''); ?> disabled="disabled">
+                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_laki" <?php echo ($detail['T_032'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_032_laki">Laki-laki</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_perempuan" <?php echo ($edit['T_032'] == "2" ? 'checked' : ''); ?> disabled="disabled">
+                                    <input type="radio" class="form-check-input" name="t_032" id="t_032_perempuan" <?php echo ($detail['T_032'] == "2" ? 'checked' : ''); ?> disabled>
                                     <label for="t_032_perempuan">Perempuan</label>
                                 </div>
                             </div>
@@ -988,7 +988,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Tanggal Tindakan : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="date" name="v_23" id="v_23" value="<?php echo $edit['V_23'] ?>" disabled="disabled">
+                                <input class="form-control" type="date" name="v_23" id="v_23" value="<?php echo $detail['V_23'] ?>" readonly>
                             </div>
                         </div>
 
@@ -997,7 +997,7 @@ foreach ($dataAssessmenttidk as $row) {
                                 <label class="col-form-label">&nbsp;&nbsp;&nbsp;&nbsp;Lokasi Pengambilan : </label>
                             </div>
                             <div class="col-md-6">
-                                <input class="form-control" type="text" name="v_24" id="v_24" value="<?php echo $edit['V_24'] ?>" disabled="disabled">
+                                <input class="form-control" type="text" name="v_24" id="v_24" value="<?php echo $detail['V_24'] ?>" readonly disabled="d isabled">
                             </div>
                         </div>
 
@@ -1010,11 +1010,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_ya" <?php echo ($edit['T_033'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_ya" <?php echo ($detail['T_033'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_033_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_tidak" <?php echo ($edit['T_033'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_033" id="t_033_tidak" <?php echo ($detail['T_033'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_033_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1026,11 +1026,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_ya" <?php echo ($edit['T_034'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_ya" <?php echo ($detail['T_034'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_034_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_tidak" <?php echo ($edit['T_034'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_034" id="t_034_tidak" <?php echo ($detail['T_034'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_034_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1042,11 +1042,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_ya" <?php echo ($edit['T_035'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_ya" <?php echo ($detail['T_035'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_035_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_tidak" <?php echo ($edit['T_035'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_035" id="t_035_tidak" <?php echo ($detail['T_035'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_035_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1056,15 +1056,15 @@ foreach ($dataAssessmenttidk as $row) {
                             <p>&nbsp;&nbsp;&nbsp;&nbsp;- Kesadaran :</p>
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="col-md-6">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="t_036_cm" name="t_036" <?php echo ($edit['T_036'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" id="t_036_cm" name="t_036" <?php echo ($detail['T_036'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_036_cm">Compos Mentis</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_037_del" name="t_037" <?php echo ($edit['T_037'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" id="t_037_del" name="t_037" <?php echo ($detail['T_037'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_037_del">Delirium</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_038_coma" name="t_038" <?php echo ($edit['T_038'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" id="t_038_coma" name="t_038" <?php echo ($detail['T_038'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_038_coma">Coma</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_039_sam" name="t_039" <?php echo ($edit['T_039'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" id="t_039_sam" name="t_039" <?php echo ($detail['T_039'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_039_sam">Samnolen</label><br>
-                                    <input class="form-check-input" type="checkbox" id="t_040_sc" name="t_040" <?php echo ($edit['T_040'] == "1" ? 'checked' : ''); ?>>
+                                    <input class="form-check-input" type="checkbox" id="t_040_sc" name="t_040" <?php echo ($detail['T_040'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_040_sc">Soporo coma</label>
                                 </div>
                             </div>
@@ -1078,11 +1078,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_041" id="t_041_ya" <?php echo ($edit['T_041'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_041" id="t_041_ya" <?php echo ($detail['T_041'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_041_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_041" id="t_041_tidak" <?php echo ($edit['T_041'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_041" id="t_041_tidak" <?php echo ($detail['T_041'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_041_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1094,11 +1094,11 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
                             <div class="col-md-5">
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_042" id="t_042_ya" <?php echo ($edit['T_042'] == "1" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_042" id="t_042_ya" <?php echo ($detail['T_042'] == "1" ? 'checked' : ''); ?> disabled>
                                     <label for="t_042_ya">Ya</label>
                                 </div>
                                 <div class="form-check-inline">
-                                    <input type="radio" class="form-check-input" name="t_042" id="t_042_tidak" <?php echo ($edit['T_042'] == "0" ? 'checked' : ''); ?>>
+                                    <input type="radio" class="form-check-input" name="t_042" id="t_042_tidak" <?php echo ($detail['T_042'] == "0" ? 'checked' : ''); ?> disabled>
                                     <label for="t_042_tidak">Tidak</label>
                                 </div>
                             </div>
@@ -1114,19 +1114,19 @@ foreach ($dataAssessmenttidk as $row) {
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Operator</label>
                         <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd"></div>
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_25" name="v_25" value="<?php echo $edit['V_25'] ?>" size="25px">
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_25" name="v_25" class="form-control-sm" value="<?php echo $detail['V_25'] ?>" readonly size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Perawat</label>
                         <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_1"></div>
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_26" name="v_26" value="<?php echo $edit['V_26'] ?>" size="25px">
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_26" name="v_26" class="form-control-sm" value="<?php echo $detail['V_26'] ?>" readonly size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Dokter Anastesi</label>
                         <br>
                         &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_2"></div>
-                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_27" name="v_27" value="<?php echo $edit['V_27'] ?>" size="25px">
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_27" name="v_27" class="form-control-sm" value="<?php echo $detail['V_27'] ?>" readonly size="25px">
                         <br>
 
                         <br>
@@ -1137,10 +1137,6 @@ foreach ($dataAssessmenttidk as $row) {
                     </td>
                 </tr>
             </table>
-
-            <div class="d-grid gap-2 mb-3">
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
-            </div>
         </div>
     </form>
 

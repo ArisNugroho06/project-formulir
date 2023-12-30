@@ -159,7 +159,7 @@ foreach ($dataAssessmentpsa as $row) {
         <h2>RSUD Dr. M. YUNUS BENGKULU</h2>
     </div>
     <div class="container mt-3">
-        <form action="<?php echo site_url('home/editform2/' . $edit['no']); ?>" method="post" id="form" autocomplete="off">
+        <form action="<?php echo site_url('update/editform/' . $edit['no']); ?>" method="post" id="form" autocomplete="off">
             <input type="hidden" id="form" name="form" value="F2">
 
             <input type="hidden" name="no" id="no" value="<?= $edit['no'] ?>">
@@ -308,7 +308,7 @@ foreach ($dataAssessmentpsa as $row) {
                         </div>
                     </div>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4">
                     <div class="row align-items-center">
                         <div class="col-md-12">
                             <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $edit['V_03'] ?>">

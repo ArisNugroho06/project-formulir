@@ -10,22 +10,25 @@ use App\Models\ModelPasien;
 class Formulir extends BaseController
 {
 
-    protected $mdata;
+    protected $ModelPasien;
 
     public function __construct()
     {
-        $this->mdata = new ModelPasien();
+        $this->ModelPasien = new ModelPasien();
     }
 
     //menampilkan semua data pasien saat akan mengisi formulir baru
 
     public function datapasien()
     {
-        $datapasien = $this->mdata->findAll();
+        // $datapasien = $this->ModelPasien->findAll();
 
-        $data = [
-            'daftarpasien' => $datapasien
-        ];
+        // $data = [
+        //     'daftarpasien' => $datapasien
+        // ];
+
+        $data['daftarpasien'] = $this->ModelPasien->paginate(1, 'pasien');
+        $data['pager'] = $this->ModelPasien->pager;
 
         return view('dashboard/datapasien', $data);
     }
@@ -35,7 +38,7 @@ class Formulir extends BaseController
     public function formptk($no_registration)
     {
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
         return view('form/form_penolakan_tindakan_kedokteran', $datapasien);
@@ -45,7 +48,7 @@ class Formulir extends BaseController
     {
 
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
         return view('form/form_persetujuan_anestesi', $datapasien);
@@ -54,7 +57,7 @@ class Formulir extends BaseController
     public function formpta($no_registration)
     {
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
         return view('form/form_penolakan_anestesi', $datapasien);
@@ -64,7 +67,7 @@ class Formulir extends BaseController
     {
 
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
 
@@ -75,7 +78,7 @@ class Formulir extends BaseController
     {
 
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
         return view('form/form_blanko_pengkajian_awal_dan_keperawatan', $datapasien);
@@ -85,7 +88,7 @@ class Formulir extends BaseController
     {
 
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
 
@@ -96,7 +99,7 @@ class Formulir extends BaseController
     {
 
         $datapasien = [
-            'psn' => $this->mdata->where(['no_registration' => $no_registration])->first()
+            'psn' => $this->ModelPasien->where(['no_registration' => $no_registration])->find($no_registration)
         ];
 
 

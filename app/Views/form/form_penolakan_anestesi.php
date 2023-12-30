@@ -529,7 +529,7 @@ foreach ($dataAssessmentpsa as $row) {
   <div class="container mt-5">
     <table class="table text-center">
       <tr>
-        <p>Bengkulu, <input type="datetime-local" name="v_27" id="v_27"></p>
+        <p>Bengkulu, <input type="datetime-local" name="v_19" id="v_19"></p>
       </tr>
       <tr>
         <td>Yang Menyatakan</td>
@@ -553,16 +553,16 @@ foreach ($dataAssessmentpsa as $row) {
       </tr>
       <tr>
         <td>
-          <input type="text" name="v_28" id="v_28">
+          <input type="text" name="v_20" id="v_20">
         </td>
         <td>
-          <input type="text" name="v_29" id="v_29">
+          <input type="text" name="v_21" id="v_21">
         </td>
         <td>
-          <input type="text" name="v_30" id="v_30">
+          <input type="text" name="v_22" id="v_22">
         </td>
         <td>
-          <input type="text" name="v_31" id="v_31">
+          <input type="text" name="v_23" id="v_23">
         </td>
       </tr>
     </table>

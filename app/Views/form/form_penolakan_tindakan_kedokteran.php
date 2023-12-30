@@ -614,23 +614,23 @@ foreach ($dataAssessmentptk as $row) {
       <tr>
         <td>
           <p>
-            Yang bertanda tangan dibawah ini, Saya, nama <input type="text" name="v_20" id="v_20"> umur <input type="text" name="v_21" id="v_21"> tahun,
+            Yang bertanda tangan dibawah ini, Saya, nama <input class="form-control-sm" size="30px" type="text" name="v_20" id="v_20"> umur <input type="text" class="form-control-sm" size="15px" name="v_21" id="v_21"> tahun,
             <input type="radio" class="form-check-input" name="t_018" id="t_018_laki" value="1">
             <label for="t_018_laki">Laki-laki</label>
             <input type="radio" class="form-check-input" name="t_018" id="t_018_perempuan" value="2">
             <label for="t_018_perempuan">Perempuan</label>,
-            alamat <input type="text" name="v_22" id="v_22"> dengan ini menyatakan <strong>PENOLAKAN</strong> untuk dilakukannya tindakan <input type="text" name="v_23" id="v_23"> terhadap
+            alamat <input type="text" class="form-control-sm" size="50px" name="v_22" id="v_22"> dengan ini menyatakan <strong>PENOLAKAN</strong> untuk dilakukannya tindakan <input type="text" class="form-control-sm" size="30px" name="v_23" id="v_23"> terhadap
             <input type="radio" class="form-check-input" name="t_019" id="t_019_saya" value="1">
             <label for="t_019_saya">saya /</label>
             <input type="radio" class="form-check-input" name="t_019" id="t_019_status" value="2">
-            <label><input type="text" name="v_24" id="v_24" disabled="disabled"></label>
+            <label><input type="text" class="form-control-sm" size="30px" name="v_24" id="v_24" disabled="disabled"></label>
             saya <br>
-            bernama <input type="text" name="v_25" id="v_25" disabled="disabled"> umur <input type="text" name="v_26" id="v_26" disabled="disabled"> tahun,
+            bernama <input type="text" name="v_25" id="v_25" class="form-control-sm" size="30px" disabled="disabled"> umur <input type="text" class="form-control-sm" size="15px" name="v_26" id="v_26" class="form-control-sm" size="30px" disabled="disabled"> tahun,
             <input type="radio" class="form-check-input" name="t_020" id="t_020_laki" value="1" disabled="disabled">
             <label for="t_020_laki">Laki-laki</label>
             <input type="radio" class="form-check-input" name="t_020" id="t_020_perempuan" value="2" disabled="disabled">
             <label for="t_020_perempuan">Perempuan</label>,
-            alamat <input type="text" name="v_27" id="v_27" disabled="disabled">
+            alamat <input type="text" class="form-control-sm" size="50px" name="v_27" id="v_27" disabled="disabled">
           </p>
         </td>
       </tr>
