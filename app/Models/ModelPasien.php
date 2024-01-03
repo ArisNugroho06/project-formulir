@@ -34,4 +34,10 @@ class ModelPasien extends Model
     {
         return $this->paginate($perPage, 'group1', $page);
     }
+
+    public function search($keyword)
+    {
+
+        return $this->table('pasien')->like('thename', $keyword)->orLike('no_registration', $keyword);
+    }
 }

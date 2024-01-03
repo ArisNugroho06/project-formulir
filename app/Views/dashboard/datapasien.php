@@ -66,10 +66,10 @@
 </style>
 
 <div class="container-fluid fixed mt-2">
-    <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
+    <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
 </div>
 
-<h3 class="text-center mt-3">DATA PASIEN</h3>
+<h3 class="text-center mt-2">DATA PASIEN</h3>
 
 <?php if (session()->getFlashdata('pesan')) : ?>
     <div class="alert alert-success" role="alert">
@@ -77,8 +77,21 @@
     </div>
 <?php endif ?>
 
-<div class="container-fluid fixed m-0">
-    <?= $pager->simpleLinks('pasien', 'pagination') ?>
+<div class="container-fluid fixed">
+    <div class="row align-items-center mt-4">
+        <div class="col-md-8">
+            <?= $pager->links('pasien', 'pagination') ?>
+        </div>
+
+        <div class="col-md-4">
+            <form action="" method="post" autocomplete="off">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Pasien . . ." name="keyword">
+                    <button class="btn btn-primary" type="submit" name="submit">Cari</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 <div class="container-fluid fixed">
@@ -86,6 +99,7 @@
 
         <thead class="text-center">
             <tr>
+                <th>No</th>
                 <th>Isi Formulir</th>
                 <th>RM</th>
                 <th>Nama</th>
@@ -99,11 +113,12 @@
                 <th>Diagnosa</th>
             </tr>
         </thead>
-
+        <?php $i = 1 + (2 * ($currentPage - 1)); ?>
         <?php foreach ($daftarpasien as $row) { ?>
 
             <tbody>
                 <tr>
+                    <td><?= $i++; ?></td>
                     <td>
                         <div class="dropdown">
                             <button class="dropbtn">Formulir</button>

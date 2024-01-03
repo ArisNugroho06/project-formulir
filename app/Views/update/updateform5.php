@@ -509,10 +509,8 @@ foreach ($dataAssessmentformptk as $row) {
     </div>
 
     <div class="container mt-5">
-        <form action="<?= site_url('insert/create') ?>" method="post" autocomplete="off">
+        <form action="<?= site_url('update/editform') ?>" method="post" autocomplete="off">
             <?php
-
-            use function PHPUnit\Framework\assertNotNull;
 
             csrf_field(); ?>
             <input type="hidden" id="form" name="form" value="F5">

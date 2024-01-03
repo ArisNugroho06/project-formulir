@@ -71,9 +71,9 @@ foreach ($dataAssessmentpkmrj as $row) {
                 $("#" + tableID).append(
                     $("<tr>")
                     .append($("<td>").html(i1))
-                    .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i + '" name="v_' + i + '" placeholder="Nama Obat" value="<?= $psn['V_' . $i] ?> "></div>'))
-                    .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i2 + '" name="v_' + i2 + '" placeholder="Dosis" value="<?= $psn['V_' . $i2] ?> "></div>'))
-                    .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" placeholder="Lama Penggunaan" value="<?= $psn['V_' . $i3] ?> "></div>'))
+                    .append($.append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i + '" name="v_' + i + '" placeholder="Nama Obat" value="<?= $detail['v_' ?>' + i + '"]"></div>'))
+                    .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i2 + '" name="v_' + i2 + '" placeholder="Dosis" value="<?= $detail['V_' . $i2] ?> "></div>'))
+                    .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" placeholder="Lama Penggunaan" value="<?= $detail['V_' . $i3] ?> "></div>'))
                 );
 
                 i += 3;
@@ -225,7 +225,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                     <label>No.RM</label>
                                 </div>
                                 <div class="col-7">
-                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $psn['NO_REGISTRATION'] ?>" readonly>
+                                    <input class="form-control" type="text" name="no_registration" id="no_registration" value="<?php echo $detail['NO_REGISTRATION'] ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -233,7 +233,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                     <label>Nama Lengkap</label>
                                 </div>
                                 <div class="col-7">
-                                    <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $psn['THENAME'] ?>" readonly>
+                                    <input class="form-control" type="text" name="thename" id="thename" value="<?php echo $detail['THENAME'] ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -241,7 +241,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                     <label>Tanggal Lahir</label>
                                 </div>
                                 <div class="col-7">
-                                    <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $psn['DATE_OF_BIRTH'] ?>" readonly>
+                                    <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $detail['DATE_OF_BIRTH'] ?>" readonly>
                                 </div>
                             </div>
                             <div class="row">
@@ -249,7 +249,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                     <label>NIK</label>
                                 </div>
                                 <div class="col-7">
-                                    <input class="form-control" type="text" name="thenik" id="thenik" value="<?php echo $psn['THENIK'] ?>" readonly>
+                                    <input class="form-control" type="text" name="thenik" id="thenik" value="<?php echo $detail['THENIK'] ?>" readonly>
                                 </div>
                             </div>
                         </div>
@@ -421,7 +421,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             </div>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_01" id="v_01" value="<?php echo $psn['V_01'] ?>" disabled="disabled">
+                                            <input class="form-control" type="text" name="v_01" id="v_01" value="<?php echo $detail['V_01'] ?>" disabled="disabled">
                                         </div>
                                     </div>
                                 </div>
@@ -504,7 +504,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             </div>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_02" id="v_02" value="<?php echo $psn['V_02'] ?>" disabled="disabled">
+                                            <input class="form-control" type="text" name="v_02" id="v_02" value="<?php echo $detail['V_02'] ?>" disabled="disabled">
                                         </div>
                                     </div>
                                 </div>
@@ -519,7 +519,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             </div>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $psn['V_03'] ?>" disabled="disabled">
+                                            <input class="form-control" type="text" name="v_03" id="v_03" value="<?php echo $detail['V_03'] ?>" disabled="disabled">
                                         </div>
                                     </div>
                                 </div>
@@ -532,7 +532,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             </div>
                                         </div>
                                         <div class="col-md-7">
-                                            <input class="form-control" type="text" name="v_04" id="v_04" value="<?php echo $psn['V_04'] ?>" disabled="disabled">
+                                            <input class="form-control" type="text" name="v_04" id="v_04" value="<?php echo $detail['V_04'] ?>" disabled="disabled">
                                         </div>
                                     </div>
                                 </div>
@@ -559,7 +559,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                         <label class="col-form-label">Tanggal dan Jam berobat di ruang poliklinik : </label>
                                     </div>
                                     <div class="col-md-6">
-                                        <input class="form-control" type="datetime-local" name="v_05" id="v_05" value="<?php echo $psn['V_05'] ?>">
+                                        <input class="form-control" type="datetime-local" name="v_05" id="v_05" value="<?php echo $detail['V_05'] ?>">
                                     </div>
                                 </div>
                             </div>
@@ -595,7 +595,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 <label class="col-form-label">Keluhan Utama</label>
                             </div>
                             <div class="col-md-9">
-                                <textarea class="form-control" name="anamnase" id="anamnase" cols="5" rows="3" readonly><?php echo $psn['ANAMNASE'] ?></textarea>
+                                <textarea class="form-control" name="anamnase" id="anamnase" cols="5" rows="3" readonly><?php echo $detail['ANAMNASE'] ?></textarea>
                             </div>
                         </div>
                         <div class="row align-items-center">
@@ -603,7 +603,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 <label class="col-form-label">Riwayat Penyakit Sekarang</label>
                             </div>
                             <div class="col-md-9">
-                                <textarea class="form-control" name="v_06" id="v_06" cols="5" rows="2"><?php echo $psn['V_06'] ?></textarea>
+                                <textarea class="form-control" name="v_06" id="v_06" cols="5" rows="2"><?php echo $detail['V_06'] ?></textarea>
                             </div>
                         </div>
                         <div class="row align-items-center">
@@ -611,7 +611,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 <label class="col-form-label">Riwayat Penyakit Dahulu</label>
                             </div>
                             <div class="col-md-9">
-                                <textarea class="form-control" name="v_07" id="v_07" cols="5" rows="2"><?php echo $psn['V_07'] ?></textarea>
+                                <textarea class="form-control" name="v_07" id="v_07" cols="5" rows="2"><?php echo $detail['V_07'] ?></textarea>
                             </div>
                         </div>
                         <div class="row align-items-center">
@@ -619,7 +619,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 <label class="col-form-label">Riwayat Penyakit Keluargas</label>
                             </div>
                             <div class="col-md-9">
-                                <textarea class="form-control" name="v_08" id="v_08" cols="5" rows="2"><?php echo $psn['V_08'] ?></textarea>
+                                <textarea class="form-control" name="v_08" id="v_08" cols="5" rows="2"><?php echo $detail['V_08'] ?></textarea>
                             </div>
                         </div>
 
@@ -639,17 +639,17 @@ foreach ($dataAssessmentpkmrj as $row) {
                                     <td>1</td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="v_09" value="<?php echo $psn['V_09'] ?>" placeholder="Nama Obat">
+                                            <input type="text" class="form-control" name="v_09" value="<?php echo $detail['V_09'] ?>" placeholder="Nama Obat">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="v_10" value="<?php echo $psn['V_10'] ?>" placeholder="Dosis">
+                                            <input type="text" class="form-control" name="v_10" value="<?php echo $detail['V_10'] ?>" placeholder="Dosis">
                                         </div>
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="v_11" value="<?php echo $psn['V_11'] ?>" placeholder="Lama Penggunaan">
+                                            <input type="text" class="form-control" name="v_11" value="<?php echo $detail['V_11'] ?>" placeholder="Lama Penggunaan">
                                         </div>
                                     </td>
                                 </tr>
@@ -678,7 +678,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 </div>
                                 <div class="row align-items-center">
                                     <div class="col-md-12">
-                                        <textarea class="form-control" name="riwayat_alergi" id="riwayat_alergi" cols="10" rows="4" disabled="disabled"><?php echo $psn['RIWAYAT_ALERGI'] ?></textarea>
+                                        <textarea class="form-control" name="riwayat_alergi" id="riwayat_alergi" cols="10" rows="4" disabled="disabled"><?php echo $detail['RIWAYAT_ALERGI'] ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -791,7 +791,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                                 <label class="col-form-label">E</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input class="form-control" type="text" name="v_39" id="v_39" value="<?php echo $psn['V_39'] ?>">
+                                                <input class="form-control" type="text" name="v_39" id="v_39" value="<?php echo $detail['V_39'] ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -801,7 +801,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                                 <label class="col-form-label">M</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input class="form-control" type="text" name="v_40" id="v_40" value="<?php echo $psn['V_40'] ?>">
+                                                <input class="form-control" type="text" name="v_40" id="v_40" value="<?php echo $detail['V_40'] ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -811,7 +811,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                                 <label class="col-form-label">V</label>
                                             </div>
                                             <div class="col-md-9">
-                                                <input class="form-control" type="text" name="v_41" id="v_41" value="<?php echo $psn['V_41'] ?>">
+                                                <input class="form-control" type="text" name="v_41" id="v_41" value="<?php echo $detail['V_41'] ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -825,13 +825,13 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             <label class="col-form-label">Tekanan Darah</label>
                                         </div>
                                         <div class="col-md-2">
-                                            <input class="form-control" type="text" name="tension_upper" id="tension_upper" value="<?php echo $psn['TENSION_UPPER'] ?>">
+                                            <input class="form-control" type="text" name="tension_upper" id="tension_upper" value="<?php echo $detail['TENSION_UPPER'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>/</label>
                                         </div>
                                         <div class="col-md-2">
-                                            <input class="form-control" type="text" name="tension_below" id="tension_below" value="<?php echo $psn['TEENSION_BELOW'] ?>">
+                                            <input class="form-control" type="text" name="tension_below" id="tension_below" value="<?php echo $detail['TEENSION_BELOW'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>mmHg</label>
@@ -843,7 +843,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             <label class="col-form-label">Suhu</label>
                                         </div>
                                         <div class="col-md-4">
-                                            <input class="form-control" type="text" name="temperature" id="temperature" value="<?php echo $psn['TEMPERATURE'] ?>">
+                                            <input class="form-control" type="text" name="temperature" id="temperature" value="<?php echo $detail['TEMPERATURE'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>C</label>
@@ -854,7 +854,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             <label class="col-form-label">Berat Badan</label>
                                         </div>
                                         <div class="col-md-4">
-                                            <input class="form-control" type="text" name="weight" id="weight" value="<?php echo $psn['WEIGHT'] ?>">
+                                            <input class="form-control" type="text" name="weight" id="weight" value="<?php echo $detail['WEIGHT'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>Kg</label>
@@ -867,7 +867,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             <label class="col-form-label">Nadi</label>
                                         </div>
                                         <div class="col-md-4">
-                                            <input class="form-control" type="text" name="nadi" id="nadi" value="<?php echo $psn['NADI'] ?>">
+                                            <input class="form-control" type="text" name="nadi" id="nadi" value="<?php echo $detail['NADI'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>x/menit</label>
@@ -878,7 +878,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             <label class="col-form-label">Pernafasan</label>
                                         </div>
                                         <div class="col-md-4">
-                                            <input class="form-control" type="text" name="nafas" id="nafas" value="<?php echo $psn['NAFAS'] ?>">
+                                            <input class="form-control" type="text" name="nafas" id="nafas" value="<?php echo $detail['NAFAS'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>x/menit</label>
@@ -890,7 +890,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                             <label class="col-form-label">Tinggi Badan</label>
                                         </div>
                                         <div class="col-md-4">
-                                            <input class="form-control" type="text" name="height" id="height" value="<?php echo $psn['HEIGHT'] ?>">
+                                            <input class="form-control" type="text" name="height" id="height" value="<?php echo $detail['HEIGHT'] ?>">
                                         </div>
                                         <div class="col-md-1">
                                             <label>cm</label>
@@ -904,31 +904,31 @@ foreach ($dataAssessmentpkmrj as $row) {
                         <table class="table table-bordered" style="border: 2px solid black">
                             <tr>
                                 <td>Kepala</td>
-                                <td><input class="form-control" type="text" name="v_42" id="v_42" value="<?php echo $psn['V_42'] ?>"></td>
+                                <td><input class="form-control" type="text" name="v_42" id="v_42" value="<?php echo $detail['V_42'] ?>"></td>
                             </tr>
                             <tr>
                                 <td>Leher</td>
-                                <td><input class="form-control" type="text" name="v_43" id="v_43" value="<?php echo $psn['V_43'] ?>"></td>
+                                <td><input class="form-control" type="text" name="v_43" id="v_43" value="<?php echo $detail['V_43'] ?>"></td>
                             </tr>
                             <tr>
                                 <td>Thoraks</td>
-                                <td><input class="form-control" type="text" name="v_44" id="v_44" value="<?php echo $psn['V_44'] ?>"></td>
+                                <td><input class="form-control" type="text" name="v_44" id="v_44" value="<?php echo $detail['V_44'] ?>"></td>
                             </tr>
                             <tr>
                                 <td>Abdomen</td>
-                                <td><input class="form-control" type="text" name="v_45" id="v_45" value="<?php echo $psn['V_45'] ?>"></td>
+                                <td><input class="form-control" type="text" name="v_45" id="v_45" value="<?php echo $detail['V_45'] ?>"></td>
                             </tr>
                             <tr>
                                 <td>Urogenitalia</td>
-                                <td><input class="form-control" type="text" name="v_46" id="v_46" value="<?php echo $psn['V_46'] ?>"></td>
+                                <td><input class="form-control" type="text" name="v_46" id="v_46" value="<?php echo $detail['V_46'] ?>"></td>
                             </tr>
                             <tr>
                                 <td>Extremitas</td>
-                                <td><input class="form-control" type="text" name="v_47" id="v_47" value="<?php echo $psn['V_47'] ?>"></td>
+                                <td><input class="form-control" type="text" name="v_47" id="v_47" value="<?php echo $detail['V_47'] ?>"></td>
                             </tr>
                             <tr>
                                 <td>Status Lokalis</td>
-                                <td><input class="form-control" type="text" name="lokalis" id="lokalis" value="<?php echo $psn['LOKALIS'] ?>"></td>
+                                <td><input class="form-control" type="text" name="lokalis" id="lokalis" value="<?php echo $detail['LOKALIS'] ?>"></td>
                             </tr>
 
                         </table>
@@ -936,14 +936,14 @@ foreach ($dataAssessmentpkmrj as $row) {
                         <h6>STATUS LOKALIS</h6>
                         <table class="table table-bordered" style="border: 2px solid black">
                             <tr>
-                                <td><textarea class="form-control" name="v_48" id="v_48" cols="6" rows="5">value="<?php echo $psn['V_48'] ?>"</textarea></td>
+                                <td><textarea class="form-control" name="v_48" id="v_48" cols="6" rows="5">value="<?php echo $detail['V_48'] ?>"</textarea></td>
                             </tr>
                         </table>
 
                         <h6>PEMERIKSAAN PENUNJANG</h6>
                         <table class="table table-bordered" style="border: 2px solid black">
                             <tr>
-                                <td><textarea class="form-control" name="v_49" id="v_49" cols="6" rows="5">value="<?php echo $psn['V_49'] ?>"</textarea></td>
+                                <td><textarea class="form-control" name="v_49" id="v_49" cols="6" rows="5">value="<?php echo $detail['V_49'] ?>"</textarea></td>
                             </tr>
                         </table>
 
@@ -960,10 +960,10 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 <tr>
                                     <td>1</td>
                                     <td>
-                                        <input type="text" class="form-control" name="v_50" id="v_50" value="<?php echo $psn['V_50'] ?>"> placeholder="Diagnosa Medis">
+                                        <input type="text" class="form-control" name="v_50" id="v_50" value="<?php echo $detail['V_50'] ?>"> placeholder="Diagnosa Medis">
                                     </td>
                                     <td>
-                                        <input type="text" class="form-control" name="v_51" id="v_51" value="<?php echo $psn['V_51'] ?>"> placeholder="Tata Laksana Medis">
+                                        <input type="text" class="form-control" name="v_51" id="v_51" value="<?php echo $detail['V_51'] ?>"> placeholder="Tata Laksana Medis">
                                     </td>
                                 </tr>
                             </tbody>
@@ -995,7 +995,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                         </div>
                                     </div>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="text" name="v_52" id="v_52" value="<?php echo $psn['V_52'] ?>" disabled="disabled">
+                                        <input class="form-control" type="text" name="v_52" id="v_52" value="<?php echo $detail['V_52'] ?>" disabled="disabled">
                                     </div>
                                 </div>
                             </div>
@@ -1017,12 +1017,12 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 <td width="50%" class="text-center">
                                     <label>Dokter Pemeriksa</label><br>
                                     <div id="ttd"></div><br>
-                                    <input type="text" id="v_69" name="v_69" size="25px" value="<?php echo $psn['V_69'] ?>">
+                                    <input type="text" id="v_69" name="v_69" size="25px" value="<?php echo $detail['V_69'] ?>">
                                 </td>
                                 <td width="50%" class="text-center">
                                     <label>Perawat Yang Melakukan Pengkajian</label><br>
                                     <div id="ttd_1"></div><br>
-                                    <input type="text" id="v_70" name="v_70" size="25px" value="<?php echo $psn['V_70'] ?>">
+                                    <input type="text" id="v_70" name="v_70" size="25px" value="<?php echo $detail['V_70'] ?>">
                                 </td>
                             </tr>
                             <tr>
@@ -1031,7 +1031,7 @@ foreach ($dataAssessmentpkmrj as $row) {
                                 </td>
                                 <td>
                                     <div class="col-md-7">
-                                        <input class="form-control" type="datetime-local" name="v_71" id="v_71" value="<?php echo $psn['V_71'] ?>">
+                                        <input class="form-control" type="datetime-local" name="v_71" id="v_71" value="<?php echo $detail['V_71'] ?>">
                                     </div>
                                 </td>
                             </tr>

@@ -1,14 +1,35 @@
 <?= $this->extend('layout'); ?>
 <?= $this->section('content'); ?>
 
-<div class="container-fluid fixed mt-5">
-    <a class="btn btn-info" href="<?= site_url('home/index') ?>" role="button">Back</a>
+<div class="container-fluid fixed mt-2">
+    <a class="btn btn-primary" href="<?= site_url('home/index') ?>" role="button">Back</a>
 </div>
 
 <h3 class="text-center text-uppercase mt-5">Formulir Penolakan Tindakan Kedokteran</h3>
 
 <div class="container-fluid fixed">
-    <table class="table table-bordered mt-5 mb-10" style="border:3px solid black">
+    <div class="row align-items-center mt-4">
+        <div class="col-md-8"><?= $pager->links('assessment_info', 'pagination') ?></div>
+
+        <div class="col-md-4 float-end">
+            <form action="" method="post" autocomplete="off">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Masukkan Nama Pasien . . ." name="keyword">
+                    <button class="btn btn-primary" type="submit" name="submit">Cari</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<?php if (session()->getFlashdata('pesan')) : ?>
+    <div class="alert alert-danger mt-3" role="alert">
+        <?= session()->getFlashdata('pesan'); ?>
+    </div>
+<?php endif ?>
+
+<div class="container-fluid fixed">
+    <table class="table table-bordered mt-3 mb-10" style="border:3px solid black">
 
         <thead class="text-center">
             <tr>
@@ -24,9 +45,8 @@
                 <th width="13%">Keterangan</th>
             </tr>
         </thead>
-
-        <?php $i = 1;
-        foreach ($data as $row) { ?>
+        <?php $i = 1 + (2 * ($currentPage - 1)); ?>
+        <?php foreach ($data as $row) { ?>
 
             <tbody>
                 <tr>
@@ -40,9 +60,11 @@
                     <td><?= $row['CLASS_ROOM_ID'] ?></td>
                     <td><?= $row['EXAMINATION_DATE'] ?></td>
                     <td align="center">
-                        <a href="<?= site_url('detail/form1/' . $row['NO_REGISTRATION']) ?>" class="btn btn-info"><i class="bi bi-eye-fill text-primary"></i></a>
-                        <a href="<?= site_url('update/form1/' . $row['NO_REGISTRATION']) ?>" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></a>
-                        <a href="<?= site_url('detail/deletef1/' . $row['no']) ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="bi bi-trash-fill text-light"></i></a>
+                        <div class="btn-group" role="group">
+                            <a href="<?= site_url('detail/form1/' . $row['NO_REGISTRATION']) ?>" class="btn btn-info"><i class="bi bi-eye-fill text-primary"></i></a>
+                            <a href="<?= site_url('update/form1/' . $row['NO_REGISTRATION']) ?>" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></a>
+                            <a href="<?= site_url('detail/deletef1/' . $row['no']) ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="bi bi-trash-fill text-light"></i></a>
+                        </div>
                     </td>
                 </tr>
             </tbody>

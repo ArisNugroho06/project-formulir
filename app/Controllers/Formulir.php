@@ -26,9 +26,21 @@ class Formulir extends BaseController
         // $data = [
         //     'daftarpasien' => $datapasien
         // ];
+        $currentPage = $this->request->getVar('page_pasien') ? $this->request->getVar('page_pasien') : 1;
 
-        $data['daftarpasien'] = $this->ModelPasien->paginate(1, 'pasien');
-        $data['pager'] = $this->ModelPasien->pager;
+        $keyword = $this->request->getVar('keyword');
+
+        if ($keyword) {
+            $pasien = $this->ModelPasien->search($keyword);
+        } else {
+            $pasien = $this->ModelPasien;
+        }
+
+        $data = [
+            'daftarpasien' => $pasien->paginate(2, 'pasien'),
+            'pager' => $this->ModelPasien->pager,
+            'currentPage' => $currentPage
+        ];
 
         return view('dashboard/datapasien', $data);
     }

@@ -36,31 +36,13 @@ foreach ($dataAssessmentptk as $row) {
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
+
+
+  <script src="<?= base_url('canvas_script.js'); ?>"></script>
+
   <script>
     $(function() {
-      var sig = {
-        container: $('#ttd').signature({
-          color: '#0000ff'
-        }),
-
-        formSave: function(formData) {
-          formData.append("ttd", b4sign.container.signature('toJSON'));
-          $.ajax({
-            url: "<?= site_url('formulir/addaksi') ?>",
-            method: 'POST',
-            data: formData,
-            processData: false,
-            contentType: false,
-            dataType: 'json',
-          });
-        },
-      }
-      sig.container;
-
-      $(document).on('submit', '#form', function(event) {
-        b4sign.formSave(new FormData(this));
-      });
-
+      var sig = $('#ttd').signature();
     });
   </script>
 
@@ -586,6 +568,7 @@ foreach ($dataAssessmentptk as $row) {
         <td class="text-center" width="15%">
           <p>Tanda Tangan</p>
           <div id="ttd"></div>
+          <input type="hidden" id="ttd" name="ttd">
         </td>
       </tr>
       <tr>

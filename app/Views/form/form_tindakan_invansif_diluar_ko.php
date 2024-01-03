@@ -161,7 +161,6 @@ foreach ($dataAssessmenttidk as $row) {
                     </td>
                     <td width="50%">
                         <div class="col">
-
                             <div class="row align-items-center">
                                 <div class="col-md-3">
                                     <label class="col-form-label">No. Rekam Medis</label>

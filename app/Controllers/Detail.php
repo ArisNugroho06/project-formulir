@@ -139,12 +139,18 @@ class Detail extends BaseController
     public function deletef1($no)
     {
         $this->ModelAssessment->delete($no);
+
+        session()->setFlashData('pesan', 'Data Berhasil Dihapus');
+
         return redirect()->to(site_url('dataformulir/form1'));
     }
 
     public function deletef2($no)
     {
         $this->ModelAssessment->delete($no);
+
+        session()->setFlashData('pesan', 'Data Berhasil Dihapus');
+
         return redirect()->to(site_url('dataformulir/form2'));
     }
 
@@ -157,24 +163,36 @@ class Detail extends BaseController
     public function deletef4($no)
     {
         $this->ModelAssessment->delete($no);
+
+        session()->setFlashData('pesan', 'Data Berhasil Dihapus');
+
         return redirect()->to(site_url('dataformulir/form4'));
     }
 
     public function deletef5($no)
     {
         $this->ModelAssessment->delete($no);
+
+        session()->setFlashData('pesan', 'Data Berhasil Dihapus');
+
         return redirect()->to(site_url('dataformulir/form5'));
     }
 
     public function deletef6($no)
     {
         $this->ModelAssessment->delete($no);
+
+        session()->setFlashData('pesan', 'Data Berhasil Dihapus');
+
         return redirect()->to(site_url('dataformulir/form6'));
     }
 
     public function deletef7($no)
     {
         $this->ModelAssessment->delete($no);
+
+        session()->setFlashData('pesan', 'Data Berhasil Dihapus');
+
         return redirect()->to(site_url('dataformulir/form7'));
     }
 }

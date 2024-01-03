@@ -22,6 +22,7 @@ class Insert extends BaseController
     {
         //  $this->ModelAssessment->save($this->request->getVar());
         $id = $this->ModelAssessment->generate_id();
+
         // versi wpu
         $this->ModelAssessment->save([
             'form' => $this->request->getVar('form'),
