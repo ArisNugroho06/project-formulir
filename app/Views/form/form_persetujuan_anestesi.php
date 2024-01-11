@@ -307,7 +307,7 @@ foreach ($dataAssessmentpsa as $row) {
           <label class="col-form-label">Penanggung Jawab *</label>
         </div>
         <div class="col-md-8">
-          <select class="form-control" name="t_01">
+          <select class="form-select" name="t_01">
             <option selected>Pilih</option>
             <option value="1">Penerima Informasi</option>
             <option value="2">Pemberi Persetujuan</option>
@@ -513,7 +513,8 @@ foreach ($dataAssessmentpsa as $row) {
       </td>
       <td class="text-center" width="15%">
         <p>Tanda Tangan</p>
-        <div id="ttd"></div>
+        <canvas id="canvas" width="150" height="75" style="border:1px solid #000;"></canvas>
+        <input type="hidden" id="ttd" name="ttd">
       </td>
     </tr>
     <tr>
@@ -526,7 +527,8 @@ foreach ($dataAssessmentpsa as $row) {
         <p class="text-center" width="15%">
           Tanda Tangan
         </p>
-        <div id="ttd_1"></div>
+        <canvas id="canvas1" width="150" height="75" style="border:1px solid #000;"></canvas>
+        <input type="hidden" id="ttd_1" name="ttd_1">
       </td>
     </tr>
     <tr>
@@ -587,16 +589,20 @@ foreach ($dataAssessmentpsa as $row) {
       </tr>
       <tr>
         <td>
-          <div id="ttd_2"></div>
+          <canvas id="canvas2" width="150" height="75" style="border:1px solid #000;"></canvas>
+          <input type="hidden" id="ttd_2" name="ttd_2">
         </td>
         <td>
-          <div id="ttd_3"></div>
+          <canvas id="canvas3" width="150" height="75" style="border:1px solid #000;"></canvas>
+          <input type="hidden" id="ttd_3" name="ttd_3">
         </td>
         <td>
-          <div id="ttd_4"></div>
+          <canvas id="canvas4" width="150" height="75" style="border:1px solid #000;"></canvas>
+          <input type="hidden" id="ttd_4" name="ttd_4">
         </td>
         <td>
-          <div id="ttd_5"></div>
+          <canvas id="canvas5" width="150" height="75" style="border:1px solid #000;"></canvas>
+          <input type="hidden" id="ttd_5" name="ttd_5">
         </td>
       </tr>
       <tr>
@@ -618,7 +624,7 @@ foreach ($dataAssessmentpsa as $row) {
 
 
   <div class="d-grid gap-2 mb-3">
-    <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+    <input class="btn btn-primary" type="submit" onclick="saveSignatureData(); saveSignatureData1(); saveSignatureData2(); saveSignatureData3(); saveSignatureData4(); saveSignatureData5()" id="submit" name="submit" value="Simpan">
   </div>
   </form>
 
@@ -636,5 +642,253 @@ foreach ($dataAssessmentpsa as $row) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 </body>
+
+<script>
+  var canvas = document.getElementById('canvas');
+  const canvasDataInput = document.getElementById('ttd');
+  var context = canvas.getContext('2d');
+
+  var drawing = false;
+
+  canvas.addEventListener('mousedown', startDrawing);
+  canvas.addEventListener('mousemove', draw);
+  canvas.addEventListener('mouseup', stopDrawing);
+  canvas.addEventListener('mouseout', stopDrawing);
+
+  function startDrawing(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    context.lineWidth = 2;
+    context.lineCap = 'butt';
+    context.strokeStyle = '#000';
+
+    // Draw a line
+    context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+    context.stroke();
+    context.beginPath();
+    context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+  }
+
+  function stopDrawing() {
+    drawing = false;
+    context.beginPath();
+  }
+
+  function saveSignatureData() {
+    const canvasData = canvas.toDataURL('image/png');
+    canvasDataInput.value = canvasData;
+  }
+</script>
+
+
+<script>
+  var canvas1 = document.getElementById('canvas1');
+  const canvasDataInput1 = document.getElementById('ttd_1');
+  var context1 = canvas1.getContext('2d');
+  var drawing = false;
+
+  canvas1.addEventListener('mousedown', startDrawing);
+  canvas1.addEventListener('mousemove', draw);
+  canvas1.addEventListener('mouseup', stopDrawing);
+  canvas1.addEventListener('mouseout', stopDrawing);
+
+  function startDrawing(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    context1.lineWidth = 2;
+    context1.lineCap = 'round';
+    context1.strokeStyle = '#000';
+
+    context1.lineTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+    context1.stroke();
+    context1.beginPath();
+    context1.moveTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+  }
+
+  function stopDrawing() {
+    drawing = false;
+    context1.beginPath();
+  }
+
+  function saveSignatureData1() {
+    const canvasData1 = canvas1.toDataURL('image/png');
+
+    canvasDataInput1.value = canvasData1;
+  }
+</script>
+
+<script>
+  var canvas2 = document.getElementById('canvas2');
+  const canvasDataInput2 = document.getElementById('ttd_2');
+  var context2 = canvas2.getContext('2d');
+  var drawing = false;
+
+  canvas2.addEventListener('mousedown', startDrawing);
+  canvas2.addEventListener('mousemove', draw);
+  canvas2.addEventListener('mouseup', stopDrawing);
+  canvas2.addEventListener('mouseout', stopDrawing);
+
+  function startDrawing(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    context2.lineWidth = 2;
+    context2.lineCap = 'round';
+    context2.strokeStyle = '#000';
+
+    context2.lineTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
+    context2.stroke();
+    context2.beginPath();
+    context2.moveTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
+  }
+
+  function stopDrawing() {
+    drawing = false;
+    context2.beginPath();
+  }
+
+  function saveSignatureData2() {
+    const canvasData2 = canvas2.toDataURL('image/png');
+
+    canvasDataInput2.value = canvasData2;
+  }
+</script>
+
+<script>
+  var canvas3 = document.getElementById('canvas3');
+  const canvasDataInput3 = document.getElementById('ttd_3');
+  var context3 = canvas3.getContext('2d');
+  var drawing = false;
+
+  canvas3.addEventListener('mousedown', startDrawing);
+  canvas3.addEventListener('mousemove', draw);
+  canvas3.addEventListener('mouseup', stopDrawing);
+  canvas3.addEventListener('mouseout', stopDrawing);
+
+  function startDrawing(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    context3.lineWidth = 2;
+    context3.lineCap = 'round';
+    context3.strokeStyle = '#000';
+
+    context3.lineTo(e.clientX - canvas3.getBoundingClientRect().left, e.clientY - canvas3.getBoundingClientRect().top);
+    context3.stroke();
+    context3.beginPath();
+    context3.moveTo(e.clientX - canvas3.getBoundingClientRect().left, e.clientY - canvas3.getBoundingClientRect().top);
+  }
+
+  function stopDrawing() {
+    drawing = false;
+    context3.beginPath();
+  }
+
+  function saveSignatureData3() {
+    const canvasData3 = canvas3.toDataURL('image/png');
+
+    canvasDataInput3.value = canvasData3;
+  }
+</script>
+
+<script>
+  var canvas4 = document.getElementById('canvas4');
+  const canvasDataInput4 = document.getElementById('ttd_4');
+  var context4 = canvas4.getContext('2d');
+  var drawing = false;
+
+  canvas4.addEventListener('mousedown', startDrawing);
+  canvas4.addEventListener('mousemove', draw);
+  canvas4.addEventListener('mouseup', stopDrawing);
+  canvas4.addEventListener('mouseout', stopDrawing);
+
+  function startDrawing(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    context4.lineWidth = 2;
+    context4.lineCap = 'round';
+    context4.strokeStyle = '#000';
+
+    context4.lineTo(e.clientX - canvas4.getBoundingClientRect().left, e.clientY - canvas4.getBoundingClientRect().top);
+    context4.stroke();
+    context4.beginPath();
+    context4.moveTo(e.clientX - canvas4.getBoundingClientRect().left, e.clientY - canvas4.getBoundingClientRect().top);
+  }
+
+  function stopDrawing() {
+    drawing = false;
+    context4.beginPath();
+  }
+
+  function saveSignatureData4() {
+    const canvasData4 = canvas4.toDataURL('image/png');
+
+    canvasDataInput4.value = canvasData4;
+  }
+</script>
+
+<script>
+  var canvas5 = document.getElementById('canvas5');
+  const canvasDataInput5 = document.getElementById('ttd_5');
+  var context5 = canvas5.getContext('2d');
+  var drawing = false;
+
+  canvas5.addEventListener('mousedown', startDrawing);
+  canvas5.addEventListener('mousemove', draw);
+  canvas5.addEventListener('mouseup', stopDrawing);
+  canvas5.addEventListener('mouseout', stopDrawing);
+
+  function startDrawing(e) {
+    drawing = true;
+    draw(e);
+  }
+
+  function draw(e) {
+    if (!drawing) return;
+
+    context5.lineWidth = 2;
+    context5.lineCap = 'round';
+    context5.strokeStyle = '#000';
+
+    context5.lineTo(e.clientX - canvas5.getBoundingClientRect().left, e.clientY - canvas5.getBoundingClientRect().top);
+    context5.stroke();
+    context5.beginPath();
+    context5.moveTo(e.clientX - canvas5.getBoundingClientRect().left, e.clientY - canvas5.getBoundingClientRect().top);
+  }
+
+  function stopDrawing() {
+    drawing = false;
+    context5.beginPath();
+  }
+
+  function saveSignatureData5() {
+    const canvasData5 = canvas5.toDataURL('image/png');
+
+    canvasDataInput5.value = canvasData5;
+  }
+</script>
 
 </html>

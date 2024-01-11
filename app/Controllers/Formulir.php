@@ -37,7 +37,7 @@ class Formulir extends BaseController
         }
 
         $data = [
-            'daftarpasien' => $pasien->paginate(2, 'pasien'),
+            'daftarpasien' => $pasien->paginate(3, 'pasien'),
             'pager' => $this->ModelPasien->pager,
             'currentPage' => $currentPage
         ];

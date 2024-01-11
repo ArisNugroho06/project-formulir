@@ -31,7 +31,7 @@
 <div class="container-fluid fixed">
     <table class="table table-bordered mt-3 mb-10" style="border:3px solid black">
 
-        <thead class="text-center">
+        <thead class="text-center table-secondary">
             <tr>
                 <th>No</th>
                 <th>BODY_ID</th>
@@ -62,8 +62,8 @@
                     <td><?= $row['EXAMINATION_DATE'] ?></td>
                     <td align="center">
                         <div class="btn-group" role="group">
-                            <a href="<?= site_url('detail/form3/' . $row['NO_REGISTRATION']) ?>" class="btn btn-info"><i class="bi bi-eye-fill text-primary"></i></a>
-                            <a href="<?= site_url('update/form3/' . $row['NO_REGISTRATION']) ?>" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></a>
+                            <a href="<?= site_url('detail/form3/' . $row['no']) ?>" class="btn btn-info"><i class="bi bi-eye-fill text-primary"></i></a>
+                            <a href="<?= site_url('update/form3/' . $row['no']) ?>" class="btn btn-warning"><i class="bi bi-pencil-square text-light"></i></a>
                             <a href="<?= site_url('detail/deletef3/' . $row['no']) ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')"><i class="bi bi-trash-fill text-light"></i></a>
                         </div>
                     </td>
@@ -72,19 +72,6 @@
         <?php $i++;
         }; ?>
     </table>
-</div>
-
-<div class="container-fluid fixed">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-muted">&copy; 2023 RSUD Dr. M. Yunus Bengkulu</span>
-        </div>
-    </footer>
 </div>
 
 <?= $this->endSection(); ?>

@@ -19,10 +19,10 @@
     .dropbtn {
         background-color: #ffc107;
         color: white;
-        padding: 16px;
+        padding: 10px;
         font-size: 16px;
         border: none;
-        border-radius: 15px;
+        border-radius: 10px;
 
     }
 
@@ -95,12 +95,12 @@
 </div>
 
 <div class="container-fluid fixed">
-    <table class="table table-bordered mt-3 mb-5" style="border:3px solid black">
+    <table class="table table-hover table-bordered mt-3 mb-5" style="border:3px solid black">
 
-        <thead class="text-center">
+        <thead class="text-center table-secondary">
             <tr>
                 <th>No</th>
-                <th>Isi Formulir</th>
+                <th>Formulir</th>
                 <th>RM</th>
                 <th>Nama</th>
                 <th>Alamat</th>
@@ -113,7 +113,7 @@
                 <th>Diagnosa</th>
             </tr>
         </thead>
-        <?php $i = 1 + (2 * ($currentPage - 1)); ?>
+        <?php $i = 1 + (3 * ($currentPage - 1)); ?>
         <?php foreach ($daftarpasien as $row) { ?>
 
             <tbody>
@@ -121,7 +121,7 @@
                     <td><?= $i++; ?></td>
                     <td>
                         <div class="dropdown">
-                            <button class="dropbtn">Formulir</button>
+                            <button class="dropbtn">Tambah</button>
                             <div class="dropdown-content">
                                 <a href="<?= site_url('formulir/formptk/' . $row['NO_REGISTRATION']) ?>">Formulir Penolakan Tindakan Kedokteran</a>
                                 <a href="<?= site_url('formulir/formpsa/' . $row['NO_REGISTRATION']) ?>">Formulir Persetujuan Tindakan Anestesi Lokal</a>
@@ -148,20 +148,5 @@
         <?php } ?>
     </table>
 </div>
-
-<div class="container-fluid fixed">
-    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-        <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
-                <svg class="bi" width="30" height="24">
-                    <use xlink:href="#bootstrap" />
-                </svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-muted">&copy; 2023 RSUD Dr. M. Yunus Bengkulu</span>
-        </div>
-    </footer>
-</div>
-
-
 
 <?= $this->endSection(); ?>

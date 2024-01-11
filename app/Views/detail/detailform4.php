@@ -1113,19 +1113,19 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Operator</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_25" name="v_25" class="form-control-sm" value="<?php echo $detail['V_25'] ?>" readonly size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Perawat</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_1"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_26" name="v_26" class="form-control-sm" value="<?php echo $detail['V_26'] ?>" readonly size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Dokter Anastesi</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_2"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_27" name="v_27" class="form-control-sm" value="<?php echo $detail['V_27'] ?>" readonly size="25px">
                         <br>
 
@@ -1152,5 +1152,38 @@ foreach ($dataAssessmenttidk as $row) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 </body>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var imageUrl = '<?= $detail['TTD'] ?>';
+    var img = new Image();
+    img.src = imageUrl;
+    img.onload = function() {
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+</script>
+
+<script>
+    var canvas1 = document.getElementById('canvas1');
+    var context1 = canvas1.getContext('2d');
+    var imageUrl1 = '<?= $detail['TTD_1'] ?>';
+    var img1 = new Image();
+    img1.src = imageUrl1;
+    img1.onload = function() {
+        context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+    };
+</script>
+
+<script>
+    var canvas2 = document.getElementById('canvas2');
+    var context2 = canvas2.getContext('2d');
+    var imageUrl2 = '<?= $detail['TTD_2'] ?>';
+    var img2 = new Image();
+    img2.src = imageUrl2;
+    img2.onload = function() {
+        context2.drawImage(img2, 0, 0, canvas2.width, canvas2.height);
+    };
+</script>
 
 </html>

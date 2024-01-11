@@ -34,12 +34,32 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/cdn/11.5.0/css/font-awesome.min.css">
 
+    <script>
+        $(document).ready(function() {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#tooltip").click(function() {
+                $('#tooltip').tooltip("toggle");
+            });
+        });
+    </script>
+
 </head>
 
 <body>
 
     <?= $this->include('navbar') ?>
     <?= $this->renderSection('content') ?>
+
+
+    <footer class="d-flex flex-wrap justify-content-center align-items-center py-3 mt-3 mb-2 border-top" width="100%">
+        <span class="mb-md-0 text-muted text-dark">&copy; 2023 RSUD Dr. M. Yunus Bengkulu</span>
+    </footer>
+
 
     <script src="<?= base_url('bootstrap-5.0.2-dist/js/bootstrap.min.js') ?>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="<?= base_url('jquery-3.7.1.min.js') ?>"></script>

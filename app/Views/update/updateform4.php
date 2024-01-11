@@ -139,9 +139,11 @@ foreach ($dataAssessmenttidk as $row) {
 </div>
 
 <body>
-    <form action="<?= site_url('update/editform') ?>" method="post" autocomplete="off">
+    <form action="<?php echo site_url('update/editform/' . $edit['no']); ?>" method="post" autocomplete="off">
         <?php csrf_field(); ?>
         <input type="hidden" id="form" name="form" value="F4">
+
+        <input type="hidden" name="no" id="no" value="<?= $edit['no'] ?>">
 
 
         <div class="container-fluid" style="text-align: center">
@@ -194,16 +196,16 @@ foreach ($dataAssessmenttidk as $row) {
                             </div>
 
                             <div class="row">
-                                <!-- <div class="col-md-6">
+                                <div class="col-md-6">
                                     <div class="row align-items-center">
                                         <div class="col-md-6">
                                             <label class="col-form-label">Tgl. Lahir</label>
                                         </div>
                                         <div class="col-md-6">
-                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<php echo $edit['DATE_OF_BIRTH'] ?>" readonly>
+                                            <input class="form-control" type="date" name="date_of_birth" id="date_of_birth" value="<?php echo $edit['DATE_OF_BIRTH'] ?>" readonly>
                                         </div>
                                     </div>
-                                </div> -->
+                                </div>
                                 <div class="col-md-6">
                                     <div class="row align-items-center">
                                         <div class="col-5">
@@ -1113,19 +1115,28 @@ foreach ($dataAssessmenttidk as $row) {
 
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Operator</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
+                        <input type="hidden" name="ttd" id="ttd" value="<?= $edit['TTD']; ?>">
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-danger mb-1" type="button" onclick="clearCanvas()">Clear Canvas</button>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_25" name="v_25" value="<?php echo $edit['V_25'] ?>" size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Perawat</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_1"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
+                        <input type="hidden" name="ttd_1" id="ttd_1" value="<?= $edit['TTD_1']; ?>">
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-danger mb-1" type="button" onclick="clearCanvas1()">Clear Canvas</button>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_26" name="v_26" value="<?php echo $edit['V_26'] ?>" size="25px">
                         <br>
                         <br>
                         <label for="">&nbsp;&nbsp;&nbsp;&nbsp;Dokter Anastesi</label>
                         <br>
-                        &nbsp;&nbsp;&nbsp;&nbsp;<div id="ttd_2"></div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
+                        <input type="hidden" name="ttd_2" id="ttd_2" value="<?= $edit['TTD_2']; ?>">
+                        <br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;<button class="btn btn-outline-danger mb-1" type="button" onclick="clearCanvas2()">Clear Canvas</button>
                         <br>&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="v_27" name="v_27" value="<?php echo $edit['V_27'] ?>" size="25px">
                         <br>
 
@@ -1139,7 +1150,7 @@ foreach ($dataAssessmenttidk as $row) {
             </table>
 
             <div class="d-grid gap-2 mb-3">
-                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+                <input class="btn btn-primary" type="submit" id="submit" name="submit" value="Update" onclick="saveSignatureData(); saveSignatureData1(); saveSignatureData2();">
             </div>
         </div>
     </form>
@@ -1156,5 +1167,174 @@ foreach ($dataAssessmenttidk as $row) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 </body>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var imageUrl = '<?= $edit['TTD'] ?>';
+    var img = new Image();
+    img.src = imageUrl;
+    img.onload = function() {
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+
+    function clearCanvas() {
+        context.clearRect(0, 0, canvas.width, canvas.height);
+    }
+</script>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    const canvasDataInput = document.getElementById('ttd');
+    var context = canvas.getContext('2d');
+
+    var drawing = false;
+
+    canvas.addEventListener('mousedown', startDrawing);
+    canvas.addEventListener('mousemove', draw);
+    canvas.addEventListener('mouseup', stopDrawing);
+    canvas.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context.lineWidth = 2;
+        context.lineCap = 'butt';
+        context.strokeStyle = '#000';
+
+        // Draw a line
+        context.lineTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+        context.stroke();
+        context.beginPath();
+        context.moveTo(e.clientX - canvas.getBoundingClientRect().left, e.clientY - canvas.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context.beginPath();
+    }
+
+    function saveSignatureData() {
+        const canvasData = canvas.toDataURL('image/png');
+        canvasDataInput.value = canvasData;
+    }
+</script>
+
+<script>
+    var canvas1 = document.getElementById('canvas1');
+    var context1 = canvas1.getContext('2d');
+    var imageUrl1 = '<?= $edit['TTD_1'] ?>';
+    var img1 = new Image();
+    img1.src = imageUrl1;
+    img1.onload = function() {
+        context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+    };
+
+    function clearCanvas1() {
+        context1.clearRect(0, 0, canvas1.width, canvas1.height);
+    }
+</script>
+
+<script>
+    var canvas1 = document.getElementById('canvas1');
+    const canvasDataInput1 = document.getElementById('ttd_1');
+    var context1 = canvas1.getContext('2d');
+    var drawing = false;
+
+    canvas1.addEventListener('mousedown', startDrawing);
+    canvas1.addEventListener('mousemove', draw);
+    canvas1.addEventListener('mouseup', stopDrawing);
+    canvas1.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context1.lineWidth = 2;
+        context1.lineCap = 'round';
+        context1.strokeStyle = '#000';
+
+        context1.lineTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+        context1.stroke();
+        context1.beginPath();
+        context1.moveTo(e.clientX - canvas1.getBoundingClientRect().left, e.clientY - canvas1.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context1.beginPath();
+    }
+
+    function saveSignatureData1() {
+        const canvasData1 = canvas1.toDataURL('image/png');
+
+        canvasDataInput1.value = canvasData1;
+    }
+</script>
+
+<script>
+    var canvas2 = document.getElementById('canvas2');
+    var context2 = canvas2.getContext('2d');
+    var imageUrl2 = '<?= $edit['TTD_2'] ?>';
+    var img2 = new Image();
+    img2.src = imageUrl2;
+    img2.onload = function() {
+        context2.drawImage(img2, 0, 0, canvas2.width, canvas2.height);
+    };
+
+    function clearCanvas2() {
+        context2.clearRect(0, 0, canvas2.width, canvas2.height);
+    }
+</script>
+
+<script>
+    var canvas2 = document.getElementById('canvas2');
+    const canvasDataInput2 = document.getElementById('ttd_2');
+    var context2 = canvas2.getContext('2d');
+    var drawing = false;
+
+    canvas2.addEventListener('mousedown', startDrawing);
+    canvas2.addEventListener('mousemove', draw);
+    canvas2.addEventListener('mouseup', stopDrawing);
+    canvas2.addEventListener('mouseout', stopDrawing);
+
+    function startDrawing(e) {
+        drawing = true;
+        draw(e);
+    }
+
+    function draw(e) {
+        if (!drawing) return;
+
+        context2.lineWidth = 2;
+        context2.lineCap = 'round';
+        context2.strokeStyle = '#000';
+
+        context2.lineTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
+        context2.stroke();
+        context2.beginPath();
+        context2.moveTo(e.clientX - canvas2.getBoundingClientRect().left, e.clientY - canvas2.getBoundingClientRect().top);
+    }
+
+    function stopDrawing() {
+        drawing = false;
+        context2.beginPath();
+    }
+
+    function saveSignatureData2() {
+        const canvasData2 = canvas2.toDataURL('image/png');
+
+        canvasDataInput2.value = canvasData2;
+    }
+</script>
 
 </html>

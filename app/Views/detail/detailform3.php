@@ -33,41 +33,6 @@ foreach ($dataAssessmentpsa as $row) {
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="<?= base_url('js/jquery.signature.js') ?>"></script>
-    <script>
-        $(function() {
-            var sig = $('#ttd').signature();
-        });
-    </script>
-
-    <script>
-        $(function() {
-            var sig = $('#ttd_1').signature();
-        });
-    </script>
-
-    <script>
-        $(function() {
-            var sig = $('#ttd_2').signature();
-        });
-    </script>
-
-    <script>
-        $(function() {
-            var sig = $('#ttd_3').signature();
-        });
-    </script>
-
-    <script>
-        $(function() {
-            var sig = $('#ttd_4').signature();
-        });
-    </script>
-
-    <script>
-        $(function() {
-            var sig = $('#ttd_5').signature();
-        });
-    </script>
 
     <script type="text/javascript">
         $(function f1() {
@@ -252,10 +217,12 @@ foreach ($dataAssessmentpsa as $row) {
                 <div class="col-md-8">
                     <select class="form-control" id="t_01" name="t_01" disabled>
                         <?php
-                        $detail['T_01'] = ($detail['T_01'] == 'Penerima Informasi' ? 'selected' : '');
-                        echo "<option value='1' " . $detail['T_01'] . ">Penerima Informasi</option>";
-                        $detail['T_01'] = ($detail['T_01'] == 'Pemberi Persetujuan' ? 'selected' : '');
-                        echo "<option value='2' " . $detail['T_01'] . ">Pemberi Persetujuan</option>";
+                        // Menggunakan operator ternary untuk menentukan nilai terpilih
+                        $selectedOption1 = ($detail['T_01'] == 1) ? 'selected' : '';
+                        $selectedOption2 = ($detail['T_01'] == 2) ? 'selected' : '';
+
+                        echo "<option value='1' $selectedOption1>Penerima Informasi</option>";
+                        echo "<option value='2' $selectedOption2>Pemberi Persetujuan</option>";
                         ?>
                     </select>
                 </div>
@@ -459,7 +426,7 @@ foreach ($dataAssessmentpsa as $row) {
             </td>
             <td class="text-center" width="15%">
                 <p>Tanda Tangan</p>
-                <div id="ttd"></div>
+                <canvas id="canvas" width="150" height="90" style="border:1px solid #000;"></canvas>
             </td>
         </tr>
         <tr>
@@ -472,7 +439,7 @@ foreach ($dataAssessmentpsa as $row) {
                 <p class="text-center" width="15%">
                     Tanda Tangan
                 </p>
-                <div id="ttd_1"></div>
+                <canvas id="canvas1" width="150" height="90" style="border:1px solid #000;"></canvas>
             </td>
         </tr>
         <tr>
@@ -533,16 +500,16 @@ foreach ($dataAssessmentpsa as $row) {
             </tr>
             <tr>
                 <td>
-                    <div id="ttd_2"></div>
+                    <canvas id="canvas2" width="150" height="90" style="border:1px solid #000;"></canvas>
                 </td>
                 <td>
-                    <div id="ttd_3"></div>
+                    <canvas id="canvas3" width="150" height="90" style="border:1px solid #000;"></canvas>
                 </td>
                 <td>
-                    <div id="ttd_4"></div>
+                    <canvas id="canvas4" width="150" height="90" style="border:1px solid #000;"></canvas>
                 </td>
                 <td>
-                    <div id="ttd_5"></div>
+                    <canvas id="canvas5" width="150" height="90" style="border:1px solid #000;"></canvas>
                 </td>
             </tr>
             <tr>
@@ -576,5 +543,71 @@ foreach ($dataAssessmentpsa as $row) {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     -->
 </body>
+
+<script>
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var imageUrl = '<?= $detail['TTD'] ?>';
+    var img = new Image();
+    img.src = imageUrl;
+    img.onload = function() {
+        context.drawImage(img, 0, 0, canvas.width, canvas.height);
+    };
+</script>
+
+<script>
+    var canvas1 = document.getElementById('canvas1');
+    var context1 = canvas1.getContext('2d');
+    var imageUrl1 = '<?= $detail['TTD_1'] ?>';
+    var img1 = new Image();
+    img1.src = imageUrl1;
+    img1.onload = function() {
+        context1.drawImage(img1, 0, 0, canvas1.width, canvas1.height);
+    };
+</script>
+
+<script>
+    var canvas2 = document.getElementById('canvas2');
+    var context2 = canvas2.getContext('2d');
+    var imageUrl2 = '<?= $detail['TTD_2'] ?>';
+    var img2 = new Image();
+    img2.src = imageUrl2;
+    img2.onload = function() {
+        context2.drawImage(img2, 0, 0, canvas2.width, canvas2.height);
+    };
+</script>
+
+<script>
+    var canvas3 = document.getElementById('canvas3');
+    var context3 = canvas3.getContext('2d');
+    var imageUrl3 = '<?= $detail['TTD_3'] ?>';
+    var img3 = new Image();
+    img3.src = imageUrl3;
+    img3.onload = function() {
+        context3.drawImage(img3, 0, 0, canvas3.width, canvas3.height);
+    };
+</script>
+
+<script>
+    var canvas4 = document.getElementById('canvas4');
+    var context4 = canvas4.getContext('2d');
+    var imageUrl4 = '<?= $detail['TTD_4'] ?>';
+    var img4 = new Image();
+    img4.src = imageUrl4;
+    img4.onload = function() {
+        context4.drawImage(img4, 0, 0, canvas4.width, canvas4.height);
+    };
+</script>
+
+<script>
+    var canvas5 = document.getElementById('canvas5');
+    var context5 = canvas5.getContext('2d');
+    var imageUrl5 = '<?= $detail['TTD_5'] ?>';
+    var img5 = new Image();
+    img5.src = imageUrl5;
+    img5.onload = function() {
+        context5.drawImage(img5, 0, 0, canvas5.width, canvas5.height);
+    };
+</script>
 
 </html>

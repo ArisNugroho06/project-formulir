@@ -67,13 +67,14 @@ foreach ($dataAssessmentpkmrj as $row) {
                 var i1 = no + 1;
                 var i2 = i + 1;
                 var i3 = i + 2;
-
+                <?php dd($detail['V_12']); ?>
                 $("#" + tableID).append(
                     $("<tr>")
-                    .append($("<td>").html(i1))
+                    .append($("<td>").html(i1))                    
                     .append($.append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i + '" name="v_' + i + '" placeholder="Nama Obat" value="<?= $detail['v_' ?>' + i + '"]"></div>'))
                     .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i2 + '" name="v_' + i2 + '" placeholder="Dosis" value="<?= $detail['V_' . $i2] ?> "></div>'))
                     .append($("<td>").html('<div class="form-group"><input type="text" class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" placeholder="Lama Penggunaan" value="<?= $detail['V_' . $i3] ?> "></div>'))
+
                 );
 
                 i += 3;

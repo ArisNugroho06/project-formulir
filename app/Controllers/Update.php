@@ -22,139 +22,104 @@ class Update extends BaseController
 
     //menampilkan data formulir yang telah diisi sesuai denga id formulir yang telah diisi
 
-    public function form1($NO_REGISTRATION)
+    public function form1($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
         return view('update/updateform1', $datapasien);
     }
 
-    public function form2($NO_REGISTRATION)
+    public function form2($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
 
         return view('update/updateform2', $datapasien);
     }
 
-    public function form3($NO_REGISTRATION)
+    public function form3($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
 
         return view('update/updateform3', $datapasien);
     }
 
-    public function form4($NO_REGISTRATION)
+    public function form4($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
 
         return view('update/updateform4', $datapasien);
     }
 
-    public function form5($NO_REGISTRATION)
+    public function form5($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
 
         return view('update/updateform5', $datapasien);
     }
 
-    public function form6($NO_REGISTRATION)
+    public function form6($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
 
         return view('update/updateform6', $datapasien);
     }
 
-    public function form7($NO_REGISTRATION)
+    public function form7($no)
     {
 
-        // $datapasien = [
-        //     //'edit' => $this->ModelAssessment->where(['NO_REGISTRATION' => $NO_REGISTRATION])->first()
-        //     'edit' => $this->ModelAssessment->find($NO_REGISTRATION)
-        // ];
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'edit' => $data
+            'edit' => $dataJOIN
         ];
 
 
@@ -163,7 +128,6 @@ class Update extends BaseController
 
     public function editform($no)
     {
-
         // versi wpu
         $this->ModelAssessment->save([
             'no' => $no,

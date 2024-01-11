@@ -22,83 +22,70 @@ class Detail extends BaseController
 
     //menampilkan data formulir yang telah diisi sesuai denga id formulir yang telah diisi
 
-    public function form1($NO_REGISTRATION)
+    public function form1($no)
     {
-
-
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
 
         return view('detail/detailform1', $datapasien);
     }
 
-    // public function form1($no)
-    // {
-
-    //     $datapasien = [
-    //           'detail' => $this->ModelAssessment->where(['no' => $no])->first()
-    //           'detail' => $this->ModelAssessment->find($no)
-    //     ];
-
-    //     return view('detail/detailform1', $datapasien);
-    // }
-
-    public function form2($NO_REGISTRATION)
+    public function form2($no)
     {
 
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
 
         return view('detail/detailform2', $datapasien);
     }
 
-    public function form3($NO_REGISTRATION)
+    public function form3($no)
     {
 
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
 
         return view('detail/detailform3', $datapasien);
     }
 
-    public function form4($NO_REGISTRATION)
+    public function form4($no)
     {
 
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
 
         return view('detail/detailform4', $datapasien);
     }
 
-    public function form5($NO_REGISTRATION)
+    public function form5($no)
     {
 
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
 
         // $datapasien = [
@@ -108,29 +95,28 @@ class Detail extends BaseController
         return view('detail/detailform5', $datapasien);
     }
 
-    public function form6($NO_REGISTRATION)
+    public function form6($no)
     {
 
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
-
         return view('detail/detailform6', $datapasien);
     }
 
-    public function form7($NO_REGISTRATION)
+    public function form7($no)
     {
 
-        $data = $this->ModelPasien->join('assessment_info', 'assessment_info.NO_REGISTRATION=pasien.NO_REGISTRATION')
-            ->where('pasien.NO_REGISTRATION', $NO_REGISTRATION)
-            ->find($NO_REGISTRATION);
+        $dataJOIN = $this->ModelAssessment->join('pasien', 'pasien.NO_REGISTRATION=assessment_info.NO_REGISTRATION')
+            ->where('assessment_info.no', $no)
+            ->find($no);
 
         $datapasien = [
-            'detail' => $data
+            'detail' => $dataJOIN
         ];
 
         return view('detail/detailform7', $datapasien);
