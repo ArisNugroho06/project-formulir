@@ -55,4 +55,8 @@ class Pku extends BaseController
     {
         return view('formpku/assessment_medis_rev.php');
     }
+    public function form12()
+    {
+        return view('formpku/assessment_medis_pasien_neonatus.php');
+    }
 }

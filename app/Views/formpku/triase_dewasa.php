@@ -350,14 +350,10 @@
                 <tr>
                     <td>
                         <div class="row">
-                            <div class="col-3">
-                                <label>Suhu</label>
-                            </div>
-                            <div class="col-6">
-                                <input class="form-control" type="text" name="temperature" id="temperature">
-                            </div>
-                            <div class="col-1">
-                                <label>C</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Suhu</span>
+                                <input type="text" class="form-control" name="temperature" id="temperature">
+                                <span class="input-group-text">C</span>
                             </div>
                         </div>
                     </td>
@@ -365,14 +361,10 @@
                 <tr>
                     <td>
                         <div class="row">
-                            <div class="col-3">
-                                <label>SpO2</label>
-                            </div>
-                            <div class="col-6">
-                                <input class="form-control" type="text" name="v_03" id="v_03">
-                            </div>
-                            <div class="col-1">
-                                <label>%</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">SpO2</span>
+                                <input type="text" class="form-control" name="saturasi" id="saturasi">
+                                <span class="input-group-text">%</span>
                             </div>
                         </div>
                     </td>
@@ -384,26 +376,18 @@
                         </strong>
                         <br>
                         <div class="row">
-                            <div class="col-3">
-                                <label>Nadi</label>
-                            </div>
-                            <div class="col-5">
-                                <input class="form-control" type="text" name="nadi" id="nadi">
-                            </div>
-                            <div class="col-1">
-                                <label>x/mnt</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">Nadi</span>
+                                <input type="text" class="form-control" name="nadi" id="nadi">
+                                <span class="input-group-text">x/mnt</span>
                             </div>
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-3">
-                                <label>RR</label>
-                            </div>
-                            <div class="col-5">
-                                <input class="form-control" type="text" name="nafas" id="nafas">
-                            </div>
-                            <div class="col-1">
-                                <label>x/mnt</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">RR</span>
+                                <input type="text" class="form-control" name="nafas" id="nafas">
+                                <span class="input-group-text">x/mnt</span>
                             </div>
                         </div>
                         <hr>
@@ -421,14 +405,10 @@
                         </div>
                         <hr>
                         <div class="row">
-                            <div class="col-3">
-                                <label>GDS</label>
-                            </div>
-                            <div class="col-5">
-                                <input class="form-control" type="text" name="t_078" id="t_078">
-                            </div>
-                            <div class="col-1">
-                                <label>mg/dL</label>
+                            <div class="input-group mb-3">
+                                <span class="input-group-text">GDS</span>
+                                <input type="text" class="form-control" name="t_078" id="t_078">
+                                <span class="input-group-text">mg/dL</span>
                             </div>
                         </div>
                     </td>

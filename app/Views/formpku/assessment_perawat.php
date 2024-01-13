@@ -41,7 +41,12 @@
                                 const canvasDataInput' + i4 + ' = document.getElementById("ttd_' + i4 + '");\
                                 var context' + i4 + ' = canvas' + i4 + '.getContext("2d");\
                                 var drawing = false;\
-                                canvas' + i4 + '.addEventListener("mousedown", startDrawing); canvas' + i4 + '.addEventListener("mousemove", draw); canvas' + i4 + '.addEventListener("mouseup", stopDrawing); canvas' + i4 + '.addEventListener("mouseout", stopDrawing); function startDrawing(e) { drawing = true; draw(e);  } function draw(e) { if (!drawing) return;\
+                                canvas' + i4 + '.addEventListener("mousedown", startDrawing); \
+                                canvas' + i4 + '.addEventListener("mousemove", draw); \
+                                canvas' + i4 + '.addEventListener("mouseup", stopDrawing); \
+                                canvas' + i4 + '.addEventListener("mouseout", stopDrawing); \
+                                function startDrawing(e) { drawing = true; draw(e);  } \
+                                function draw(e) { if (!drawing) return;\
                                 context' + i4 + '.lineWidth = 2; \
                                 context' + i4 + '.lineCap = "round"; \
                                 context' + i4 + '.strokeStyle = "#000"; \
@@ -49,7 +54,9 @@
                                 context' + i4 + '.stroke(); \
                                 context' + i4 + '.beginPath(); \
                                 context' + i4 + '.moveTo(e.clientX - canvas' + i4 + '.getBoundingClientRect().left, e.clientY - canvas' + i4 + '.getBoundingClientRect().top); \
-                                } function stopDrawing() { drawing = false; context' + i4 + '.beginPath(); } function saveSignatureData' + i4 + '() { const canvasData' + i4 + ' = canvas' + i4 + '.toDataURL("image/png"); \
+                                }\
+                                 function stopDrawing() { drawing = false; context' + i4 + '.beginPath(); } \
+                                function saveSignatureData' + i4 + '() { const canvasData' + i4 + ' = canvas' + i4 + '.toDataURL("image/png"); \
                                     canvasDataInput' + i4 + '.value = canvasData' + i4 + '; \
                                 }'))
 
@@ -79,21 +86,32 @@
                 .append($("<td>").html('<div class="form-group"><input type="datetime-local" class="form-control" name="v_' + i2 + '"  id="v_' + i2 + '" size="20px"></div>'))
                 .append($("<td>").html('<div class="form-group"><textarea class="form-control" id="v_' + i3 + '" name="v_' + i3 + '" rows="2" cols="6" placeholder="Tindakan"></textarea></div>'))
                 .append($("<td>").html('<canvas id="canvas' + i4 + '" width="150" height="75" style="border:1px solid #000;"></canvas><input type="hidden" id="ttd_' + i4 + '" name="ttd_' + i4 + '">'))
-                .append($("<script>").html('var canvas' + i4 + ' = document.getElementById("canvas' + i4 + '");\
-                                const canvasDataInput' + i4 + ' = document.getElementById("ttd_' + i4 + '");\
-                                var context' + i4 + ' = canvas' + i4 + '.getContext("2d");\
-                                var drawing = false;\
-                                canvas' + i4 + '.addEventListener("mousedown", startDrawing); canvas' + i4 + '.addEventListener("mousemove", draw); canvas' + i4 + '.addEventListener("mouseup", stopDrawing); canvas' + i4 + '.addEventListener("mouseout", stopDrawing); function startDrawing(e) { drawing = true; draw(e);  } function draw(e) { if (!drawing) return;\
-                                context' + i4 + '.lineWidth = 2; \
-                                context' + i4 + '.lineCap = "round"; \
-                                context' + i4 + '.strokeStyle = "#000"; \
-                                context' + i4 + '.lineTo(e.clientX - canvas' + i4 + '.getBoundingClientRect().left, e.clientY - canvas' + i4 + '.getBoundingClientRect().top); \
-                                context' + i4 + '.stroke(); \
-                                context' + i4 + '.beginPath(); \
-                                context' + i4 + '.moveTo(e.clientX - canvas' + i4 + '.getBoundingClientRect().left, e.clientY - canvas' + i4 + '.getBoundingClientRect().top); \
-                                } function stopDrawing() { drawing = false; context' + i4 + '.beginPath(); } function saveSignatureData' + i4 + '() { const canvasData' + i4 + ' = canvas' + i4 + '.toDataURL("image/png"); \
-                                    canvasDataInput' + i4 + '.value = canvasData' + i4 + '; \
-                                }'))
+                .append($("<script>").html('var canvas' + i4 + ' = document.getElementById("canvas' + i4 + '"); \
+                                            const canvasDataInput' + i4 + ' = document.getElementById("ttd_' + i4 + '"); \
+                                            var context' + i4 + ' = canvas.getContext("2d"); \
+                                            var drawing = false; \
+                                            canvas' + i4 + '.addEventListener("mousedown", startDrawing);\
+                                            canvas' + i4 + '.addEventListener("mousemove", draw);\
+                                            canvas' + i4 + '.addEventListener("mouseup", stopDrawing);\
+                                            canvas' + i4 + '.addEventListener("mouseout", stopDrawing);\
+                                            function startDrawing(e) { drawing = true;\
+                                                draw(e);\
+                                            }\
+                                            function draw(e) { if (!drawing) return; \
+                                                context' + i4 + '.lineWidth = 2; \
+                                                context' + i4 + '.lineCap = "round"; \
+                                                context' + i4 + '.strokeStyle = "#000"; \
+                                                context' + i4 + '.lineTo(e.clientX - canvas' + i4 + '.getBoundingClientRect().left, e.clientY - canvas' + i4 + '.getBoundingClientRect().top); \
+                                                context' + i4 + '.stroke(); \
+                                                context' + i4 + '.beginPath(); \
+                                                context' + i4 + '.moveTo(e.clientX - canvas' + i4 + '.getBoundingClientRect().left, e.clientY - canvas' + i4 + '.getBoundingClientRect().top); \
+                                            } \
+                                            function stopDrawing() { drawing = false; \
+                                                context' + i4 + '.beginPath(); \
+                                            } \
+                                            function saveSignatureData' + i4 + '() { const canvasData' + i4 + ' = canvas' + i4 + '.toDataURL("image/png"); \
+                                                canvasDataInput' + i4 + '.value = canvasData' + i4 + '; \
+                                            }'))
 
             )
 

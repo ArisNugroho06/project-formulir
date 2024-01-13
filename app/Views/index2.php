@@ -181,6 +181,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form12') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MESIN PASIEN NEONATUS<br><br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
