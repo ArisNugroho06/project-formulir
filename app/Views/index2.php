@@ -186,7 +186,80 @@
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form12') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MESIN PASIEN NEONATUS<br><br><br><br></a>
+                                <a href="<?= site_url('pku/form12') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MESIN PASIEN NEONATUS<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form13') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.3 ASESMEN MEDIS PASIEN PENYAKIT DALAM <br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form14') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RJ.2.4 ASESMEN MEDIS PASIEN BEDAH <br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form15') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.10 ASESMEN AWAL MEDIS PASIEN BEDA ORTHIOPEDI<br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form16') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.14 ASESMEN MEDIS PASIEN PENAKIT PARU<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form17') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.5 ASESMEN MEDIS PASIEN KULIT DAN KELAMIN <br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form18') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.7 ASESMEN MEDIS PASIEN THT <br><br><br></a>
                             </div>
                         </div>
                     </div>

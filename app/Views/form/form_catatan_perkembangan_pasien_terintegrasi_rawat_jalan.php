@@ -1,9 +1,3 @@
-<!-- $db = db_connect();
-foreach ($dataAssessmentcpptrj as $row) {
-    <canvas id="sig' + i5 + '" width="198" height="123">Your browser doesn\'t support signing</canvas>
-}; -->
-
-
 <!doctype html>
 <html lang="en">
 
@@ -157,80 +151,79 @@ foreach ($dataAssessmentcpptrj as $row) {
                                 <input class="form-control" type="text" name="clinic_id" id="clinic_id" value="<?php echo $psn['CLINIC_ID'] ?>" readonly>
                             </div>
                         </div>
-    </div>
-    </td>
-    </tr>
-    <tr>
-        <td colspan="3">
-            <h3 class="text-center">CATATAN PERKEMBANGAN PASIEN TERINTEGRASI RAWAT JALAN</h3>
-        </td>
-    </tr>
-    </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        <h3 class="text-center">CATATAN PERKEMBANGAN PASIEN TERINTEGRASI RAWAT JALAN</h3>
+                    </td>
+                </tr>
+            </table>
 
-    <table class="w-full table table-striped table-bordered table-hover text-center" style="border: 2px solid black">
-        <tr>
-            <thead>
-                <th>NO</th>
-                <th width="10%">TANGGAL/JAM</th>
-                <th width="10%">PROFESI</th>
-                <th width="30%">
-                    HASIL PEMERIKSAAN, ANALISIS, <br> RENCANA PENATALAKSANAAN PASIEN <br>
-                    <p>(Dituliskan dengan format SOAP/ADIME, Disertai dengan Targer yang terukur, Evaluasi Hasil Tatalaksana dituliskan dalam Asessment. Harap Bubuhkan Stampel Nama, dan Paraf Setiap Akhir Catatan)</p>
-                </th>
-                <th width="30%">
-                    Instruksi Tenaga Kesehatan Termasuk <br> Pasca Bedah/Prosudur <br>
-                    (Instruksi Ditulis dengan Rinci dan Jelas)
-                </th>
-                <th width="20%">
-                    VERIFIKASI DPJP <br>
-                    (Bubuhkan Stempel Nama, Paraf, Tgl, Jam) <br> (DPJP Harus membaca seluruh rencana perawatan)
-                </th>
-            </thead>
-        </tr>
-        <tbody id="tbody2">
-            <tr>
-                <td>1</td>
-                <td>
-                    <div class="form-group">
-                        <input type="datetime-local" class="form-control" required="required" id="v_04" name="v_04" size="20px">
-                    </div>
-                </td>
-                <td>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="v_05" name="v_05" placeholder="Profesi">
-                    </div>
-                </td>
-                <td>
-                    <div class="form-group">
-                        <textarea class="form-control" id="v_06" name="v_06" rows="10" cols="5" placeholder="Hasil"></textarea>
-                    </div>
-                </td>
-                <td>
-                    <div class="form-group">
-                        <textarea class="form-control" id="v_07" name="v_07" rows="10" cols="5" placeholder="Instruksi"></textarea>
-                    </div>
-                </td>
-                <td>
-                    <div class="form-group">
-                        <input type="datetime-local" id="v_08" name="v_08" size="25px"><br>
-                        <label>DPJP</label><br>
-                        <div id="ttd"></div><br>
-                        <input type="text" id="v_09" name="v_09" size="25px">
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <td colspan="6" align="center">
-                <button type="button" class="btn btn-primary" onclick="addRow('tbody2')">Tambah Baris</button>
-            </td>
-        </tfoot>
-    </table>
+            <table class="w-full table table-striped table-bordered table-hover text-center" style="border: 2px solid black">
+                <tr>
+                    <thead>
+                        <th>NO</th>
+                        <th width="10%">TANGGAL/JAM</th>
+                        <th width="10%">PROFESI</th>
+                        <th width="30%">
+                            HASIL PEMERIKSAAN, ANALISIS, <br> RENCANA PENATALAKSANAAN PASIEN <br>
+                            <p>(Dituliskan dengan format SOAP/ADIME, Disertai dengan Targer yang terukur, Evaluasi Hasil Tatalaksana dituliskan dalam Asessment. Harap Bubuhkan Stampel Nama, dan Paraf Setiap Akhir Catatan)</p>
+                        </th>
+                        <th width="30%">
+                            Instruksi Tenaga Kesehatan Termasuk <br> Pasca Bedah/Prosudur <br>
+                            (Instruksi Ditulis dengan Rinci dan Jelas)
+                        </th>
+                        <th width="20%">
+                            VERIFIKASI DPJP <br>
+                            (Bubuhkan Stempel Nama, Paraf, Tgl, Jam) <br> (DPJP Harus membaca seluruh rencana perawatan)
+                        </th>
+                    </thead>
+                </tr>
+                <tbody id="tbody2">
+                    <tr>
+                        <td>1</td>
+                        <td>
+                            <div class="form-group">
+                                <input type="datetime-local" class="form-control" required="required" id="v_04" name="v_04" size="20px">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" id="v_05" name="v_05" placeholder="Profesi">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <textarea class="form-control" id="v_06" name="v_06" rows="10" cols="5" placeholder="Hasil"></textarea>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <textarea class="form-control" id="v_07" name="v_07" rows="10" cols="5" placeholder="Instruksi"></textarea>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="datetime-local" id="v_08" name="v_08" size="25px"><br>
+                                <label>DPJP</label><br>
+                                <div id="ttd"></div><br>
+                                <input type="text" id="v_09" name="v_09" size="25px">
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <td colspan="6" align="center">
+                        <button type="button" class="btn btn-primary" onclick="addRow('tbody2')">Tambah Baris</button>
+                    </td>
+                </tfoot>
+            </table>
 
-    <div class="d-grid gap-2 mb-3">
-        <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
-    </div>
-    </form>
+            <div class="d-grid gap-2 mb-3">
+                <input class="btn btn-primary" type="submit" name="submit" value="Simpan">
+            </div>
+        </form>
 
     </div>
 
