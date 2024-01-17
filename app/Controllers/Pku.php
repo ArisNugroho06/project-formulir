@@ -83,4 +83,53 @@ class Pku extends BaseController
     {
         return view('formpku/RMJ_2_7.php');
     }
+
+    public function form19()
+    {
+        return view('formpku/RM_3_4.php');
+    }
+    public function form20()
+    {
+        return view('formpku/RM_3_2_9.php');
+    }
+    public function form21()
+    {
+        return view('formpku/RM_3_2_10.php');
+    }
+    public function form22()
+    {
+        return view('formpku/RM_3_2_11.php');
+    }
+    public function form23()
+    {
+        return view('formpku/RM_3_2_12.php');
+    }
+    public function form24()
+    {
+        return view('formpku/RM_3_2_13.php');
+    }
+    public function form25()
+    {
+        return view('formpku/RM_3_2_14.php');
+    }
+    public function form26()
+    {
+        return view('formpku/RM_3_2_15.php');
+    }
+    public function form27()
+    {
+        return view('formpku/RM_3_2_16.php');
+    }
+    public function form28()
+    {
+        return view('formpku/RM_3_2.php');
+    }
+    public function form29()
+    {
+        return view('formpku/RM_5CP5.php');
+    }
+    public function form30()
+    {
+        return view('formpku/RM_5CP2b.php');
+    }
 }

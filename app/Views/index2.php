@@ -265,6 +265,147 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form19') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.4 EARLY WARNING SCORING SYSTEM (ANAK)<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form20') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.9 DIAGNOSA GANGGUAN CEMAS <br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form21') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.10 DIAGNOSA RESIKO INJURY <br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form22') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.11 DIAGNOSA KEBERSIHAN JALAN NAFAS TIDAK EFEKTIF <br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form23') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.12 DIAGNOSA KEKURANGAN VOLUME CAIRAN<br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form24') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.13 DIAGNOSA HIPERTERMIA<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form25') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.14 DIAGNOSA GANGGUAN BODY IMAGE <br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form26') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.15 DIAGNOSA NUTRISI KURANG DARI KEBUTUHAN TUBUH <br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form27') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.16 DIAGNOSA DEFISIT PERAWATAN DIRI<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form28') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2 EARLY WARNING SCORING SYSTEM (OBSTETRIC)<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-5">
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form29') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 5CP5 RENCANA ASUHAN KEPERAWATAN<br><br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-3 mb-4">
+                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form30') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 5CP2B DISCHARGE PLANNING<br><br></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
