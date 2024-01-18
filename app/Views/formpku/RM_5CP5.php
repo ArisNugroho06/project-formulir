@@ -71,20 +71,20 @@
                         <br>
                         <br>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Penurunan berat badan abnormal (> 7 - 8 % pada bayi yang baru lahir menyusu ASI, > 15% pada bayi yang cukup bulan)</label>
+                            <input class="form-check-input" type="checkbox" id="t_01" name="t_01" value="1">
+                            <label for="t_01">Penurunan berat badan abnormal (> 7 - 8 % pada bayi yang baru lahir menyusu ASI, > 15% pada bayi yang cukup bulan)</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Pola makan tidak ditetapkan dengan baik</label>
+                            <input class="form-check-input" type="checkbox" id="t_02" name="t_02" value="1">
+                            <label for="t_02">Pola makan tidak ditetapkan dengan baik</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Usia < 7</label>
+                            <input class="form-check-input" type="checkbox" id="t_03" name="t_03" value="1">
+                            <label for="t_03">Usia < 7</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Kerterlambatan keluar feces mekonium</label>
+                            <input class="form-check-input" type="checkbox" id="t_04" name="t_04" value="1">
+                            <label for="t_04">Kerterlambatan keluar feces mekonium</label>
                         </div>
                         <br>
                         <br>
@@ -92,20 +92,20 @@
                             <p>Ditandai <br> Mayor :</p>
                         </strong>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Profil darah abnormal (hemofilis, bilirubin serum total > 2mg/dl, bilirubin serum total pada rentang resiko tinggi menurut usia)</label>
+                            <input class="form-check-input" type="checkbox" id="t_05" name="t_05" value="1">
+                            <label for="t_05">Profil darah abnormal (hemofilis, bilirubin serum total > 2mg/dl, bilirubin serum total pada rentang resiko tinggi menurut usia)</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Membrane mukosa kuning</label>
+                            <input class="form-check-input" type="checkbox" id="t_06" name="t_06" value="1">
+                            <label for="t_06">Membrane mukosa kuning</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Kulit kuning</label>
+                            <input class="form-check-input" type="checkbox" id="t_07" name="t_07" value="1">
+                            <label for="t_07">Kulit kuning</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Selera kuning</label>
+                            <input class="form-check-input" type="checkbox" id="t_08" name="t_08" value="1">
+                            <label for="t_08">Selera kuning</label>
                         </div>
                         <br>
                         <br>
@@ -114,43 +114,168 @@
                         </strong>
                     </td>
                     <td>
-                        <p>Setelah dilakukan intervensi keperawatan selama <input size="10px" type="text" name="v_06" id="v_06">. <br> Maka integritas kulit dan jaringan meningkat, dengan kriteria hasil : <br> <br> (L.14125)</p>
+                        <p>Setelah dilakukan intervensi keperawatan selama <input size="10px" type="text" name="v_02" id="v_02">. <br> Maka integritas kulit dan jaringan meningkat, dengan kriteria hasil : <br> <br> (L.14125)</p>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Elastisitas meningkat</label>
+                            <input class="form-check-input" type="checkbox" id="t_09" name="t_09" value="1">
+                            <label for="t_09">Elastisitas meningkat</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_010" name="t_010" value="1">
+                            <label for="t_010">Hidrasi meningkat</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_011" name="t_011" value="1">
+                            <label for="t_011">Perfusi jaringan meningkat</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_012" name="t_012" value="1">
+                            <label for="t_012">Kerusakan jaringan menurun</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_013" name="t_013" value="1">
+                            <label for="t_013">Kerusakan lapisan kulit menurun</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_014" name="t_014" value="1">
+                            <label for="t_014">Pigmentasi abnormal menurun</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_015" name="t_015" value="1">
+                            <label for="t_015">Nekrosis menurun</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_016" name="t_016" value="1">
+                            <label for="t_016">Nyeri menurun</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_017" name="t_017" value="1">
+                            <label for="t_017">Suhu kulit membaik</label>
+                        </div>
+                    </td>
+                    <td>
+                        <p>(I.03091) Fisioterapi Neonatus</p>
+                        <p><i>Observasi</i></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_018" name="t_018" value="1">
+                            <label for="t_018">Monitor ikterik pada selera dan kulit bayi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_019" name="t_019" value="1">
+                            <label for="t_019">Identifikasi kebutuhan cairan sesuai dengan usia gestasi dan berat badan</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_020" name="t_020" value="1">
+                            <label for="t_020">Monitor suhu dan tanda vital setiap 4 jam sekali</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_021" name="t_021" value="1">
+                            <label for="t_021">Monitor efek samping fototerapi</label>
+                        </div>
+                        <br>
+                        <p><i>Terapeutik</i> </p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_022" name="t_022" value="1">
+                            <label for="t_022">Siapkan lampu fototerapi dan inkubator</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_023" name="t_023" value="1">
+                            <label for="t_023">Lepaskan pakaian bayi kecuali popok</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_024" name="t_024" value="1">
+                            <label for="t_024">Berikan penutup mata ( eye protection)</label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Hidrasi meningkat</label>
+                            <label for="t_025">Ukur jarak antara lampu dan permukaan kulit bayi (30cm)</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Perfusi jaringan meningkat</label>
+                            <input class="form-check-input" type="checkbox" id="t_026" name="t_026" value="1">
+                            <label for="t_026">Biar kan tubuh bayi terpapar sinar fototerapi secara berkelanjutan</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Kerusakan jaringan menurun</label>
+                            <input class="form-check-input" type="checkbox" id="t_027" name="t_027" value="1">
+                            <label for="t_027">Ganti segera alas dan popok bayi jika BAB atau BAK</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Kerusakan lapisan kulit menurun</label>
+                            <input class="form-check-input" type="checkbox" id="t_028" name="t_028" value="1">
+                            <label for="t_028">Gunakan linen berwarna putih agar memantulkan cahaya sebanyak mungkin</label>
+                        </div>
+                        <br>
+                        <p><i>Edukasi</i></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_029" name="t_029" value="1">
+                            <label for="t_029">Anjurkan ibu menyususi sekitar 20-30 menit</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Pigmentasi abnormal menurun</label>
+                            <input class="form-check-input" type="checkbox" id="t_030" name="t_030" value="1">
+                            <label for="t_030">Anjurkan ibu menyusui sesering mungkin</label>
+                        </div>
+                        <br>
+                        <p><i>Kolaborasi</i></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_031" name="t_031" value="1">
+                            <label for="t_031">Kolaborasi pemeriksaan darah vena bilirubin direk dan inderek.</label>
+                        </div>
+                        <br>
+                        <p>(I.10338) Perawatan bayi</p>
+                        <br>
+                        <p><i>Observasi</i></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_032" name="t_032" value="1">
+                            <label for="t_032">Monitor tanda-tanda vital bayi </label>
+                        </div>
+                        <br>
+                        <p><i>Terapeutik</i></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_033" name="t_033" value="1">
+                            <label for="t_033">Mandikan bayi dengan suhu ruangan 21 C - 24 C</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Nekrosis menurun</label>
+                            <input class="form-check-input" type="checkbox" id="t_034" name="t_034" value="1">
+                            <label for="t_034">Mandikan bayi dengan suhu ruangan 21 - 24 C</label>
+                            <label for="t_0"></label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Nyeri menurun</label>
+                            <input class="form-check-input" type="checkbox" id="t_035" name="t_035" value="1">
+                            <label for="t_035">Rawat tali pusat secara terbuka</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" id="t_025" name="t_025" value="1">
-                            <label for="t_025">Suhu kulit membaik</label>
+                            <input class="form-check-input" type="checkbox" id="t_036" name="t_036" value="1">
+                            <label for="t_036">Rawat tali pusat secara terbuka</label>
                         </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_037" name="t_037" value="1">
+                            <label for="t_037">Lakukan pemijatan bayi</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_038" name="t_038" value="1">
+                            <label for="t_038">Ganti popok jika basah</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_039" name="t_039" value="1">
+                            <label for="t_039">Kenakan pakaian baju dari bahan katun</label>
+                        </div>
+                        <br>
+                        <p><i>Edukasi</i></p>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_040" name="t_040" value="1">
+                            <label for="t_040">Kenakan pakaian baju dari bahan katun</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_041" name="t_041" value="1">
+                            <label for="t_041">Ajarkan ibu cara merawat bayi di rumah</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="t_042" name="t_042" value="1">
+                            <label for="t_042">Ajarkan cara pemberian makanan pendamping ASI pada bayi >6 bulan</label>
+                        </div>
+                    </td>
+                    <td>
+                        <canvas id="canvas" width="150" height="100" style="border:1px solid #000;"></canvas>
+                        <input type="hidden" id="ttd" name="ttd">
+                        <br>
+                        <input type="text" class="form-control" id="v_03" name="v_03">
                     </td>
                 </tr>
             </table>
