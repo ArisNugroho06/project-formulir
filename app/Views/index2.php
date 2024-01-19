@@ -36,157 +36,85 @@
 
 </head>
 
-<body>
+<body class="bg-dark">
 
-    <nav class="navbar navbar-expand-md navbar-dark bg-info border-bottom border-5 border-primary sticky-top" aria-label="Fourth navbar example">
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark border-bottom border-5 border-danger sticky-top" aria-label="Fourth navbar example">
         <div class="container-fluid">
             <td width="5%" align="right">
                 <img src="<?= base_url('assets/logopku.png') ?>" width="55px">
             </td>
-            <h5 class="me-auto" style="padding-left: 30px;">RS. PKU MUHAMMADIYAH SURAKARTA</h5>
+            <h5 class="me-auto" style="padding-left: 30px; color:white">RS. PKU MUHAMMADIYAH SURAKARTA</h5>
         </div>
         </div>
     </nav>
 
-    <div class="container container-fluid fixed">
-        <div class="row align-items-center mt-5">
+    <div class="container">
+        <div class="row align-items-center mt-4">
 
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form1') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">PENILAIAN KEBUTUHAN EDUKASI ANAK<br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form2') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">TRIASE ANAK <br><br><br><br></a>
+                                <a href="<?= site_url('pku/form1') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 1.2a BAG 1</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form3') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">PENILAIAN KEBUTUHAN EDUKASI DEWASA<br><br><br></a>
+                                <a href="<?= site_url('pku/form2') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">R 1.2a BAG 2</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form4') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">TRIASE DEWASA <br><br><br><br></a>
+                                <a href="<?= site_url('pku/form3') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">rm 1.2b BAG 1</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row align-items-center mt-5">
 
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form5') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASSESSMENT MEDIS PASIEN ANAK<br><br><br></a>
+                                <a href="<?= site_url('pku/form4') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 1.2b BAG 2</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form6') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASSESSMENT PERAWAT<br><br><br><br></a>
+                                <a href="<?= site_url('pku/form5') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1.1</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form7') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASSESSMENT MEDIS PASIEN BEDAH<br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form8') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MEDIS PASIEN PENYAKIT DALAM<br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center mt-5">
-
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form9') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MEDIS PASIEN KEBIDANAN DAN KANDUNGAN<br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form10') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MEDIS<br><br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form11') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MEDIS REV<br><br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form12') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">ASESMEN MESIN PASIEN NEONATUS<br><br><br></a>
+                                <a href="<?= site_url('pku/form6') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2</a>
                             </div>
                         </div>
                     </div>
@@ -194,94 +122,68 @@
             </div>
         </div>
 
-        <div class="row align-items-center mt-5">
-
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+        <div class="row align-items-center mt-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form13') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.3 ASESMEN MEDIS PASIEN PENYAKIT DALAM <br><br><br></a>
+                                <a href="<?= site_url('pku/form7') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1.4</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form14') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RJ.2.4 ASESMEN MEDIS PASIEN BEDAH <br><br><br></a>
+                                <a href="<?= site_url('pku/form8') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1.3</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form15') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.10 ASESMEN AWAL MEDIS PASIEN BEDA ORTHIOPEDI<br><br></a>
+                                <a href="<?= site_url('pku/form9') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1.2</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form16') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.14 ASESMEN MEDIS PASIEN PENAKIT PARU<br><br><br></a>
+                                <a href="<?= site_url('pku/form10') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row align-items-center mt-5">
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form17') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.5 ASESMEN MEDIS PASIEN KULIT DAN KELAMIN <br><br><br></a>
+                                <a href="<?= site_url('pku/form11') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1 REV</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form18') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RMJ.2.7 ASESMEN MEDIS PASIEN THT <br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form19') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.4 EARLY WARNING SCORING SYSTEM (ANAK)<br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form20') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.9 DIAGNOSA GANGGUAN CEMAS <br><br><br></a>
+                                <a href="<?= site_url('pku/form12') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 2.1C<br></a>
                             </div>
                         </div>
                     </div>
@@ -289,93 +191,68 @@
             </div>
         </div>
 
-        <div class="row align-items-center mt-5">
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+        <div class="row align-items-center mt-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form21') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.10 DIAGNOSA RESIKO INJURY <br><br><br></a>
+                                <a href="<?= site_url('pku/form13') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RMJ.2.3 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form22') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.11 DIAGNOSA KEBERSIHAN JALAN NAFAS TIDAK EFEKTIF <br><br></a>
+                                <a href="<?= site_url('pku/form14') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RJ.2.4 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form23') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.12 DIAGNOSA KEKURANGAN VOLUME CAIRAN<br><br></a>
+                                <a href="<?= site_url('pku/form15') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RMJ.2.10 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form24') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.13 DIAGNOSA HIPERTERMIA<br><br><br></a>
+                                <a href="<?= site_url('pku/form16') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RMJ.2.14 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="row align-items-center mt-5">
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form25') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.14 DIAGNOSA GANGGUAN BODY IMAGE <br><br><br></a>
+                                <a href="<?= site_url('pku/form17') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RMJ.2.5 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form26') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.15 DIAGNOSA NUTRISI KURANG DARI KEBUTUHAN TUBUH <br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form27') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2.16 DIAGNOSA DEFISIT PERAWATAN DIRI<br><br><br></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
-                    <div class="card-body">
-                        <div class="row no-gutters align-items-center">
-                            <div class="col mr-2">
-                                <a href="<?= site_url('pku/form28') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 3.2 EARLY WARNING SCORING SYSTEM (OBSTETRIC)<br><br><br></a>
+                                <a href="<?= site_url('pku/form18') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RMJ.2.7 </a>
                             </div>
                         </div>
                     </div>
@@ -383,24 +260,163 @@
             </div>
         </div>
 
-        <div class="row align-items-center mt-5">
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+        <div class="row align-items-center mt-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form29') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 5CP5 RENCANA ASUHAN KEPERAWATAN<br><br><br></a>
+                                <a href="<?= site_url('pku/form19') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.4 </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-md-3 mb-4">
-                <div class="card border border-5 border-info border-top-0 border-bottom-0 border-end-0 shadow h-100 py-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
                     <div class="card-body">
                         <div class="row no-gutters align-items-center">
                             <div class="col mr-2">
-                                <a href="<?= site_url('pku/form30') ?>" class="text-xs font-weight-bold text-primary text-uppercase mb-1 text-decoration-none">RM 5CP2B DISCHARGE PLANNING<br><br></a>
+                                <a href="<?= site_url('pku/form20') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.9 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form21') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.10 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form22') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.11 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form23') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.12 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form24') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.13 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row align-items-center mt-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form25') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.14 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form26') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.15 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form27') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2.16 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form28') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 3.2 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form29') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 5CP5 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form30') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 5CP2B </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row align-items-center mt-2">
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form31') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 7.2 Bag 2</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form32') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 8e </a>
                             </div>
                         </div>
                     </div>
@@ -408,7 +424,6 @@
             </div>
         </div>
     </div>
-
 
     <script src="<?= base_url('bootstrap-5.0.2-dist/js/bootstrap.min.js') ?>" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="<?= base_url('jquery-3.7.1.min.js') ?>"></script>

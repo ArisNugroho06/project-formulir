@@ -134,7 +134,7 @@ class Pku extends BaseController
     }
     public function form31()
     {
-        return view('formpku/RM_5CP2b.php');
+        return view('formpku/RM_7_2_Patrograf_2.php');
     }
     public function form32()
     {
