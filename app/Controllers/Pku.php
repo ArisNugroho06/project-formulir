@@ -132,4 +132,16 @@ class Pku extends BaseController
     {
         return view('formpku/RM_5CP2b.php');
     }
+    public function form31()
+    {
+        return view('formpku/RM_5CP2b.php');
+    }
+    public function form32()
+    {
+        return view('formpku/RM_8e.php');
+    }
+    public function bantuarip()
+    {
+        return view('formpku/bantuarip.php');
+    }
 }

@@ -26,7 +26,7 @@
     <div class="container mt-5">
         <form action="<?= site_url('#') ?>" method="post" autocomplete="off">
             <?php csrf_field(); ?>
-            <h6 align="right">RM 3.4</h6>
+            <h6 align="right">RM 3.2</h6>
             <table class="table table-bordered mb-0" style="border: 1px solid black">
                 <tr>
                     <td align="center">
@@ -47,7 +47,7 @@
                 </tr>
                 <tr>
                     <td colspan="3">
-                        <h5 class="text-center">EARLY WARNING SCORING SYSTEM (ANAK)</h5>
+                        <h5 class="text-center">EARLY WARNING SCORING SYSTEM (OBSTETRIC)</h5>
                     </td>
                 </tr>
             </table>
