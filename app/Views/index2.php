@@ -422,6 +422,17 @@
                     </div>
                 </div>
             </div>
+            <div class="col-xl-2 col-md-2 mb-1">
+                <div class="card border border-5 border-danger border-top-0 border-bottom-0 border-end-0 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <a href="<?= site_url('pku/form33') ?>" class="text-xs font-weight-bold text-dark text-uppercase mb-1 text-decoration-none">RM 7.1 </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
